@@ -3,15 +3,20 @@
 
 #include <vector>
 
+#include "tournament.hh"
+
+using namespace std;
+
 class Category {
 private:
-    std::vector<int> points_per_level; // points won on the category based in
+    vector<int> points_per_level; // points won on the category based in
     // the position of result
-    string identifier; // name of the category
-    std::vector<string> tournaments; // vector of the tournaments in the
+    string id; // name of the category
+    vector<string> tournaments; // vector of the tournaments in the
     // category
+
 public:
-    Category();
+    Category(string id);
 
     ~Category();
 
@@ -26,6 +31,14 @@ public:
     /* Pre: levels >= 1, levels integers in the standard channel */
     /* Post: added the inputted elements to the implicit parameter */
     void set_points_per_level(int levels);
+
+    /* Pre: true */
+    /* Post return the id from the implicit parameter */
+    string get_name();
+
+    /* Pre: true */
+    /* Post: return the points_per_level vector from the implicit parameter */
+    vector<int> get_points_per_level();
 };
 
 #endif
