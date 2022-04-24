@@ -1,7 +1,32 @@
-#include <iostream>
-#include <map>
+/**
+ * @mainpage PRO2 Practice: Tennis tournaments circuit.
+ *
+ * Classes:
+ * <ul>
+ * <li>Player</li>
+ * <li>Set_players</li>
+ * <li>Category</li>
+ * <li>Set_categories</li>
+ * <li>Tournament</li>
+ * <li>Set_tournament</li>
+ * </ul>
+ *
+ * Files:
+ * <ul>
+ * <li>main.cc</li>
+ * <li>player.hh</li>
+ * <li>set_players.hh</li>
+ * <li>Category.hh</li>
+ * <li>set_categories.hh</li>
+ * <li>tournament.hh</li>
+ * <li>set_tournament.hh</li>
+ * </ul>
+ *
+ */
 
-#include "BinTree.hh"
+/** @file main.cc
+ * @brief Main program for the practice.
+ */
 
 #include "set_categories.hh"
 #include "set_players.hh"
@@ -10,8 +35,16 @@
 #include "player.hh"
 #include "tournament.hh"
 
+#ifndef NO_DIAGRAM
+#include <iostream>
+#include <map>
+
+#include "BinTree.hh"
+#endif
+
 using namespace std;
 
+/** @brief Main program for the practice */
 int main() {
     Set_categories categories;
     categories.read();

@@ -1,12 +1,23 @@
+/** @file set_players.hh
+ * @brief Specification of the class Set_players.
+ */
+
 #ifndef SET_PLAYERS
 #define SET_PLAYERS
 
+
+#ifndef NO_DIAGRAM
 #include <map>
 #include <vector>
+#endif
+
 #include "player.hh"
 
 using namespace std;
 
+/** @class Set_players
+ * @brief Represent a set of players
+ */
 class Set_players {
 private:
     int num;
@@ -14,8 +25,9 @@ private:
     vector<string> players;
     vector<string> ranking;
 
-    /* Pre: true */
-    /* Post: players sorted by their name */
+    /** @brief Sort the players
+     * \pre true
+     * \post Players sorted by their name */
     void sort_players();
 
 public:
@@ -23,49 +35,60 @@ public:
 
     ~Set_players();
 
-    /* Pre: id is a player identifier */
-    /* Post: player added to the implicit parameter */
+    /** @brief Add the player
+     * \pre id is a player identifier
+     * \post Player added to the implicit parameter */
     void add_player(string id);
 
-    /* Pre: id is a player identifier */
-    /* Post: player deleted from the implicit parameter */
+    /** @brief Delete the player
+     * \pre id is a player identifier
+     * \post Player deleted from the implicit parameter */
     void delete_player(string id);
 
-    /* Pre: tournament is a tournament id */
-    /* Post: tournament added to all the players in the implicit parameter */
+    /** @brief Add a tournament to all the players
+     * \pre Tournament is a tournament id
+     * \post Tournament added to all the players in the implicit parameter */
     void add_tournament(string tournament);
 
-    /* Pre: tournament is a tournament id */
-    /* Post: tournament deleted from all the players in the implicit
+    /** @brief Delete a tournament from all the players
+     * \pre Tournament is a tournament id
+     * \post Tournament deleted from all the players in the implicit
      * parameter */
     void delete_tournament(string tournament);
 
-    /* Pre: true */
-    /*Post: return the players in the implicit parameter */
+    /** @brief Return all the players identifiers
+     * \pre true
+     * \post Return the players in the implicit parameter */
     vector<string> get_players();
 
-    /* Pre: true */
-    /*Post: return the ranking in the implicit parameter */
+    /** @brief Return the ranking with the players identifier
+     * \pre true
+     * \post Return the ranking in the implicit parameter */
     vector<string> get_ranking();
 
-    /* Pre: true */
-    /* Post: ranking in the implicit parameter is recalculated */
+    /** @brief Recalculate the ranking
+     * \pre true
+     * \post Ranking in the implicit parameter is recalculated */
     void recalculate_ranking();
 
-    /* Pre: true */
-    /* Post: print in the standard channel the players */
+    /** @brief Print the players' name
+     * \pre true
+     * \post Print in the standard channel the players */
     void print_players();
 
-    /* Pre: id is a player identifier */
-    /* Post: true if player in the implicit parameter, false if not */
+    /** @brief Check if the player exist
+     * \pre id is a player identifier
+     * \post true if player in the implicit parameter, false if not */
     bool player_exists(string id);
 
-    /* Pre: id is a player identifier */
-    /* Post: return the player requested */
+    /** @brief Get a player data with the identifier
+     * \pre id is a player identifier
+     * \post Return the player requested */
     Player get_player(string id);
 
-    /* Pre: an integer P and P strings */
-    /* Post: players added to the implicit parameter */
+    /** @brief Read the players identifier
+     * \pre An integer P and P strings
+     * \post Players added to the implicit parameter */
     void read();
 };
 

@@ -1,0 +1,40 @@
+\hypertarget{category_8hh_source}{}\doxysection{category.\+hh}
+\mbox{\hyperlink{category_8hh}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00005}00005 \textcolor{preprocessor}{\#ifndef CATEGORY}}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00006}00006 \textcolor{preprocessor}{\#define CATEGORY}}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00008}00008 \textcolor{preprocessor}{\#ifndef NO\_DIAGRAM}}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00009}00009 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00010}00010 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00012}00012 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00016}\mbox{\hyperlink{class_category}{00016}} \textcolor{keyword}{class }\mbox{\hyperlink{class_category}{Category}} \{}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00017}00017 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00018}\mbox{\hyperlink{class_category_adbb7e81eb516272e9e000e3f8a8790e9}{00018}}     vector<int> \mbox{\hyperlink{class_category_adbb7e81eb516272e9e000e3f8a8790e9}{points\_per\_level}}; \textcolor{comment}{// points won on the category based in}}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00019}00019     \textcolor{comment}{// the position of result}}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00020}\mbox{\hyperlink{class_category_a1194fc6afc84589ce499c1612cd97185}{00020}}     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_category_a1194fc6afc84589ce499c1612cd97185}{id}}; \textcolor{comment}{// name of the category}}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00021}\mbox{\hyperlink{class_category_a15a3bf05c1af0e2652175379905918de}{00021}}     vector<string> \mbox{\hyperlink{class_category_a15a3bf05c1af0e2652175379905918de}{tournaments}}; \textcolor{comment}{// vector of the tournaments in the}}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00022}00022     \textcolor{comment}{// category}}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00024}00024 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00025}\mbox{\hyperlink{class_category_a02562067b26e17dfd56f5a616183be30}{00025}}     \mbox{\hyperlink{class_category_a02562067b26e17dfd56f5a616183be30}{Category}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00027}\mbox{\hyperlink{class_category_aaa98d8419b1d26679a01713ac8fe58dc}{00027}}     \mbox{\hyperlink{class_category_aaa98d8419b1d26679a01713ac8fe58dc}{\string~Category}}();}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00032}\mbox{\hyperlink{class_category_a8c68999b0b2acc15f0227f3aa8a9f12f}{00032}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_category_a8c68999b0b2acc15f0227f3aa8a9f12f}{add\_tournament}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00037}\mbox{\hyperlink{class_category_aac0d6a0de2c616f5fb15c1833b984016}{00037}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_category_aac0d6a0de2c616f5fb15c1833b984016}{delete\_tournament}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00042}\mbox{\hyperlink{class_category_ab5a8b1735b996ae048b495687ec72ceb}{00042}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_category_ab5a8b1735b996ae048b495687ec72ceb}{set\_points\_per\_level}}(\textcolor{keywordtype}{int} levels);}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00047}\mbox{\hyperlink{class_category_a91eb21a6a04917e96f20c90c1956f809}{00047}}     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_category_a91eb21a6a04917e96f20c90c1956f809}{get\_name}}();}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00052}\mbox{\hyperlink{class_category_ace6dc37f4d0a839fa102d341aef7b3c5}{00052}}     vector<int> \mbox{\hyperlink{class_category_ace6dc37f4d0a839fa102d341aef7b3c5}{get\_points\_per\_level}}();}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00053}00053 \};}
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{category_8hh_source_l00055}00055 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

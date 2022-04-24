@@ -1,13 +1,21 @@
+/** @file tournament.hh
+ * @brief Specification of the class Tournament.
+ */
+
 #ifndef TOURNAMENT
 #define TOURNAMENT
 
+#ifndef NO_DIAGRAM
 #include "BinTree.hh"
+#endif
 
 #include "player.hh"
 #include "set_players.hh"
 
 using namespace std;
 
+/** @class Tournament
+ * @brief Represents a tournament. */
 class Tournament {
 private:
     string id;
@@ -16,8 +24,9 @@ private:
     int category;
     BinTree<string> matches;
 
-    /* Pre: true */
-    /* Post: returned a binary tree of strings with the positions of the
+    /** @brief Return the result of the tournament
+     * \pre true
+     * \post Returned a binary tree of strings with the positions of the
      * players */
     BinTree<string> result_tournament();
 
@@ -26,28 +35,26 @@ public:
 
     ~Tournament();
 
-    /* Pre: player is a valid player not included in the implicit parameter */
-    /* Post: added player to the implicit parameter */
+    /** @brief Add the player to the tournament
+     * \pre player is a valid player not included in the implicit parameter
+     * \post Added player to the implicit parameter */
     void add_player(Player player);
 
-    /* Pre: true */
-    /* Post: return category from the implicit parameter */
+    /** @brief Get the number of the category of the tournament
+     * \pre true
+     * \post Return category from the implicit parameter */
     int get_category() const;
 
-    /* Pre: players is a set of players */
-    /* Post: the tournament is ended, updating the matches' tree showing the
+    /** @brief En the tournament
+     * \pre Players is a set of players
+     * \post The tournament is ended, updating the matches' tree showing the
      * results of the matches and modifying the players data */
     void end_tournament(Set_players& players);
 
-    /* Pre: true */
-    /* Post: the results are printed in the standard channel */
+    /** @brief Print the results of the tournament
+     * \pre true
+     * \post The results are printed in the standard channel */
     void print_results();
-
-    /*
-    * Pre: 1 <= category <= C *
-    * Post: category is set in the implicit parameter *
-    void set_category(int category);
-*/
 };
 
 #endif

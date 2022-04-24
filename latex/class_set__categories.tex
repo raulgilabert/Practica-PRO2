@@ -1,0 +1,194 @@
+\hypertarget{class_set__categories}{}\doxysection{Set\+\_\+categories Class Reference}
+\label{class_set__categories}\index{Set\_categories@{Set\_categories}}
+
+
+Represent a set of categories.  
+
+
+
+
+{\ttfamily \#include $<$set\+\_\+categories.\+hh$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_set__categories_a7f6e57b042346e078ff5401aa7647049}{Set\+\_\+categories}} ()
+\item 
+\mbox{\hyperlink{class_set__categories_aee9357b2ca34b4c6e1a4f7799978756e}{$\sim$\+Set\+\_\+categories}} ()
+\item 
+void \mbox{\hyperlink{class_set__categories_aa2f5376f08ed1aea1e7bcdd0bb91b369}{add\+\_\+category}} (const \mbox{\hyperlink{class_category}{Category}} \&cat)
+\begin{DoxyCompactList}\small\item\em Add a category. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_set__categories_a009e2c0ff6358700dc8b0060173774b3}{num\+\_\+categories}} ()
+\begin{DoxyCompactList}\small\item\em Get the quantity of categories. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_set__categories_a5eb642f11f855c5748165f0bdd1c5709}{add\+\_\+tournament}} (int category, string tournament)
+\begin{DoxyCompactList}\small\item\em Add a tournament to a category. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_set__categories_a4a25f0d50b4a12225e47858d9b44722e}{delete\+\_\+tournament}} (int category, string tournament)
+\begin{DoxyCompactList}\small\item\em Delete a tournament from a category. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_category}{Category}} $>$ \mbox{\hyperlink{class_set__categories_af0caa3e768ec0294a9953ce7b5e8a72b}{get\+\_\+categories}} ()
+\item 
+void \mbox{\hyperlink{class_set__categories_a2d84f4d1299b68c3aa70425ad30a97ce}{read}} ()
+\begin{DoxyCompactList}\small\item\em Read the categories data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_set__categories_a4d2a30504e037b29137bff833a4cf01c}{num}}
+\item 
+int \mbox{\hyperlink{class_set__categories_adc230f54da93c51d285626a75d0ef369}{levels}}
+\item 
+vector$<$ \mbox{\hyperlink{class_category}{Category}} $>$ \mbox{\hyperlink{class_set__categories_a4bba343807dfb17a91677fc3b2b5134b}{categories}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represent a set of categories. 
+
+Definition at line \mbox{\hyperlink{set__categories_8hh_source_l00019}{19}} of file \mbox{\hyperlink{set__categories_8hh_source}{set\+\_\+categories.\+hh}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_set__categories_a7f6e57b042346e078ff5401aa7647049}\label{class_set__categories_a7f6e57b042346e078ff5401aa7647049}} 
+\index{Set\_categories@{Set\_categories}!Set\_categories@{Set\_categories}}
+\index{Set\_categories@{Set\_categories}!Set\_categories@{Set\_categories}}
+\doxysubsubsection{\texorpdfstring{Set\_categories()}{Set\_categories()}}
+{\footnotesize\ttfamily Set\+\_\+categories\+::\+Set\+\_\+categories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_set__categories_aee9357b2ca34b4c6e1a4f7799978756e}\label{class_set__categories_aee9357b2ca34b4c6e1a4f7799978756e}} 
+\index{Set\_categories@{Set\_categories}!````~Set\_categories@{$\sim$Set\_categories}}
+\index{````~Set\_categories@{$\sim$Set\_categories}!Set\_categories@{Set\_categories}}
+\doxysubsubsection{\texorpdfstring{$\sim$Set\_categories()}{~Set\_categories()}}
+{\footnotesize\ttfamily Set\+\_\+categories\+::$\sim$\+Set\+\_\+categories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_set__categories_aa2f5376f08ed1aea1e7bcdd0bb91b369}\label{class_set__categories_aa2f5376f08ed1aea1e7bcdd0bb91b369}} 
+\index{Set\_categories@{Set\_categories}!add\_category@{add\_category}}
+\index{add\_category@{add\_category}!Set\_categories@{Set\_categories}}
+\doxysubsubsection{\texorpdfstring{add\_category()}{add\_category()}}
+{\footnotesize\ttfamily void Set\+\_\+categories\+::add\+\_\+category (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_category}{Category}} \&}]{cat }\end{DoxyParamCaption})}
+
+
+
+Add a category. 
+
+\begin{DoxyPrecond}{Precondition}
+The implicit parameter does not include a category with the same identifier as cat 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+cat is added to the implicit parameter 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_set__categories_a009e2c0ff6358700dc8b0060173774b3}\label{class_set__categories_a009e2c0ff6358700dc8b0060173774b3}} 
+\index{Set\_categories@{Set\_categories}!num\_categories@{num\_categories}}
+\index{num\_categories@{num\_categories}!Set\_categories@{Set\_categories}}
+\doxysubsubsection{\texorpdfstring{num\_categories()}{num\_categories()}}
+{\footnotesize\ttfamily int Set\+\_\+categories\+::num\+\_\+categories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the quantity of categories. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Return num from the implicit parameter 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_set__categories_a5eb642f11f855c5748165f0bdd1c5709}\label{class_set__categories_a5eb642f11f855c5748165f0bdd1c5709}} 
+\index{Set\_categories@{Set\_categories}!add\_tournament@{add\_tournament}}
+\index{add\_tournament@{add\_tournament}!Set\_categories@{Set\_categories}}
+\doxysubsubsection{\texorpdfstring{add\_tournament()}{add\_tournament()}}
+{\footnotesize\ttfamily void Set\+\_\+categories\+::add\+\_\+tournament (\begin{DoxyParamCaption}\item[{int}]{category,  }\item[{string}]{tournament }\end{DoxyParamCaption})}
+
+
+
+Add a tournament to a category. 
+
+\begin{DoxyPrecond}{Precondition}
+1 \texorpdfstring{$<$}{<}= category \texorpdfstring{$<$}{<}= num, tournament is a tournament identifier 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Added the tournament to the category 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_set__categories_a4a25f0d50b4a12225e47858d9b44722e}\label{class_set__categories_a4a25f0d50b4a12225e47858d9b44722e}} 
+\index{Set\_categories@{Set\_categories}!delete\_tournament@{delete\_tournament}}
+\index{delete\_tournament@{delete\_tournament}!Set\_categories@{Set\_categories}}
+\doxysubsubsection{\texorpdfstring{delete\_tournament()}{delete\_tournament()}}
+{\footnotesize\ttfamily void Set\+\_\+categories\+::delete\+\_\+tournament (\begin{DoxyParamCaption}\item[{int}]{category,  }\item[{string}]{tournament }\end{DoxyParamCaption})}
+
+
+
+Delete a tournament from a category. 
+
+\begin{DoxyPrecond}{Precondition}
+1 \texorpdfstring{$<$}{<}= category \texorpdfstring{$<$}{<}= num, tournament is a tournament identifier 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Deleted the tournament from the category 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_set__categories_af0caa3e768ec0294a9953ce7b5e8a72b}\label{class_set__categories_af0caa3e768ec0294a9953ce7b5e8a72b}} 
+\index{Set\_categories@{Set\_categories}!get\_categories@{get\_categories}}
+\index{get\_categories@{get\_categories}!Set\_categories@{Set\_categories}}
+\doxysubsubsection{\texorpdfstring{get\_categories()}{get\_categories()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_category}{Category}} $>$ Set\+\_\+categories\+::get\+\_\+categories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get all the categories data \begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Return the categories 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_set__categories_a2d84f4d1299b68c3aa70425ad30a97ce}\label{class_set__categories_a2d84f4d1299b68c3aa70425ad30a97ce}} 
+\index{Set\_categories@{Set\_categories}!read@{read}}
+\index{read@{read}!Set\_categories@{Set\_categories}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void Set\+\_\+categories\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read the categories data. 
+
+\begin{DoxyPrecond}{Precondition}
+Two integers (C and K), n categories identifiers and C$\ast$K integers in the standard channel 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Added the data to the implicit parameter 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_set__categories_a4d2a30504e037b29137bff833a4cf01c}\label{class_set__categories_a4d2a30504e037b29137bff833a4cf01c}} 
+\index{Set\_categories@{Set\_categories}!num@{num}}
+\index{num@{num}!Set\_categories@{Set\_categories}}
+\doxysubsubsection{\texorpdfstring{num}{num}}
+{\footnotesize\ttfamily int Set\+\_\+categories\+::num\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{set__categories_8hh_source_l00021}{21}} of file \mbox{\hyperlink{set__categories_8hh_source}{set\+\_\+categories.\+hh}}.
+
+\mbox{\Hypertarget{class_set__categories_adc230f54da93c51d285626a75d0ef369}\label{class_set__categories_adc230f54da93c51d285626a75d0ef369}} 
+\index{Set\_categories@{Set\_categories}!levels@{levels}}
+\index{levels@{levels}!Set\_categories@{Set\_categories}}
+\doxysubsubsection{\texorpdfstring{levels}{levels}}
+{\footnotesize\ttfamily int Set\+\_\+categories\+::levels\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{set__categories_8hh_source_l00022}{22}} of file \mbox{\hyperlink{set__categories_8hh_source}{set\+\_\+categories.\+hh}}.
+
+\mbox{\Hypertarget{class_set__categories_a4bba343807dfb17a91677fc3b2b5134b}\label{class_set__categories_a4bba343807dfb17a91677fc3b2b5134b}} 
+\index{Set\_categories@{Set\_categories}!categories@{categories}}
+\index{categories@{categories}!Set\_categories@{Set\_categories}}
+\doxysubsubsection{\texorpdfstring{categories}{categories}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_category}{Category}}$>$ Set\+\_\+categories\+::categories\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{set__categories_8hh_source_l00023}{23}} of file \mbox{\hyperlink{set__categories_8hh_source}{set\+\_\+categories.\+hh}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{set__categories_8hh}{set\+\_\+categories.\+hh}}\end{DoxyCompactItemize}

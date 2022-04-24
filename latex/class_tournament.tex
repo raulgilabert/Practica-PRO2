@@ -1,0 +1,207 @@
+\hypertarget{class_tournament}{}\doxysection{Tournament Class Reference}
+\label{class_tournament}\index{Tournament@{Tournament}}
+
+
+Represents a tournament.  
+
+
+
+
+{\ttfamily \#include $<$tournament.\+hh$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tournament_aa31684f469ee8ecb4e750a31db9ffa41}{Tournament}} (string \mbox{\hyperlink{class_tournament_a8d5a69afdfcd948e7d045bcd38fa94f4}{id}}, int \mbox{\hyperlink{class_tournament_afe0ad181e8c5b1feb708dc4f07d90651}{category}})
+\item 
+\mbox{\hyperlink{class_tournament_a3cd15abb3e9599c60ae124fed5a04ee5}{$\sim$\+Tournament}} ()
+\item 
+void \mbox{\hyperlink{class_tournament_a650798aadb454b8727b35e9e3ddacd39}{add\+\_\+player}} (\mbox{\hyperlink{class_player}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Add the player to the tournament. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tournament_a4648690ed8b2360f09468922d54e11d5}{get\+\_\+category}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of the category of the tournament. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tournament_a688e014acbbd375f57f816dc3334e35d}{end\+\_\+tournament}} (\mbox{\hyperlink{class_set__players}{Set\+\_\+players}} \&\mbox{\hyperlink{class_tournament_a770ac33380e96369af02c00575c38466}{players}})
+\begin{DoxyCompactList}\small\item\em En the tournament. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tournament_a903fd4af75504693ea897d3c988a6024}{print\+\_\+results}} ()
+\begin{DoxyCompactList}\small\item\em Print the results of the tournament. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Bin\+Tree$<$ string $>$ \mbox{\hyperlink{class_tournament_adba6ef8314f6b904fe22a20eb724b14c}{result\+\_\+tournament}} ()
+\begin{DoxyCompactList}\small\item\em Return the result of the tournament. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_tournament_a8d5a69afdfcd948e7d045bcd38fa94f4}{id}}
+\item 
+int \mbox{\hyperlink{class_tournament_a0c15a5159c624c627cec923d12314940}{num\+\_\+registered}}
+\item 
+vector$<$ \mbox{\hyperlink{class_player}{Player}} $>$ \mbox{\hyperlink{class_tournament_a770ac33380e96369af02c00575c38466}{players}}
+\item 
+int \mbox{\hyperlink{class_tournament_afe0ad181e8c5b1feb708dc4f07d90651}{category}}
+\item 
+Bin\+Tree$<$ string $>$ \mbox{\hyperlink{class_tournament_a0878527032dd63e7b3e46cdedc1bd555}{matches}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a tournament. 
+
+Definition at line \mbox{\hyperlink{tournament_8hh_source_l00019}{19}} of file \mbox{\hyperlink{tournament_8hh_source}{tournament.\+hh}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tournament_aa31684f469ee8ecb4e750a31db9ffa41}\label{class_tournament_aa31684f469ee8ecb4e750a31db9ffa41}} 
+\index{Tournament@{Tournament}!Tournament@{Tournament}}
+\index{Tournament@{Tournament}!Tournament@{Tournament}}
+\doxysubsubsection{\texorpdfstring{Tournament()}{Tournament()}}
+{\footnotesize\ttfamily Tournament\+::\+Tournament (\begin{DoxyParamCaption}\item[{string}]{id,  }\item[{int}]{category }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tournament_a3cd15abb3e9599c60ae124fed5a04ee5}\label{class_tournament_a3cd15abb3e9599c60ae124fed5a04ee5}} 
+\index{Tournament@{Tournament}!````~Tournament@{$\sim$Tournament}}
+\index{````~Tournament@{$\sim$Tournament}!Tournament@{Tournament}}
+\doxysubsubsection{\texorpdfstring{$\sim$Tournament()}{~Tournament()}}
+{\footnotesize\ttfamily Tournament\+::$\sim$\+Tournament (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tournament_adba6ef8314f6b904fe22a20eb724b14c}\label{class_tournament_adba6ef8314f6b904fe22a20eb724b14c}} 
+\index{Tournament@{Tournament}!result\_tournament@{result\_tournament}}
+\index{result\_tournament@{result\_tournament}!Tournament@{Tournament}}
+\doxysubsubsection{\texorpdfstring{result\_tournament()}{result\_tournament()}}
+{\footnotesize\ttfamily Bin\+Tree$<$ string $>$ Tournament\+::result\+\_\+tournament (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Return the result of the tournament. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returned a binary tree of strings with the positions of the players 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_tournament_a650798aadb454b8727b35e9e3ddacd39}\label{class_tournament_a650798aadb454b8727b35e9e3ddacd39}} 
+\index{Tournament@{Tournament}!add\_player@{add\_player}}
+\index{add\_player@{add\_player}!Tournament@{Tournament}}
+\doxysubsubsection{\texorpdfstring{add\_player()}{add\_player()}}
+{\footnotesize\ttfamily void Tournament\+::add\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Add the player to the tournament. 
+
+\begin{DoxyPrecond}{Precondition}
+player is a valid player not included in the implicit parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Added player to the implicit parameter 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_tournament_a4648690ed8b2360f09468922d54e11d5}\label{class_tournament_a4648690ed8b2360f09468922d54e11d5}} 
+\index{Tournament@{Tournament}!get\_category@{get\_category}}
+\index{get\_category@{get\_category}!Tournament@{Tournament}}
+\doxysubsubsection{\texorpdfstring{get\_category()}{get\_category()}}
+{\footnotesize\ttfamily int Tournament\+::get\+\_\+category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of the category of the tournament. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Return category from the implicit parameter 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_tournament_a688e014acbbd375f57f816dc3334e35d}\label{class_tournament_a688e014acbbd375f57f816dc3334e35d}} 
+\index{Tournament@{Tournament}!end\_tournament@{end\_tournament}}
+\index{end\_tournament@{end\_tournament}!Tournament@{Tournament}}
+\doxysubsubsection{\texorpdfstring{end\_tournament()}{end\_tournament()}}
+{\footnotesize\ttfamily void Tournament\+::end\+\_\+tournament (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_set__players}{Set\+\_\+players}} \&}]{players }\end{DoxyParamCaption})}
+
+
+
+En the tournament. 
+
+\begin{DoxyPrecond}{Precondition}
+Players is a set of players 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The tournament is ended, updating the matches\textquotesingle{} tree showing the results of the matches and modifying the players data 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_tournament_a903fd4af75504693ea897d3c988a6024}\label{class_tournament_a903fd4af75504693ea897d3c988a6024}} 
+\index{Tournament@{Tournament}!print\_results@{print\_results}}
+\index{print\_results@{print\_results}!Tournament@{Tournament}}
+\doxysubsubsection{\texorpdfstring{print\_results()}{print\_results()}}
+{\footnotesize\ttfamily void Tournament\+::print\+\_\+results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print the results of the tournament. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The results are printed in the standard channel 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_tournament_a8d5a69afdfcd948e7d045bcd38fa94f4}\label{class_tournament_a8d5a69afdfcd948e7d045bcd38fa94f4}} 
+\index{Tournament@{Tournament}!id@{id}}
+\index{id@{id}!Tournament@{Tournament}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Tournament\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tournament_8hh_source_l00021}{21}} of file \mbox{\hyperlink{tournament_8hh_source}{tournament.\+hh}}.
+
+\mbox{\Hypertarget{class_tournament_a0c15a5159c624c627cec923d12314940}\label{class_tournament_a0c15a5159c624c627cec923d12314940}} 
+\index{Tournament@{Tournament}!num\_registered@{num\_registered}}
+\index{num\_registered@{num\_registered}!Tournament@{Tournament}}
+\doxysubsubsection{\texorpdfstring{num\_registered}{num\_registered}}
+{\footnotesize\ttfamily int Tournament\+::num\+\_\+registered\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tournament_8hh_source_l00022}{22}} of file \mbox{\hyperlink{tournament_8hh_source}{tournament.\+hh}}.
+
+\mbox{\Hypertarget{class_tournament_a770ac33380e96369af02c00575c38466}\label{class_tournament_a770ac33380e96369af02c00575c38466}} 
+\index{Tournament@{Tournament}!players@{players}}
+\index{players@{players}!Tournament@{Tournament}}
+\doxysubsubsection{\texorpdfstring{players}{players}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_player}{Player}}$>$ Tournament\+::players\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tournament_8hh_source_l00023}{23}} of file \mbox{\hyperlink{tournament_8hh_source}{tournament.\+hh}}.
+
+\mbox{\Hypertarget{class_tournament_afe0ad181e8c5b1feb708dc4f07d90651}\label{class_tournament_afe0ad181e8c5b1feb708dc4f07d90651}} 
+\index{Tournament@{Tournament}!category@{category}}
+\index{category@{category}!Tournament@{Tournament}}
+\doxysubsubsection{\texorpdfstring{category}{category}}
+{\footnotesize\ttfamily int Tournament\+::category\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tournament_8hh_source_l00024}{24}} of file \mbox{\hyperlink{tournament_8hh_source}{tournament.\+hh}}.
+
+\mbox{\Hypertarget{class_tournament_a0878527032dd63e7b3e46cdedc1bd555}\label{class_tournament_a0878527032dd63e7b3e46cdedc1bd555}} 
+\index{Tournament@{Tournament}!matches@{matches}}
+\index{matches@{matches}!Tournament@{Tournament}}
+\doxysubsubsection{\texorpdfstring{matches}{matches}}
+{\footnotesize\ttfamily Bin\+Tree$<$string$>$ Tournament\+::matches\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tournament_8hh_source_l00025}{25}} of file \mbox{\hyperlink{tournament_8hh_source}{tournament.\+hh}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tournament_8hh}{tournament.\+hh}}\end{DoxyCompactItemize}

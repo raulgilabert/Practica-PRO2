@@ -1,12 +1,18 @@
+/** @file category.hh
+ * @brief Specification of the class Category.
+ */
+
 #ifndef CATEGORY
 #define CATEGORY
 
+#ifndef NO_DIAGRAM
 #include <vector>
-
-#include "tournament.hh"
+#endif
 
 using namespace std;
 
+/** @class Category
+ * @brief Represents a category */
 class Category {
 private:
     vector<int> points_per_level; // points won on the category based in
@@ -20,24 +26,29 @@ public:
 
     ~Category();
 
-    /* Pre: id is a tournament id */
-    /* Post: id is added to the implicit parameter */
+    /** @brief Add tournament to category
+     * \pre id is a tournament id
+     * \post id is added to the implicit parameter */
     void add_tournament(string id);
 
-    /* Pre: id is a tournament id */
-    /* Post: id is deleted from the implicit parameter */
+    /** @brief Delete tournament from category
+     * \pre id is a tournament id
+     * \post id is deleted from the implicit parameter */
     void delete_tournament(string id);
 
-    /* Pre: levels >= 1, levels integers in the standard channel */
-    /* Post: added the inputted elements to the implicit parameter */
+    /** @brief Set the points per level of the category
+     * \pre Levels >= 1, levels integers in the standard channel
+     * \post Added the inputted elements to the implicit parameter */
     void set_points_per_level(int levels);
 
-    /* Pre: true */
-    /* Post return the id from the implicit parameter */
+    /** @brief Return the name of the category
+     * \pre true
+     * \post Return the id from the implicit parameter */
     string get_name();
 
-    /* Pre: true */
-    /* Post: return the points_per_level vector from the implicit parameter */
+    /** @brief Return the points per level
+     * \pre true
+     * \post Return the points_per_level vector from the implicit parameter */
     vector<int> get_points_per_level();
 };
 

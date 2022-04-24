@@ -1,0 +1,180 @@
+\hypertarget{class_category}{}\doxysection{Category Class Reference}
+\label{class_category}\index{Category@{Category}}
+
+
+Represents a category.  
+
+
+
+
+{\ttfamily \#include $<$category.\+hh$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_category_a02562067b26e17dfd56f5a616183be30}{Category}} (string \mbox{\hyperlink{class_category_a1194fc6afc84589ce499c1612cd97185}{id}})
+\item 
+\mbox{\hyperlink{class_category_aaa98d8419b1d26679a01713ac8fe58dc}{$\sim$\+Category}} ()
+\item 
+void \mbox{\hyperlink{class_category_a8c68999b0b2acc15f0227f3aa8a9f12f}{add\+\_\+tournament}} (string \mbox{\hyperlink{class_category_a1194fc6afc84589ce499c1612cd97185}{id}})
+\begin{DoxyCompactList}\small\item\em Add tournament to category. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_category_aac0d6a0de2c616f5fb15c1833b984016}{delete\+\_\+tournament}} (string \mbox{\hyperlink{class_category_a1194fc6afc84589ce499c1612cd97185}{id}})
+\begin{DoxyCompactList}\small\item\em Delete tournament from category. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_category_ab5a8b1735b996ae048b495687ec72ceb}{set\+\_\+points\+\_\+per\+\_\+level}} (int levels)
+\begin{DoxyCompactList}\small\item\em Set the points per level of the category. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_category_a91eb21a6a04917e96f20c90c1956f809}{get\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Return the name of the category. \end{DoxyCompactList}\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_category_ace6dc37f4d0a839fa102d341aef7b3c5}{get\+\_\+points\+\_\+per\+\_\+level}} ()
+\begin{DoxyCompactList}\small\item\em Return the points per level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_category_adbb7e81eb516272e9e000e3f8a8790e9}{points\+\_\+per\+\_\+level}}
+\item 
+string \mbox{\hyperlink{class_category_a1194fc6afc84589ce499c1612cd97185}{id}}
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_category_a15a3bf05c1af0e2652175379905918de}{tournaments}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a category. 
+
+Definition at line \mbox{\hyperlink{category_8hh_source_l00016}{16}} of file \mbox{\hyperlink{category_8hh_source}{category.\+hh}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_category_a02562067b26e17dfd56f5a616183be30}\label{class_category_a02562067b26e17dfd56f5a616183be30}} 
+\index{Category@{Category}!Category@{Category}}
+\index{Category@{Category}!Category@{Category}}
+\doxysubsubsection{\texorpdfstring{Category()}{Category()}}
+{\footnotesize\ttfamily Category\+::\+Category (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_category_aaa98d8419b1d26679a01713ac8fe58dc}\label{class_category_aaa98d8419b1d26679a01713ac8fe58dc}} 
+\index{Category@{Category}!````~Category@{$\sim$Category}}
+\index{````~Category@{$\sim$Category}!Category@{Category}}
+\doxysubsubsection{\texorpdfstring{$\sim$Category()}{~Category()}}
+{\footnotesize\ttfamily Category\+::$\sim$\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_category_a8c68999b0b2acc15f0227f3aa8a9f12f}\label{class_category_a8c68999b0b2acc15f0227f3aa8a9f12f}} 
+\index{Category@{Category}!add\_tournament@{add\_tournament}}
+\index{add\_tournament@{add\_tournament}!Category@{Category}}
+\doxysubsubsection{\texorpdfstring{add\_tournament()}{add\_tournament()}}
+{\footnotesize\ttfamily void Category\+::add\+\_\+tournament (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+
+
+
+Add tournament to category. 
+
+\begin{DoxyPrecond}{Precondition}
+id is a tournament id 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+id is added to the implicit parameter 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_category_aac0d6a0de2c616f5fb15c1833b984016}\label{class_category_aac0d6a0de2c616f5fb15c1833b984016}} 
+\index{Category@{Category}!delete\_tournament@{delete\_tournament}}
+\index{delete\_tournament@{delete\_tournament}!Category@{Category}}
+\doxysubsubsection{\texorpdfstring{delete\_tournament()}{delete\_tournament()}}
+{\footnotesize\ttfamily void Category\+::delete\+\_\+tournament (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+
+
+
+Delete tournament from category. 
+
+\begin{DoxyPrecond}{Precondition}
+id is a tournament id 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+id is deleted from the implicit parameter 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_category_ab5a8b1735b996ae048b495687ec72ceb}\label{class_category_ab5a8b1735b996ae048b495687ec72ceb}} 
+\index{Category@{Category}!set\_points\_per\_level@{set\_points\_per\_level}}
+\index{set\_points\_per\_level@{set\_points\_per\_level}!Category@{Category}}
+\doxysubsubsection{\texorpdfstring{set\_points\_per\_level()}{set\_points\_per\_level()}}
+{\footnotesize\ttfamily void Category\+::set\+\_\+points\+\_\+per\+\_\+level (\begin{DoxyParamCaption}\item[{int}]{levels }\end{DoxyParamCaption})}
+
+
+
+Set the points per level of the category. 
+
+\begin{DoxyPrecond}{Precondition}
+Levels \texorpdfstring{$>$}{>}= 1, levels integers in the standard channel 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Added the inputted elements to the implicit parameter 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_category_a91eb21a6a04917e96f20c90c1956f809}\label{class_category_a91eb21a6a04917e96f20c90c1956f809}} 
+\index{Category@{Category}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!Category@{Category}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily string Category\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the name of the category. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Return the id from the implicit parameter 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_category_ace6dc37f4d0a839fa102d341aef7b3c5}\label{class_category_ace6dc37f4d0a839fa102d341aef7b3c5}} 
+\index{Category@{Category}!get\_points\_per\_level@{get\_points\_per\_level}}
+\index{get\_points\_per\_level@{get\_points\_per\_level}!Category@{Category}}
+\doxysubsubsection{\texorpdfstring{get\_points\_per\_level()}{get\_points\_per\_level()}}
+{\footnotesize\ttfamily vector$<$ int $>$ Category\+::get\+\_\+points\+\_\+per\+\_\+level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the points per level. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Return the points\+\_\+per\+\_\+level vector from the implicit parameter 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_category_adbb7e81eb516272e9e000e3f8a8790e9}\label{class_category_adbb7e81eb516272e9e000e3f8a8790e9}} 
+\index{Category@{Category}!points\_per\_level@{points\_per\_level}}
+\index{points\_per\_level@{points\_per\_level}!Category@{Category}}
+\doxysubsubsection{\texorpdfstring{points\_per\_level}{points\_per\_level}}
+{\footnotesize\ttfamily vector$<$int$>$ Category\+::points\+\_\+per\+\_\+level\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{category_8hh_source_l00018}{18}} of file \mbox{\hyperlink{category_8hh_source}{category.\+hh}}.
+
+\mbox{\Hypertarget{class_category_a1194fc6afc84589ce499c1612cd97185}\label{class_category_a1194fc6afc84589ce499c1612cd97185}} 
+\index{Category@{Category}!id@{id}}
+\index{id@{id}!Category@{Category}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Category\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{category_8hh_source_l00020}{20}} of file \mbox{\hyperlink{category_8hh_source}{category.\+hh}}.
+
+\mbox{\Hypertarget{class_category_a15a3bf05c1af0e2652175379905918de}\label{class_category_a15a3bf05c1af0e2652175379905918de}} 
+\index{Category@{Category}!tournaments@{tournaments}}
+\index{tournaments@{tournaments}!Category@{Category}}
+\doxysubsubsection{\texorpdfstring{tournaments}{tournaments}}
+{\footnotesize\ttfamily vector$<$string$>$ Category\+::tournaments\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{category_8hh_source_l00021}{21}} of file \mbox{\hyperlink{category_8hh_source}{category.\+hh}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{category_8hh}{category.\+hh}}\end{DoxyCompactItemize}

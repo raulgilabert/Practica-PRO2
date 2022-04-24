@@ -1,12 +1,21 @@
+/** @file set_categories.hh
+ * @brief Specification of the class Set_categories
+ */
+
 #ifndef SET_CATEGORIES
 #define SET_CATEGORIES
 
+#ifndef NO_DIAGRAM
 #include <vector>
+#endif
 
 #include "category.hh"
 
 using namespace std;
 
+/** @class Set_categories
+ * @brief Represent a set of categories
+ */
 class Set_categories {
 private:
     int num; // Número de categorías
@@ -18,30 +27,36 @@ public:
 
     ~Set_categories();
 
-    /* Pre: the implicit parameter does not include a category with the same
-     * identifier as cat */
-    /* Post: cat is added to the implicit parameter */
+    /** @brief Add a category
+     * \pre The implicit parameter does not include a category with the same
+     * identifier as cat
+     * \post cat is added to the implicit parameter */
     void add_category(const Category& cat);
 
-    /* Pre: true */
-    /* Post: return num from the implicit parameter */
+    /** @brief Get the quantity of categories
+     * \pre true
+     * \post Return num from the implicit parameter */
     int num_categories();
 
-    /* Pre: 1 <= category <= num, tournament is a tournament identifier */
-    /* Post: added the tournament to the category */
+    /** @brief Add a tournament to a category
+     * \pre 1 <= category <= num, tournament is a tournament identifier
+     * \post Added the tournament to the category */
     void add_tournament(int category, string tournament);
 
-    /* Pre: 1 <= category <= num, tournament is a tournament identifier */
-    /* Post: deleted the tournament from the category */
+    /** @brief Delete a tournament from a category
+     * \pre 1 <= category <= num, tournament is a tournament identifier
+     * \post Deleted the tournament from the category */
     void delete_tournament(int category, string tournament);
 
-    /* Pre: true */
-    /* Post: return the categories */
+    /** Get all the categories data
+     * \pre true
+     * \post Return the categories */
     vector<Category> get_categories();
 
-    /* Pre: two integers (C and K), n categories identifiers and C*K integers
-     * in the standard channel */
-    /* Post: Added the data to the implicit parameter */
+    /** @brief Read the categories data
+     * \pre Two integers (C and K), n categories identifiers and C*K integers
+     * in the standard channel
+     * \post Added the data to the implicit parameter */
     void read();
 };
 

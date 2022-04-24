@@ -1,0 +1,9 @@
+<map id="main.cc" name="main.cc">
+<area shape="rect" id="node1" title="Main program for the practice." alt="" coords="210,5,277,32"/>
+<area shape="rect" id="node2" href="$set__categories_8hh.html" title="Specification of the class Set_categories." alt="" coords="5,80,129,107"/>
+<area shape="rect" id="node3" href="$category_8hh.html" title="Specification of the class Category." alt="" coords="58,155,146,181"/>
+<area shape="rect" id="node4" href="$set__players_8hh.html" title="Specification of the class Set_players." alt="" coords="256,229,361,256"/>
+<area shape="rect" id="node5" href="$player_8hh.html" title="Specification of the class Player." alt="" coords="272,304,345,331"/>
+<area shape="rect" id="node6" href="$set__tournament_8hh.html" title="Specification of the class Set_tournament." alt="" coords="307,80,436,107"/>
+<area shape="rect" id="node7" href="$tournament_8hh.html" title="Specification of the class Tournament." alt="" coords="333,155,437,181"/>
+</map>
