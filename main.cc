@@ -165,7 +165,7 @@ int main() {
 
             int size = players_names.size();
 
-            for (int i = 0; i < szie; ++i) {
+            for (int i = 0; i < size; ++i) {
                 Player player = players.get_player(players_names[i]);
                 player.print();
             }

@@ -7,6 +7,7 @@
 
 #ifndef NO_DIAGRAM
 #include <vector>
+#include <iostream>
 #endif
 
 using namespace std;
@@ -20,6 +21,14 @@ private:
     string id; // name of the category
     vector<string> tournaments; // vector of the tournaments in the
     // category
+
+    /** @brief Search a tournament returning the position in the vector
+     * \pre  0 <= left <= tournaments.size(), 0 <= right <= tournaments.size(),
+     * search is a valid string, tournaments in the implicit parameter is
+     * sorted in alphabetic order
+     * \post return -1 if string not in tournaments, if not return the
+     * position in tournaments of search */
+    int search(int left, int right, string to_search);
 
 public:
     Category(string id);
@@ -45,6 +54,8 @@ public:
      * \pre true
      * \post Return the id from the implicit parameter */
     string get_name();
+
+    vector<string> get();
 
     /** @brief Return the points per level
      * \pre true

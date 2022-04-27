@@ -23,7 +23,7 @@ private:
     int num;
     map<string, Player> players_data;
     vector<string> players;
-    vector<string> ranking;
+    vector<map<string, Player>::const_iterator> ranking;
 
     /** @brief Sort the players
      * \pre true

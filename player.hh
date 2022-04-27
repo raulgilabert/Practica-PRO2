@@ -7,6 +7,7 @@
 
 #ifndef NO_DIAGRAM
 #include <map>
+#include <iostream>
 #endif
 
 using namespace std;
@@ -19,8 +20,8 @@ private:
     string name;
 
     int tournaments_played;
-    int tournaments_won;
-    int tournaments_lost;
+    int matches_won;
+    int matches_lost;
     int sets_won;
     int sets_lost;
     int games_won;
@@ -60,8 +61,8 @@ public:
      * \pre tournament_won is true if the tournament is won by the player,
      * sets_won >= 0, sets_lost >= 0, games_won >= 0, games_lost >= 0
      * \post The data in the implicit parameter is updated */
-    void update_data(bool tournament_won, int sets_won, int sets_lost, int
-    games_won, int games_lost);
+    void update_data(int matches_won, int matches_lost, int sets_won,
+	    int sets_lost, int games_won, int games_lost);
 
     /** @brief Print the name, the position and the tournaments, sets and games
      * data
