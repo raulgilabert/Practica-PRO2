@@ -61,7 +61,6 @@ int main() {
         cin >> name >> cat;
 
         tournaments.add_tournament(name, cat);
-        categories.add_tournament(cat, name);
     }
 
 
@@ -103,7 +102,6 @@ int main() {
                 }
                 else {
                     tournaments.add_tournament(t, c);
-                    categories.add_tournament(c, t);
                     players.add_tournament(t);
                     cout << tournaments.num_tournaments() << endl;
                 }
@@ -134,7 +132,6 @@ int main() {
 
             if (tournaments.tournament_exists(t)) {
                 const Tournament tournament = tournaments.get_tournament(t);
-                categories.delete_tournament(tournament.get_category(), t);
                 tournaments.delete_tournament(t);
                 players.delete_tournament(t);
                 cout << tournaments.num_tournaments() << endl;

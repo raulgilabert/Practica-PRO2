@@ -18,15 +18,6 @@ int Set_categories::num_categories() {
     return num;
 }
 
-void Set_categories::add_tournament(int category, string tournament) {
-    categories[category - 1].add_tournament(tournament);
-}
-
-void Set_categories::delete_tournament(int category, string tournament) {
-    categories[category - 1].delete_tournament(tournament);
-
-}
-
 vector<Category> Set_categories::get_categories() {
     return categories;
 }
