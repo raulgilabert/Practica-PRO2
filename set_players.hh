@@ -22,8 +22,7 @@ class Set_players {
 private:
     int num;
     map<string, Player> players_data;
-    vector<string> players;
-    vector<map<string, Player>::const_iterator> ranking;
+    vector<map<string, Player>::iterator> ranking;
 
     /** @brief Sort the players
      * \pre true
@@ -56,15 +55,32 @@ public:
      * parameter */
     void delete_tournament(string tournament);
 
+    /** @brief Return a iterator to the element requested
+     * \pre true
+     * \post Return a iterator to the element requested if exists or
+     * player_data.end() if not */
+    map<string, Player>::iterator get_iterator(string id);
+
+    /** @brief Return a iterator to the player in the ranking position requested
+     * \pre true
+     * \post Return a iterator to the player requested */
+    map<string, Player>::iterator get_iterator(int pos);
+
+
     /** @brief Return all the players identifiers
      * \pre true
      * \post Return the players in the implicit parameter */
-    vector<string> get_players();
+    map<string, Player> get_players();
 
     /** @brief Return the ranking with the players identifier
      * \pre true
      * \post Return the ranking in the implicit parameter */
-    vector<string> get_ranking();
+    vector<map<string, Player>::iterator> get_ranking();
+
+    /** @brief Get the queantity of players
+     * \pre true
+     * \post return the quantity of players */
+    int get_num();
 
     /** @brief Recalculate the ranking
      * \pre true
@@ -81,15 +97,15 @@ public:
      * \post true if player in the implicit parameter, false if not */
     bool player_exists(string id);
 
-    /** @brief Get a player data with the identifier
-     * \pre id is a player identifier
-     * \post Return the player requested */
-    Player get_player(string id);
-
     /** @brief Read the players identifier
      * \pre An integer P and P strings
      * \post Players added to the implicit parameter */
     void read();
+    /** @brief Print the data of all the players
+     * \pre true
+     * \post printed the data of the players on the standard channel */
+    void print();
+
 };
 
 #endif

@@ -27,13 +27,15 @@ private:
     int games_won;
     int games_lost;
 
+    int ranking;
+    
     int points;
     map<string, int> points_per_tournament;
 
-    int ranking_position;
-
 public:
-    Player(string name);
+    Player(string name, int pos);
+
+    Player();
 
     ~Player();
 
@@ -47,6 +49,11 @@ public:
      * \post Removed key id from the map in the implicit parameter */
     void delete_tournament(string id);
 
+   /** @brief Return the position in ranking of the player
+     * \pre true
+     * \post Return position in ranking from the implicit parameter */
+    int get_position();
+
     /** @brief Return the points of the player
      * \pre true
      * \post Return points from the implicit parameter */
@@ -58,11 +65,21 @@ public:
     void calc_points();
 
     /** @brief update the tournaments, sets and games data
-     * \pre tournament_won is true if the tournament is won by the player,
-     * sets_won >= 0, sets_lost >= 0, games_won >= 0, games_lost >= 0
+     * \pre matches_won >= 0, matches_lost >= 0, sets_won >= 0, sets_lost >= 0,
+     * games_won >= 0, games_lost >= 0
      * \post The data in the implicit parameter is updated */
     void update_data(int matches_won, int matches_lost, int sets_won,
 	    int sets_lost, int games_won, int games_lost);
+
+    /** @brief Decrease the ranking position by one
+     * \pre true
+     * \post position in the implicit parameter decreased by one */
+    void decrease_pos();
+
+    /** @brief return player's name
+     * \pre true
+     * \post return player's name from the implicit parameter */
+    string get_name();
 
     /** @brief Print the name, the position and the tournaments, sets and games
      * data
@@ -70,7 +87,7 @@ public:
      * \post Prints in the standard channel the name, the position in the
      * ranking, the points and all the data about tournaments, sets and
      * games */
-    void print();
+    void print() const;
 };
 
 

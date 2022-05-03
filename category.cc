@@ -1,4 +1,7 @@
 #include "category.hh"
+#include <algorithm>
+
+using namespace std;
 
 int Category::search(int left, int right, string to_search) {
     if (left > right)
@@ -16,12 +19,20 @@ int Category::search(int left, int right, string to_search) {
 
 Category::Category(string id) {
     this->id = id;
+    // vector<string> tournaments(0);
 }
+
+Category::Category() {}
 
 Category::~Category() {}
 
+bool Category::cmp(string a, string b) {
+    return a > b;
+}
+
 void Category::add_tournament(string id) {
     tournaments.push_back(id);
+    sort(tournaments.begin(), tournaments.end(), cmp);
 }
 
 void Category::delete_tournament(string id) {
@@ -41,10 +52,11 @@ void Category::delete_tournament(string id) {
 }
 
 void Category::set_points_per_level(int levels) {
-    vector<int> points_per_level(levels);
+    points_per_level = vector<int>(levels);
 
-    for (int i = 0; i < levels; ++i)
-        cin >> levels[i];
+    for (int i = 0; i < levels; ++i) {
+        cin >> points_per_level[i];
+    }
 }
 
 vector<int> Category::get_points_per_level() {
@@ -53,4 +65,12 @@ vector<int> Category::get_points_per_level() {
 
 vector<string> Category::get() {
     return tournaments;
+}
+
+string Category::get_name() const {
+    return id;
+}
+
+string Category::get_name() {
+    return id;
 }

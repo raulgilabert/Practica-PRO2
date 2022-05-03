@@ -30,8 +30,14 @@ private:
      * position in tournaments of search */
     int search(int left, int right, string to_search);
 
+    /** @brief comparator for sorting
+     * \pre a and b are valid strings
+     * \post true if a is higher than b, false if not */
+    static bool cmp(string a, string b);
 public:
     Category(string id);
+
+    Category();
 
     ~Category();
 
@@ -53,7 +59,13 @@ public:
     /** @brief Return the name of the category
      * \pre true
      * \post Return the id from the implicit parameter */
+    string get_name() const;
+
+    /** @brief Return the name of the category
+     * \pre true
+     * \post Return the id from the implicit parameter */
     string get_name();
+
 
     vector<string> get();
 

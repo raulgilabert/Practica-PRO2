@@ -50,7 +50,20 @@ int main() {
     categories.read();
 
     Set_tournament tournaments;
-    tournaments.read();
+    //tournaments.read();
+    // Read tournaments
+    int n;
+    cin >> n;
+
+    for (int i = 0; i < n; ++i) {
+        string name;
+        int cat;
+        cin >> name >> cat;
+
+        tournaments.add_tournament(name, cat);
+        categories.add_tournament(cat, name);
+    }
+
 
     Set_players players;
     players.read();
@@ -60,17 +73,20 @@ int main() {
     string command;
     cin >> command;
 
-    while (command != "end") {
-        // Process commands
+    while (command != "fin") {
+        cout << '#' << command;
         if (command == "nuevo_jugador" or command == "nj") {
             string id;
             cin >> id;
 
+            cout << ' ' << id << endl;
+
             if (players.player_exists(id)) {
-                players.add_player(id);
+                cout << "error: ya existe un jugador con ese nombre" << endl;
             }
             else {
-                cout << "Error: Player exists in the circuit." << endl;
+                players.add_player(id);
+                cout << players.get_num() << endl;
             }
         }
         else if (command == "nuevo_torneo" or command == "nt") {
@@ -79,66 +95,82 @@ int main() {
 
             cin >> t >> c;
 
-            if (c <= C) {
+            cout << ' ' << t << ' ' << c << endl;
+
+            if (c > 0 and c <= C) {
                 if (tournaments.tournament_exists(t)) {
-                    cout << "Error: tournament exists in the circuit." << endl;
+                    cout << "error: ya existe un torneo con ese nombre" << endl;
                 }
                 else {
-                    tournaments.add_tournament(t);
+                    tournaments.add_tournament(t, c);
                     categories.add_tournament(c, t);
                     players.add_tournament(t);
                     cout << tournaments.num_tournaments() << endl;
                 }
             }
             else {
-                cout << "Error: category not exists." << endl;
+                cout << "error: la categoria no existe" << endl;
             }
         }
         else if (command == "baja_jugador" or command == "bj") {
             string p;
             cin >> p;
 
+            cout << ' ' << p << endl;
+
             if (players.player_exists(p)) {
                 players.delete_player(p);
+                cout << players.get_num() << endl;
             }
             else {
-                cout << "Error: player does not exist." << endl;
+                cout << "error: el jugador no existe" << endl;
             }
         }
         else if (command == "baja_torneo" or command == "bt") {
             string t;
             cin >> t;
 
+            cout << ' ' << t << endl;
+
             if (tournaments.tournament_exists(t)) {
                 const Tournament tournament = tournaments.get_tournament(t);
+                categories.delete_tournament(tournament.get_category(), t);
                 tournaments.delete_tournament(t);
                 players.delete_tournament(t);
-                categories.delete_tournament(tournament.get_category(), t);
+                cout << tournaments.num_tournaments() << endl;
             }
             else {
-                cout << "Error: tournament does not exist" << endl;
+                cout << "error: el torneo no existe" << endl;
             }
         }
         else if (command == "iniciar_torneo" or command == "it") {
             string t;
             cin >> t;
 
-            Tournament tournament = tournaments.get_tournament(t);
+            cout << ' ' << t << endl;
 
-            int n;
-            cin >> n;
+            if (tournaments.tournament_exists(t)) {
+                int n;
+                cin >> n;
 
-            vector<string> ranking = players.get_ranking();
+                Tournament tournament = tournaments.get_tournament(t);
 
-            for (int i = 0; i < n; ++i) {
-                int position_in_ranking;
-                cin >> position_in_ranking;
-                tournament.add_player(players.get_player
-                (ranking[position_in_ranking - 1]));
+                for (int i = 0; i < n; ++i) {
+                    int position_in_ranking;
+                    cin >> position_in_ranking;
+
+                    tournament.add_player(
+                            players.get_iterator(position_in_ranking - 1));
+                }
+
+                tournament.inscriptions(n);
+
+                tournaments_playing[t] = tournament;
             }
-
-            tournaments_playing[t] = tournament;
-        }
+            else {
+                //cout << "error: el torneo no existe" << endl;
+            }
+        }/*
         else if (command == "finalizar_torneo" or command == "ft") {
             string t;
             cin >> t;
@@ -148,66 +180,59 @@ int main() {
                 tournament.end_tournament(players);
                 tournament.print_results();
             }
-        }
+        }*/
         else if (command == "listar_ranking" or command == "lr") {
-            vector<string> ranking = players.get_ranking();
+            cout << endl;
+            vector<map<string, Player>::iterator> ranking = players.get_ranking();
 
             int size = ranking.size();
 
             for (int i = 0; i < size; ++i) {
-                Player player = players.get_player(ranking[i]);
-                cout << i + 1 << ' ' << ranking[i] << ' ' <<
-                player.get_points() << endl;
+                map<string, Player>::iterator player = ranking[i];
+                cout << i + 1 << ' ' << player->second.get_name() << ' ' <<
+                player->second.get_points() << endl;
             }
         }
         else if (command == "listar_jugadores" or command == "lj") {
-            vector<string> players_names = players.get_players();
-
-            int size = players_names.size();
-
-            for (int i = 0; i < size; ++i) {
-                Player player = players.get_player(players_names[i]);
-                player.print();
-            }
+            cout << endl << players.get_num() << endl;
+            players.print();
         }
         else if (command == "consultar_jugador" or command == "cj") {
             string p;
             cin >> p;
 
+            cout << ' ' << p << endl;
+
             if (players.player_exists(p)) {
-                Player player = players.get_player(p);
-                player.print();
+                players.get_iterator(p)->second.print();
             }
             else {
-                cout << "Error: player does not exist." << endl;
+                cout << "error: el jugador no existe" << endl;
             }
         }
-        else if (command == "listar_torneo" or command == "lt") {
-            vector<string> tournaments_name = tournaments.get_tournaments();
-            int size = tournaments_name.size();
+        else if (command == "listar_torneos" or command == "lt") {
+            cout << endl << tournaments.num_tournaments() << endl;
 
-            for (int i = 0; i < size; ++i) {
-                Tournament tournament = tournaments.get_tournament
-                        (tournaments_name[i]);
-
-                cout << tournaments_name[i] << ' ' <<
-                tournament.get_category() << endl;
-            }
+            tournaments.print(categories);
         }
-        else if (command == "listar_categorías" or command == "lc") {
+        else if (command == "listar_categorias" or command == "lc") {
+            cout << endl;
             vector<Category> categories_data = categories.get_categories();
             int size = categories_data.size();
 
+            cout << size << ' ' << categories.get_levels() << endl;
+
             for (int i = 0; i < size; ++i) {
                 Category category = categories_data[i];
-                cout << category.get_name() << ' ' << endl;
+                cout << category.get_name();
 
                 vector<int> points_per_level = category.get_points_per_level();
                 int size2 = points_per_level.size();
 
-                for (int j = 0; j < size; ++j) {
-                    cout << j + 1 << ' ' << points_per_level[j] << endl;
+                for (int j = 0; j < size2; ++j) {
+                    cout << ' ' << points_per_level[j];
                 }
+                cout << endl;
             }
         }
 

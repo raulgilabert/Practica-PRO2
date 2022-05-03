@@ -11,6 +11,7 @@
 
 #include "player.hh"
 #include "set_players.hh"
+#include "set_categories.hh"
 
 using namespace std;
 
@@ -20,9 +21,9 @@ class Tournament {
 private:
     string id;
     int num_registered;
-    vector<Player> players;
+    vector<map<string, Player>::iterator> players;
     int category;
-    BinTree<string> matches;
+    BinTree<int> matches;
 
     /** @brief Return the result of the tournament
      * \pre true
@@ -33,17 +34,35 @@ private:
 public:
     Tournament(string id, int category);
 
+    Tournament();
+
     ~Tournament();
 
     /** @brief Add the player to the tournament
      * \pre player is a valid player not included in the implicit parameter
      * \post Added player to the implicit parameter */
-    void add_player(Player player);
+    void add_player(map<string, Player>::iterator player);
+
+    void create_matches();
 
     /** @brief Get the number of the category of the tournament
      * \pre true
      * \post Return category from the implicit parameter */
     int get_category() const;
+
+
+    /** @brief Generate the BinTree of matches
+     * \pre 0 < nodes <= 2^(k-1), 8 <= n <= 2^(k-1), 0 < pos <= 2^(k-1)
+     * \post returned the binary tree of matches
+     */
+    BinTree<int> inscriptions_t(int nodes, int n, int pos);
+
+    /** @brief Call to generate the matches tree with the players data
+     * \pre 8 <= n <= 2^(k-1)
+     * \post BinTree of matches creates
+     */
+    void inscriptions(int n);
+
 
     /** @brief En the tournament
      * \pre Players is a set of players
@@ -55,6 +74,11 @@ public:
      * \pre true
      * \post The results are printed in the standard channel */
     void print_results();
+
+    /** @brief Print the name and the category of the tournament
+     * \pre true
+     * \post print in the standard channel id and category from the implicit paramenter */ 
+    void print(const Set_categories& cat) const;
 };
 
 #endif

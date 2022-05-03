@@ -48,10 +48,21 @@ public:
      * \post Deleted the tournament from the category */
     void delete_tournament(int category, string tournament);
 
-    /** Get all the categories data
+    /** @brief Get all the categories data
      * \pre true
      * \post Return the categories */
     vector<Category> get_categories();
+
+    /** @brief Get the requested category's name
+     * \pre 0 < pos <= num
+     * \post return name of the category with identifier pos */
+    string get_name(int pos) const;
+
+    /** @brief Get the levels quantity
+     * \pre true
+     * \post return the quantity of levels from the implicit parameter
+     */
+    int get_levels();
 
     /** @brief Read the categories data
      * \pre Two integers (C and K), n categories identifiers and C*K integers

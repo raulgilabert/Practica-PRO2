@@ -6,6 +6,7 @@
 #define SET_TOURNAMENT
 
 #include "tournament.hh"
+#include "set_categories.hh"
 
 using namespace std;
 
@@ -14,14 +15,8 @@ using namespace std;
  */
 class Set_tournament {
 private:
-    int number;
-    map<string, Tournament> tournaments_data;
-    vector<string> tournaments;
-
-    /** @brief Sort the tournaments by their name
-     * \pre true
-     * \post tournaments sorted by their name */
-    void sort_tournaments();
+    int num;
+    map<string, Tournament> tournaments;
 
 public:
     Set_tournament();
@@ -29,9 +24,9 @@ public:
     ~Set_tournament();
 
     /** @brief Add a tournament
-     * \pre id a tournament identifier
+     * \pre id a tournament identifier, 0 <= category <= C
      * \post Tournament added to the implicit parameter */
-    void add_tournament(string id);
+    void add_tournament(string id, int category);
 
     /** @brief Delete a tournament
      * \pre id a tournament identifier
@@ -62,6 +57,13 @@ public:
      * \pre An integer n and n pairs of string and integer
      * \post Added the data to the implicit parameter */
     void read();
+
+    /** @brief Print the data of all the tournaments
+     * \pre true
+     * \post printed the data of the tournaments on the standard channel */
+    void print(const Set_categories& cat);
+
+
 };
 
 #endif
