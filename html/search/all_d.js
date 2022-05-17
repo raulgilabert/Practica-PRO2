@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['update_5fdata_0',['update_data',['../class_player.html#aacd0bdb6d7c38196e0b8e38b5b6af4cd',1,'Player']]]
+  ['update_5fdata_0',['update_data',['../class_player.html#afb70fff21860e1a2e9193227840fbb9a',1,'Player']]]
 ];

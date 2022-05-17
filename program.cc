@@ -63,11 +63,11 @@ int main() {
         tournaments.add_tournament(name, cat);
     }
 
-
     Set_players players;
     players.read();
 
-    map<string, Tournament> tournaments_playing;
+    map<string, map<string, Tournament>::iterator> tournaments_playing;
+
 
     string command;
     cin >> command;
@@ -102,7 +102,7 @@ int main() {
                 }
                 else {
                     tournaments.add_tournament(t, c);
-                    players.add_tournament(t);
+                    //players.add_tournament(t);
                     cout << tournaments.num_tournaments() << endl;
                 }
             }
@@ -117,6 +117,7 @@ int main() {
             cout << ' ' << p << endl;
 
             if (players.player_exists(p)) {
+                tournaments.delete_player(p);
                 players.delete_player(p);
                 cout << players.get_num() << endl;
             }
@@ -131,10 +132,27 @@ int main() {
             cout << ' ' << t << endl;
 
             if (tournaments.tournament_exists(t)) {
-                const Tournament tournament = tournaments.get_tournament(t);
+                map<string, Tournament>::iterator tournament = tournaments.get_tournament(t);
+
+                vector<last_played> points_to_delete = tournament->second
+                        .last_tournament_played();
+
+                int size = points_to_delete.size();
+
+                for (int i = 0; i < size; ++i) {
+                    int points = categories.points_level(
+                            tournament->second.get_category(),
+                            points_to_delete[i].points);
+
+                    if (points_to_delete[i].player != "") {
+                        players.modify_points(points_to_delete[i].player,
+                                              -points);
+                    }
+                }
+
                 tournaments.delete_tournament(t);
-                players.delete_tournament(t);
                 cout << tournaments.num_tournaments() << endl;
+                players.recalculate_ranking();
             }
             else {
                 cout << "error: el torneo no existe" << endl;
@@ -150,37 +168,92 @@ int main() {
                 int n;
                 cin >> n;
 
-                Tournament tournament = tournaments.get_tournament(t);
+                map<string, Tournament>::iterator tournament = 
+                    tournaments.get_tournament(t);
+
+                vector<last_played> points_to_delete =
+                    tournament->second.last_tournament_played();
+
+                tournament->second.clear();
 
                 for (int i = 0; i < n; ++i) {
                     int position_in_ranking;
                     cin >> position_in_ranking;
 
-                    tournament.add_player(
-                            players.get_iterator(position_in_ranking - 1));
+                    tournament->second.add_player(
+                            players.get_iterator(position_in_ranking
+                            - 1));
                 }
 
-                tournament.inscriptions(n);
+                tournament->second.inscriptions(n);
 
                 tournaments_playing[t] = tournament;
             }
             else {
                 //cout << "error: el torneo no existe" << endl;
             }
-        }/*
+        }
         else if (command == "finalizar_torneo" or command == "ft") {
             string t;
             cin >> t;
 
-            if (tournaments_playing.find(t) != tournaments_playing.end()) {
-                Tournament tournament = tournaments.get_tournament(t);
-                tournament.end_tournament(players);
-                tournament.print_results();
+            cout << ' ' << t << endl;
+
+            map<string, map<string, Tournament>::iterator>::iterator
+            tournament = tournaments_playing.find(t);
+            // Check if tournament is being played
+            if (tournament != tournaments_playing.end()) {
+                vector<last_played> points_to_delete =
+                        tournament->second->second.last_tournament_played();
+
+                int size = points_to_delete.size();
+
+                for (int i = 0; i < size; ++i) {
+                    int points = categories.points_level(
+                            tournament->second->second.get_category(),
+                            points_to_delete[i].points);
+
+                    if (points_to_delete[i].player != "") {
+                        players.modify_points(points_to_delete[i].player,
+                                              -points);
+                    }
+                }
+
+                tournament->second->second.get_results_i();
+                tournament->second->second.calc_winners_i();
+                tournament->second->second.print_tree_i();
+
+                vector<last_played> points_to_add = tournament->second->second
+                    .last_tournament_played();
+
+                size = points_to_add.size();
+
+                int counter = 0;
+
+                for (int i = 0; i < size; ++i) {
+                    int points = categories.points_level(
+                        tournament->second->second.get_category(),
+                        points_to_add[i].points);
+
+                    if (points_to_add[i].player != "") {
+                        players.get_iterator(points_to_add[i].player)->second
+                        .increase_tournament();
+                        players.modify_points(points_to_add[i].player, points);
+
+                        if (points != 0) {
+                            ++counter;
+                            cout << counter << '.' << points_to_add[i].player
+                            <<  ' ' << points << endl;
+                        }
+                    }
+                }
+                players.recalculate_ranking();
             }
-        }*/
+        }
         else if (command == "listar_ranking" or command == "lr") {
             cout << endl;
-            vector<map<string, Player>::iterator> ranking = players.get_ranking();
+            vector<map<string, Player>::iterator> ranking = 
+		players.get_ranking();
 
             int size = ranking.size();
 

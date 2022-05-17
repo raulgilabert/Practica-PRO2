@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cc']]]
+  ['inscriptions_0',['inscriptions',['../class_tournament.html#abab0c0beb48ebdd6fe4db3df151380a9',1,'Tournament']]],
+  ['inscriptions_5ft_1',['inscriptions_t',['../class_tournament.html#a6e42b8b9881ba3eb1274a492afa93aec',1,'Tournament']]]
 ];

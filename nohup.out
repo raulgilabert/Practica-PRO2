@@ -1,0 +1,280 @@
+polybar|warn:  Naming your configuration file 'config' is deprecated, the expected name is 'config.ini'.
+polybar|notice:  Parsing config file: /home/raulg/.config/polybar/config
+polybar|error: /home/raulg/.config/polybar/config:936: Value '(lsb_release -d | awk {'print $2'} ;echo " "; lsb_release -r | awk {'print $2'}) | tr -d '\n'' of key 'exec' contains one or more unescaped backslashes, please prepend them with the backslash escape character.
+polybar|warn:  Naming your configuration file 'config' is deprecated, the expected name is 'config.ini'.
+polybar|notice:  Parsing config file: /home/raulg/.config/polybar/config
+polybar|notice:  Listening for IPC messages (PID: 3844)
+polybar|error: /home/raulg/.config/polybar/config:936: Value '(lsb_release -d | awk {'print $2'} ;echo " "; lsb_release -r | awk {'print $2'}) | tr -d '\n'' of key 'exec' contains one or more unescaped backslashes, please prepend them with the backslash escape character.
+polybar|notice:  Listening for IPC messages (PID: 3843)
+polybar|warn:  The config parameter 'settings.throttle-output' is deprecated, it will be removed in the future. Please remove it from your config
+polybar|warn:  The config parameter 'settings.throttle-output-for' is deprecated, it will be removed in the future. Please remove it from your config
+polybar|notice:  Loading module 'filesystem' of type 'internal/fs'
+polybar|warn:  The config parameter 'settings.throttle-output' is deprecated, it will be removed in the future. Please remove it from your config
+polybar|warn:  The config parameter 'settings.throttle-output-for' is deprecated, it will be removed in the future. Please remove it from your config
+polybar|notice:  Loading module 'white' of type 'custom/text'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'bspwm' of type 'internal/bspwm'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'arrow5' of type 'custom/text'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'memory2' of type 'internal/memory'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'arrow6' of type 'custom/text'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'cpu2' of type 'internal/cpu'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|notice:  Loading module 'arrow8' of type 'custom/text'
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'arrow4' of type 'custom/text'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'helper' of type 'custom/text'
+polybar|notice:  Loading module 'arrow5' of type 'custom/text'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'arrow8' of type 'custom/text'
+polybar|notice:  Loading module 'battery' of type 'internal/battery'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'arrow4' of type 'custom/text'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'wireless-network' of type 'internal/network'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'networkspeedup' of type 'internal/network'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'networkspeeddown' of type 'internal/network'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loaded 10 modules
+polybar|notice:  Loaded font "UbuntuMono Nerd Font:size=12" (name=UbuntuMono Nerd Font, offset=2, file=/usr/share/fonts/NerdFonts/ttf/Ubuntu Mono Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "UbuntuMono Nerd Font:size=22" (name=UbuntuMono Nerd Font, offset=3, file=/usr/share/fonts/NerdFonts/ttf/Ubuntu Mono Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "Font Awesome 5 Free:style=Regular:pixelsize=8" (name=DejaVu Sans, offset=1, file=/usr/share/fonts/TTF/DejaVuSans.ttf)
+polybar|notice:  Loaded font "Font Awesome 5 Free:style=Solid:pixelsize=8" (name=DejaVu Sans, offset=1, file=/usr/share/fonts/TTF/DejaVuSans.ttf)
+polybar|notice:  Loaded font "Font Awesome 5 Brands:pixelsize=8" (name=DejaVu Sans, offset=1, file=/usr/share/fonts/TTF/DejaVuSans.ttf)
+polybar|error: Disabling tray manager (reason: Invalid position "0")
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'arrow7' of type 'custom/text'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'arrow1' of type 'custom/text'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'cmus' of type 'custom/script'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'arrow3' of type 'custom/text'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'pavolume' of type 'custom/script'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'arrow2' of type 'custom/text'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'weather' of type 'custom/script'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'arrow3' of type 'custom/text'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loading module 'date' of type 'internal/date'
+polybar|error: Invalid value for "settings.format-spacing", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-padding", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-margin", using default value (reason: stof)
+polybar|error: Invalid value for "settings.format-offset", using default value (reason: stof)
+polybar|notice:  Loaded 16 modules
+polybar|notice:  Loaded font "UbuntuMono Nerd Font:size=12" (name=UbuntuMono Nerd Font, offset=2, file=/usr/share/fonts/NerdFonts/ttf/Ubuntu Mono Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "UbuntuMono Nerd Font:size=22" (name=UbuntuMono Nerd Font, offset=3, file=/usr/share/fonts/NerdFonts/ttf/Ubuntu Mono Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "Font Awesome 5 Free:style=Regular:pixelsize=8" (name=DejaVu Sans, offset=1, file=/usr/share/fonts/TTF/DejaVuSans.ttf)
+polybar|notice:  Loaded font "Font Awesome 5 Free:style=Solid:pixelsize=8" (name=DejaVu Sans, offset=1, file=/usr/share/fonts/TTF/DejaVuSans.ttf)
+polybar|notice:  Loaded font "Font Awesome 5 Brands:pixelsize=8" (name=DejaVu Sans, offset=1, file=/usr/share/fonts/TTF/DejaVuSans.ttf)
+polybar|error: Disabling tray manager (reason: Invalid position "0")
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|warn:  Dropping unmatched character  (U+f2f1) in '   '
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|error: Parser error (reason: Invalid color: '${colors.text' (Context: '%{F${colors.text'))
+polybar|notice:  Received signal(15): Terminated
+polybar|notice:  Received signal(15): Terminated
+polybar|notice:  Termination signal received, shutting down...
+polybar|notice:  Termination signal received, shutting down...

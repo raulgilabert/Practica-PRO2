@@ -64,6 +64,9 @@ public:
      */
     int get_levels();
 
+
+    int points_level(int cat, int lvl);
+
     /** @brief Read the categories data
      * \pre Two integers (C and K), n categories identifiers and C*K integers
      * in the standard channel

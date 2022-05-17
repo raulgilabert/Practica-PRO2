@@ -16,40 +16,35 @@ Represents a set of tournaments.
 \item 
 \mbox{\hyperlink{class_set__tournament_a1280f0f825163a1b8a9e6c2bd9ac9719}{$\sim$\+Set\+\_\+tournament}} ()
 \item 
-void \mbox{\hyperlink{class_set__tournament_add434cafb41f4b8e9b27a01049865e08}{add\+\_\+tournament}} (string id)
+void \mbox{\hyperlink{class_set__tournament_a3713da08ff5f0af3e00856765d89329d}{add\+\_\+tournament}} (const string \&id, int category)
 \begin{DoxyCompactList}\small\item\em Add a tournament. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_set__tournament_ac680fc11b56d376995a719b9bc94dc3d}{delete\+\_\+tournament}} (string id)
+void \mbox{\hyperlink{class_set__tournament_a6d00c072b338ff5b8135228170e58843}{delete\+\_\+tournament}} (const string \&id)
 \begin{DoxyCompactList}\small\item\em Delete a tournament. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_set__tournament_a9730a7b500bc38a77c06f059eb975aae}{tournament\+\_\+exists}} (string id)
+bool \mbox{\hyperlink{class_set__tournament_abb5295730a14c11c794bde53c0e9fe8d}{tournament\+\_\+exists}} (const string \&id)
 \begin{DoxyCompactList}\small\item\em Check if the tournament exists. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_set__tournament_af00c9ce9cb2d489a0c7b0db9b8e795a9}{num\+\_\+tournaments}} ()
 \begin{DoxyCompactList}\small\item\em Return the number of tournaments. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_tournament}{Tournament}} \mbox{\hyperlink{class_set__tournament_ac501b54bfa79ad6ce5b0a6b8913606ef}{get\+\_\+tournament}} (string id)
+\mbox{\hyperlink{class_tournament}{Tournament}} \mbox{\hyperlink{class_set__tournament_a74f27793f8920f8a3d7d5a7eaf3dadcb}{get\+\_\+tournament}} (const string \&id)
 \begin{DoxyCompactList}\small\item\em Return the tournament requested. \end{DoxyCompactList}\item 
 vector$<$ string $>$ \mbox{\hyperlink{class_set__tournament_a9e5dfeaaf0cd487311d18c9171c04e87}{get\+\_\+tournaments}} ()
 \begin{DoxyCompactList}\small\item\em Return all the tournaments identifiers. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_set__tournament_a0000bd1ed7584e9261ef5026c8ac50ae}{read}} ()
-\begin{DoxyCompactList}\small\item\em Read the tournaments. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{class_set__tournament_abd4a4795512abdba3dfafc490ad740c6}{sort\+\_\+tournaments}} ()
-\begin{DoxyCompactList}\small\item\em Sort the tournaments by their name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Read the tournaments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_set__tournament_a593ef45ec5cd3ab09fdde083136a93d3}{print}} (const \mbox{\hyperlink{class_set__categories}{Set\+\_\+categories}} \&cat)
+\begin{DoxyCompactList}\small\item\em Print the data of all the tournaments. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{class_set__tournament_a576422eab3d1662b25fc9c9ea93e18d1}{number}}
+int \mbox{\hyperlink{class_set__tournament_a21b3e086df99edad220d45c3cff35a7b}{num}}
 \item 
-map$<$ string, \mbox{\hyperlink{class_tournament}{Tournament}} $>$ \mbox{\hyperlink{class_set__tournament_a85dcd748ec2f7843277d6b94284225ea}{tournaments\+\_\+data}}
-\item 
-vector$<$ string $>$ \mbox{\hyperlink{class_set__tournament_a6093a39081fada0182504e30ae0d4e52}{tournaments}}
+map$<$ string, \mbox{\hyperlink{class_tournament}{Tournament}} $>$ \mbox{\hyperlink{class_set__tournament_a72c1ce5106774ed6952bf737f798fa39}{tournaments}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Represents a set of tournaments. 
 
-Definition at line \mbox{\hyperlink{set__tournament_8hh_source_l00015}{15}} of file \mbox{\hyperlink{set__tournament_8hh_source}{set\+\_\+tournament.\+hh}}.
+Definition at line \mbox{\hyperlink{set__tournament_8hh_source_l00016}{16}} of file \mbox{\hyperlink{set__tournament_8hh_source}{set\+\_\+tournament.\+hh}}.
 
 
 
@@ -60,6 +55,17 @@ Definition at line \mbox{\hyperlink{set__tournament_8hh_source_l00015}{15}} of f
 \doxysubsubsection{\texorpdfstring{Set\_tournament()}{Set\_tournament()}}
 {\footnotesize\ttfamily Set\+\_\+tournament\+::\+Set\+\_\+tournament (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Definition at line \mbox{\hyperlink{set__tournament_8cc_source_l00006}{6}} of file \mbox{\hyperlink{set__tournament_8cc_source}{set\+\_\+tournament.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006                                \{}
+\DoxyCodeLine{00007     \mbox{\hyperlink{class_set__tournament_a21b3e086df99edad220d45c3cff35a7b}{num}} = 0;}
+\DoxyCodeLine{00008 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_set__tournament_a1280f0f825163a1b8a9e6c2bd9ac9719}\label{class_set__tournament_a1280f0f825163a1b8a9e6c2bd9ac9719}} 
 \index{Set\_tournament@{Set\_tournament}!````~Set\_tournament@{$\sim$Set\_tournament}}
 \index{````~Set\_tournament@{$\sim$Set\_tournament}!Set\_tournament@{Set\_tournament}}
@@ -68,44 +74,51 @@ Definition at line \mbox{\hyperlink{set__tournament_8hh_source_l00015}{15}} of f
 
 
 
+Definition at line \mbox{\hyperlink{set__tournament_8cc_source_l00010}{10}} of file \mbox{\hyperlink{set__tournament_8cc_source}{set\+\_\+tournament.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010 \{\}}
+
+\end{DoxyCode}
+
+
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_set__tournament_abd4a4795512abdba3dfafc490ad740c6}\label{class_set__tournament_abd4a4795512abdba3dfafc490ad740c6}} 
-\index{Set\_tournament@{Set\_tournament}!sort\_tournaments@{sort\_tournaments}}
-\index{sort\_tournaments@{sort\_tournaments}!Set\_tournament@{Set\_tournament}}
-\doxysubsubsection{\texorpdfstring{sort\_tournaments()}{sort\_tournaments()}}
-{\footnotesize\ttfamily void Set\+\_\+tournament\+::sort\+\_\+tournaments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Sort the tournaments by their name. 
-
-\begin{DoxyPrecond}{Precondition}
-true 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondition}
-tournaments sorted by their name 
-\end{DoxyPostcond}
-\mbox{\Hypertarget{class_set__tournament_add434cafb41f4b8e9b27a01049865e08}\label{class_set__tournament_add434cafb41f4b8e9b27a01049865e08}} 
+\mbox{\Hypertarget{class_set__tournament_a3713da08ff5f0af3e00856765d89329d}\label{class_set__tournament_a3713da08ff5f0af3e00856765d89329d}} 
 \index{Set\_tournament@{Set\_tournament}!add\_tournament@{add\_tournament}}
 \index{add\_tournament@{add\_tournament}!Set\_tournament@{Set\_tournament}}
 \doxysubsubsection{\texorpdfstring{add\_tournament()}{add\_tournament()}}
-{\footnotesize\ttfamily void Set\+\_\+tournament\+::add\+\_\+tournament (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Set\+\_\+tournament\+::add\+\_\+tournament (\begin{DoxyParamCaption}\item[{const string \&}]{id,  }\item[{int}]{category }\end{DoxyParamCaption})}
 
 
 
 Add a tournament. 
 
 \begin{DoxyPrecond}{Precondition}
-id a tournament identifier 
+id a tournament identifier, 0 \texorpdfstring{$<$}{<}= category \texorpdfstring{$<$}{<}= C 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
 \mbox{\hyperlink{class_tournament}{Tournament}} added to the implicit parameter 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_set__tournament_ac680fc11b56d376995a719b9bc94dc3d}\label{class_set__tournament_ac680fc11b56d376995a719b9bc94dc3d}} 
+
+
+Definition at line \mbox{\hyperlink{set__tournament_8cc_source_l00012}{12}} of file \mbox{\hyperlink{set__tournament_8cc_source}{set\+\_\+tournament.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012                                                                   \{}
+\DoxyCodeLine{00013     \mbox{\hyperlink{class_tournament}{Tournament}} tournament(\textcolor{keywordtype}{id}, category);}
+\DoxyCodeLine{00014     \mbox{\hyperlink{class_set__tournament_a72c1ce5106774ed6952bf737f798fa39}{tournaments}}[id] = tournament;}
+\DoxyCodeLine{00015     }
+\DoxyCodeLine{00016     ++\mbox{\hyperlink{class_set__tournament_a21b3e086df99edad220d45c3cff35a7b}{num}};}
+\DoxyCodeLine{00017 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set__tournament_a6d00c072b338ff5b8135228170e58843}\label{class_set__tournament_a6d00c072b338ff5b8135228170e58843}} 
 \index{Set\_tournament@{Set\_tournament}!delete\_tournament@{delete\_tournament}}
 \index{delete\_tournament@{delete\_tournament}!Set\_tournament@{Set\_tournament}}
 \doxysubsubsection{\texorpdfstring{delete\_tournament()}{delete\_tournament()}}
-{\footnotesize\ttfamily void Set\+\_\+tournament\+::delete\+\_\+tournament (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Set\+\_\+tournament\+::delete\+\_\+tournament (\begin{DoxyParamCaption}\item[{const string \&}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -117,11 +130,23 @@ id a tournament identifier
 \begin{DoxyPostcond}{Postcondition}
 \mbox{\hyperlink{class_tournament}{Tournament}} deleted from the implicit parameter 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_set__tournament_a9730a7b500bc38a77c06f059eb975aae}\label{class_set__tournament_a9730a7b500bc38a77c06f059eb975aae}} 
+
+
+Definition at line \mbox{\hyperlink{set__tournament_8cc_source_l00027}{27}} of file \mbox{\hyperlink{set__tournament_8cc_source}{set\+\_\+tournament.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027                                                        \{}
+\DoxyCodeLine{00028     \mbox{\hyperlink{class_set__tournament_a72c1ce5106774ed6952bf737f798fa39}{tournaments}}.erase(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00029     -\/-\/\mbox{\hyperlink{class_set__tournament_a21b3e086df99edad220d45c3cff35a7b}{num}};}
+\DoxyCodeLine{00030 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set__tournament_abb5295730a14c11c794bde53c0e9fe8d}\label{class_set__tournament_abb5295730a14c11c794bde53c0e9fe8d}} 
 \index{Set\_tournament@{Set\_tournament}!tournament\_exists@{tournament\_exists}}
 \index{tournament\_exists@{tournament\_exists}!Set\_tournament@{Set\_tournament}}
 \doxysubsubsection{\texorpdfstring{tournament\_exists()}{tournament\_exists()}}
-{\footnotesize\ttfamily bool Set\+\_\+tournament\+::tournament\+\_\+exists (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Set\+\_\+tournament\+::tournament\+\_\+exists (\begin{DoxyParamCaption}\item[{const string \&}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -133,6 +158,17 @@ id is a tournament identifier
 \begin{DoxyPostcond}{Postcondition}
 True if id in the implicit parameter, false if not 
 \end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__tournament_8cc_source_l00019}{19}} of file \mbox{\hyperlink{set__tournament_8cc_source}{set\+\_\+tournament.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019                                                        \{}
+\DoxyCodeLine{00020     \textcolor{keywordflow}{return} (\mbox{\hyperlink{class_set__tournament_a72c1ce5106774ed6952bf737f798fa39}{tournaments}}.find(\textcolor{keywordtype}{id}) != \mbox{\hyperlink{class_set__tournament_a72c1ce5106774ed6952bf737f798fa39}{tournaments}}.end());}
+\DoxyCodeLine{00021 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_set__tournament_af00c9ce9cb2d489a0c7b0db9b8e795a9}\label{class_set__tournament_af00c9ce9cb2d489a0c7b0db9b8e795a9}} 
 \index{Set\_tournament@{Set\_tournament}!num\_tournaments@{num\_tournaments}}
 \index{num\_tournaments@{num\_tournaments}!Set\_tournament@{Set\_tournament}}
@@ -149,11 +185,22 @@ true
 \begin{DoxyPostcond}{Postcondition}
 Return number 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_set__tournament_ac501b54bfa79ad6ce5b0a6b8913606ef}\label{class_set__tournament_ac501b54bfa79ad6ce5b0a6b8913606ef}} 
+
+
+Definition at line \mbox{\hyperlink{set__tournament_8cc_source_l00032}{32}} of file \mbox{\hyperlink{set__tournament_8cc_source}{set\+\_\+tournament.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032                                     \{}
+\DoxyCodeLine{00033     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__tournament_a21b3e086df99edad220d45c3cff35a7b}{num}};}
+\DoxyCodeLine{00034 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set__tournament_a74f27793f8920f8a3d7d5a7eaf3dadcb}\label{class_set__tournament_a74f27793f8920f8a3d7d5a7eaf3dadcb}} 
 \index{Set\_tournament@{Set\_tournament}!get\_tournament@{get\_tournament}}
 \index{get\_tournament@{get\_tournament}!Set\_tournament@{Set\_tournament}}
 \doxysubsubsection{\texorpdfstring{get\_tournament()}{get\_tournament()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_tournament}{Tournament}} Set\+\_\+tournament\+::get\+\_\+tournament (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tournament}{Tournament}} Set\+\_\+tournament\+::get\+\_\+tournament (\begin{DoxyParamCaption}\item[{const string \&}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -165,6 +212,17 @@ id is a tournament identifier
 \begin{DoxyPostcond}{Postcondition}
 Return the tournament requested 
 \end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__tournament_8cc_source_l00023}{23}} of file \mbox{\hyperlink{set__tournament_8cc_source}{set\+\_\+tournament.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023                                                           \{}
+\DoxyCodeLine{00024     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__tournament_a72c1ce5106774ed6952bf737f798fa39}{tournaments}}.find(\textcolor{keywordtype}{id})-\/>second;}
+\DoxyCodeLine{00025 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_set__tournament_a9e5dfeaaf0cd487311d18c9171c04e87}\label{class_set__tournament_a9e5dfeaaf0cd487311d18c9171c04e87}} 
 \index{Set\_tournament@{Set\_tournament}!get\_tournaments@{get\_tournaments}}
 \index{get\_tournaments@{get\_tournaments}!Set\_tournament@{Set\_tournament}}
@@ -199,32 +257,72 @@ Added the data to the implicit parameter
 \end{DoxyPostcond}
 
 
+Definition at line \mbox{\hyperlink{set__tournament_8cc_source_l00036}{36}} of file \mbox{\hyperlink{set__tournament_8cc_source}{set\+\_\+tournament.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036                           \{}
+\DoxyCodeLine{00037     \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{00038     cin >> n;}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{00041   \textcolor{keywordtype}{string} name;}
+\DoxyCodeLine{00042   \textcolor{keywordtype}{int} cat;}
+\DoxyCodeLine{00043   cin >> name >> cat;}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045   \mbox{\hyperlink{class_set__tournament_a3713da08ff5f0af3e00856765d89329d}{add\_tournament}}(name, cat);}
+\DoxyCodeLine{00046     \}}
+\DoxyCodeLine{00047 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set__tournament_a593ef45ec5cd3ab09fdde083136a93d3}\label{class_set__tournament_a593ef45ec5cd3ab09fdde083136a93d3}} 
+\index{Set\_tournament@{Set\_tournament}!print@{print}}
+\index{print@{print}!Set\_tournament@{Set\_tournament}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Set\+\_\+tournament\+::print (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_set__categories}{Set\+\_\+categories}} \&}]{cat }\end{DoxyParamCaption})}
+
+
+
+Print the data of all the tournaments. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+printed the data of the tournaments on the standard channel 
+\end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__tournament_8cc_source_l00049}{49}} of file \mbox{\hyperlink{set__tournament_8cc_source}{set\+\_\+tournament.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049                                                     \{}
+\DoxyCodeLine{00050     \textcolor{keywordflow}{for} (map<string, Tournament>::const\_iterator it = \mbox{\hyperlink{class_set__tournament_a72c1ce5106774ed6952bf737f798fa39}{tournaments}}.begin(); it != \mbox{\hyperlink{class_set__tournament_a72c1ce5106774ed6952bf737f798fa39}{tournaments}}.end(); ++it) \{}
+\DoxyCodeLine{00051         it-\/>second.print(cat);}
+\DoxyCodeLine{00052         cout << endl;}
+\DoxyCodeLine{00053     \}}
+\DoxyCodeLine{00054 \}}
+
+\end{DoxyCode}
+
+
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_set__tournament_a576422eab3d1662b25fc9c9ea93e18d1}\label{class_set__tournament_a576422eab3d1662b25fc9c9ea93e18d1}} 
-\index{Set\_tournament@{Set\_tournament}!number@{number}}
-\index{number@{number}!Set\_tournament@{Set\_tournament}}
-\doxysubsubsection{\texorpdfstring{number}{number}}
-{\footnotesize\ttfamily int Set\+\_\+tournament\+::number\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line \mbox{\hyperlink{set__tournament_8hh_source_l00017}{17}} of file \mbox{\hyperlink{set__tournament_8hh_source}{set\+\_\+tournament.\+hh}}.
-
-\mbox{\Hypertarget{class_set__tournament_a85dcd748ec2f7843277d6b94284225ea}\label{class_set__tournament_a85dcd748ec2f7843277d6b94284225ea}} 
-\index{Set\_tournament@{Set\_tournament}!tournaments\_data@{tournaments\_data}}
-\index{tournaments\_data@{tournaments\_data}!Set\_tournament@{Set\_tournament}}
-\doxysubsubsection{\texorpdfstring{tournaments\_data}{tournaments\_data}}
-{\footnotesize\ttfamily map$<$string, \mbox{\hyperlink{class_tournament}{Tournament}}$>$ Set\+\_\+tournament\+::tournaments\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_set__tournament_a21b3e086df99edad220d45c3cff35a7b}\label{class_set__tournament_a21b3e086df99edad220d45c3cff35a7b}} 
+\index{Set\_tournament@{Set\_tournament}!num@{num}}
+\index{num@{num}!Set\_tournament@{Set\_tournament}}
+\doxysubsubsection{\texorpdfstring{num}{num}}
+{\footnotesize\ttfamily int Set\+\_\+tournament\+::num\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Definition at line \mbox{\hyperlink{set__tournament_8hh_source_l00018}{18}} of file \mbox{\hyperlink{set__tournament_8hh_source}{set\+\_\+tournament.\+hh}}.
 
-\mbox{\Hypertarget{class_set__tournament_a6093a39081fada0182504e30ae0d4e52}\label{class_set__tournament_a6093a39081fada0182504e30ae0d4e52}} 
+\mbox{\Hypertarget{class_set__tournament_a72c1ce5106774ed6952bf737f798fa39}\label{class_set__tournament_a72c1ce5106774ed6952bf737f798fa39}} 
 \index{Set\_tournament@{Set\_tournament}!tournaments@{tournaments}}
 \index{tournaments@{tournaments}!Set\_tournament@{Set\_tournament}}
 \doxysubsubsection{\texorpdfstring{tournaments}{tournaments}}
-{\footnotesize\ttfamily vector$<$string$>$ Set\+\_\+tournament\+::tournaments\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily map$<$string, \mbox{\hyperlink{class_tournament}{Tournament}}$>$ Set\+\_\+tournament\+::tournaments\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -232,6 +330,7 @@ Definition at line \mbox{\hyperlink{set__tournament_8hh_source_l00019}{19}} of f
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{set__tournament_8hh}{set\+\_\+tournament.\+hh}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{set__tournament_8hh}{set\+\_\+tournament.\+hh}}\item 
+\mbox{\hyperlink{set__tournament_8cc}{set\+\_\+tournament.\+cc}}\end{DoxyCompactItemize}

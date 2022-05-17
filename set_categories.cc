@@ -47,3 +47,7 @@ int Set_categories::get_levels() {
 string Set_categories::get_name(int pos) const {
     return categories[pos - 1].get_name();
 }
+
+int Set_categories::points_level(int cat, int lvl) {
+    return categories[cat - 1].get_points_per_level()[lvl];
+}

@@ -16,28 +16,34 @@ Represent a set of players.
 \item 
 \mbox{\hyperlink{class_set__players_aa018f32a79c942d628451327d3af9d63}{$\sim$\+Set\+\_\+players}} ()
 \item 
-void \mbox{\hyperlink{class_set__players_af7296ec7b05e7249a78fba1c0ac9749e}{add\+\_\+player}} (string id)
+void \mbox{\hyperlink{class_set__players_ac4dc303d81e6c0dd3b255ab00d0dcc27}{add\+\_\+player}} (const string \&id)
 \begin{DoxyCompactList}\small\item\em Add the player. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_set__players_ad8e83d08b44ab8c604b48bbfd5cb463a}{delete\+\_\+player}} (string id)
+void \mbox{\hyperlink{class_set__players_aa9b0633239a10c99ae54cad4e4aec719}{delete\+\_\+player}} (const string \&id)
 \begin{DoxyCompactList}\small\item\em Delete the player. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_set__players_a9f4964e210cda1754b42c2ccb2d3f7ae}{add\+\_\+tournament}} (string tournament)
 \begin{DoxyCompactList}\small\item\em Add a tournament to all the players. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_set__players_a4336e4e19553a4de7370836678c30fc8}{delete\+\_\+tournament}} (string tournament)
 \begin{DoxyCompactList}\small\item\em Delete a tournament from all the players. \end{DoxyCompactList}\item 
-vector$<$ string $>$ \mbox{\hyperlink{class_set__players_ada5b3b0de2bf3c89d44cd9a75a3489ca}{get\+\_\+players}} ()
+map$<$ string, \mbox{\hyperlink{class_player}{Player}} $>$\+::iterator \mbox{\hyperlink{class_set__players_a341494d26997bb09495a8cbaf9ab0bee}{get\+\_\+iterator}} (const string \&id)
+\begin{DoxyCompactList}\small\item\em Return a iterator to the element requested. \end{DoxyCompactList}\item 
+map$<$ string, \mbox{\hyperlink{class_player}{Player}} $>$\+::iterator \mbox{\hyperlink{class_set__players_a74c85fd453aea2289ea4f70d46f29207}{get\+\_\+iterator}} (int pos)
+\begin{DoxyCompactList}\small\item\em Return a iterator to the player in the ranking position requested. \end{DoxyCompactList}\item 
+map$<$ string, \mbox{\hyperlink{class_player}{Player}} $>$ \mbox{\hyperlink{class_set__players_acc9e62dd438b1939f5b5743843ed6aef}{get\+\_\+players}} ()
 \begin{DoxyCompactList}\small\item\em Return all the players identifiers. \end{DoxyCompactList}\item 
-vector$<$ string $>$ \mbox{\hyperlink{class_set__players_ab44d75b687a163b06d18b753d71a7fda}{get\+\_\+ranking}} ()
+vector$<$ map$<$ string, \mbox{\hyperlink{class_player}{Player}} $>$\+::iterator $>$ \mbox{\hyperlink{class_set__players_a1d0a62bf3339895dc2be80b6d49d1faa}{get\+\_\+ranking}} ()
 \begin{DoxyCompactList}\small\item\em Return the ranking with the players identifier. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_set__players_aa4723d821c8bf5410666bdd77cb75c79}{get\+\_\+num}} ()
+\begin{DoxyCompactList}\small\item\em Get the queantity of players. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_set__players_a6fb442d27e5b8f70ea4f4cd1741a338b}{recalculate\+\_\+ranking}} ()
 \begin{DoxyCompactList}\small\item\em Recalculate the ranking. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_set__players_af09efa11af6402af133b5b831659f6d0}{print\+\_\+players}} ()
 \begin{DoxyCompactList}\small\item\em Print the players\textquotesingle{} name. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_set__players_ad6e2530c6b33d83726bf7d2bbe8f8f97}{player\+\_\+exists}} (string id)
+bool \mbox{\hyperlink{class_set__players_ad4688bf691250ada7655a24b45870a81}{player\+\_\+exists}} (const string \&id)
 \begin{DoxyCompactList}\small\item\em Check if the player exist. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_set__players_a7bb08bb503c270caf51076500d212d69}{get\+\_\+player}} (string id)
-\begin{DoxyCompactList}\small\item\em Get a player data with the identifier. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_set__players_a6206ccc73a63eb2e64719333d8e409f8}{read}} ()
-\begin{DoxyCompactList}\small\item\em Read the players identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Read the players identifier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_set__players_a11cf560d381a06920872d8dc03ca45c5}{print}} ()
+\begin{DoxyCompactList}\small\item\em Print the data of all the players. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -50,9 +56,7 @@ int \mbox{\hyperlink{class_set__players_a15e63a6a62a79ca94fc1efc2bcd5a588}{num}}
 \item 
 map$<$ string, \mbox{\hyperlink{class_player}{Player}} $>$ \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\+\_\+data}}
 \item 
-vector$<$ string $>$ \mbox{\hyperlink{class_set__players_a0eb3cdc811ffbe32af45050bd268619b}{players}}
-\item 
-vector$<$ string $>$ \mbox{\hyperlink{class_set__players_ad4640eb2de0b542e8bc86eb5cef626d0}{ranking}}
+vector$<$ map$<$ string, \mbox{\hyperlink{class_player}{Player}} $>$\+::iterator $>$ \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}}
 \end{DoxyCompactItemize}
 
 
@@ -70,12 +74,32 @@ Definition at line \mbox{\hyperlink{set__players_8hh_source_l00021}{21}} of file
 \doxysubsubsection{\texorpdfstring{Set\_players()}{Set\_players()}}
 {\footnotesize\ttfamily Set\+\_\+players\+::\+Set\+\_\+players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Definition at line \mbox{\hyperlink{set__players_8cc_source_l00006}{6}} of file \mbox{\hyperlink{set__players_8cc_source}{set\+\_\+players.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006                          \{}
+\DoxyCodeLine{00007     \mbox{\hyperlink{class_set__players_a15e63a6a62a79ca94fc1efc2bcd5a588}{num}} = 0;}
+\DoxyCodeLine{00008 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_set__players_aa018f32a79c942d628451327d3af9d63}\label{class_set__players_aa018f32a79c942d628451327d3af9d63}} 
 \index{Set\_players@{Set\_players}!````~Set\_players@{$\sim$Set\_players}}
 \index{````~Set\_players@{$\sim$Set\_players}!Set\_players@{Set\_players}}
 \doxysubsubsection{\texorpdfstring{$\sim$Set\_players()}{~Set\_players()}}
 {\footnotesize\ttfamily Set\+\_\+players\+::$\sim$\+Set\+\_\+players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Definition at line \mbox{\hyperlink{set__players_8cc_source_l00010}{10}} of file \mbox{\hyperlink{set__players_8cc_source}{set\+\_\+players.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010 \{\}}
+
+\end{DoxyCode}
 
 
 \doxysubsection{Member Function Documentation}
@@ -95,11 +119,11 @@ true
 \begin{DoxyPostcond}{Postcondition}
 Players sorted by their name 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_set__players_af7296ec7b05e7249a78fba1c0ac9749e}\label{class_set__players_af7296ec7b05e7249a78fba1c0ac9749e}} 
+\mbox{\Hypertarget{class_set__players_ac4dc303d81e6c0dd3b255ab00d0dcc27}\label{class_set__players_ac4dc303d81e6c0dd3b255ab00d0dcc27}} 
 \index{Set\_players@{Set\_players}!add\_player@{add\_player}}
 \index{add\_player@{add\_player}!Set\_players@{Set\_players}}
 \doxysubsubsection{\texorpdfstring{add\_player()}{add\_player()}}
-{\footnotesize\ttfamily void Set\+\_\+players\+::add\+\_\+player (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Set\+\_\+players\+::add\+\_\+player (\begin{DoxyParamCaption}\item[{const string \&}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -111,11 +135,26 @@ id is a player identifier
 \begin{DoxyPostcond}{Postcondition}
 \mbox{\hyperlink{class_player}{Player}} added to the implicit parameter 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_set__players_ad8e83d08b44ab8c604b48bbfd5cb463a}\label{class_set__players_ad8e83d08b44ab8c604b48bbfd5cb463a}} 
+
+
+Definition at line \mbox{\hyperlink{set__players_8cc_source_l00012}{12}} of file \mbox{\hyperlink{set__players_8cc_source}{set\+\_\+players.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012                                              \{}
+\DoxyCodeLine{00013     \mbox{\hyperlink{class_player}{Player}} p(\textcolor{keywordtype}{id}, ++\mbox{\hyperlink{class_set__players_a15e63a6a62a79ca94fc1efc2bcd5a588}{num}});}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015     \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}[id] = p;}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017     \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}}.push\_back(\mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.find(\textcolor{keywordtype}{id}));}
+\DoxyCodeLine{00018 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set__players_aa9b0633239a10c99ae54cad4e4aec719}\label{class_set__players_aa9b0633239a10c99ae54cad4e4aec719}} 
 \index{Set\_players@{Set\_players}!delete\_player@{delete\_player}}
 \index{delete\_player@{delete\_player}!Set\_players@{Set\_players}}
 \doxysubsubsection{\texorpdfstring{delete\_player()}{delete\_player()}}
-{\footnotesize\ttfamily void Set\+\_\+players\+::delete\+\_\+player (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Set\+\_\+players\+::delete\+\_\+player (\begin{DoxyParamCaption}\item[{const string \&}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -127,6 +166,38 @@ id is a player identifier
 \begin{DoxyPostcond}{Postcondition}
 \mbox{\hyperlink{class_player}{Player}} deleted from the implicit parameter 
 \end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__players_8cc_source_l00020}{20}} of file \mbox{\hyperlink{set__players_8cc_source}{set\+\_\+players.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020                                                 \{}
+\DoxyCodeLine{00021     map<string, Player>::iterator p = \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00022     \textcolor{keywordtype}{int} pos = p-\/>second.get\_position();}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024     \textcolor{keywordtype}{int} size = \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}}.size();}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026     \textcolor{comment}{//vector<map<string, Player>::iterator> new\_ranking(size);}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028     \textcolor{comment}{/*for (i = 0; i < pos -\/ 1; ++i) \{}}
+\DoxyCodeLine{00029 \textcolor{comment}{        new\_ranking[i] = ranking[i];}}
+\DoxyCodeLine{00030 \textcolor{comment}{    \}*/}}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = pos; i < size; ++i) \{}
+\DoxyCodeLine{00033         \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}}[i -\/ 1] = \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}}[i];}
+\DoxyCodeLine{00034         \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}}[i -\/ 1]-\/>second.decrease\_pos();}
+\DoxyCodeLine{00035     \}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037     \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}}.pop\_back();}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039     \textcolor{comment}{//ranking = new\_ranking;}}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041     \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.erase(p);}
+\DoxyCodeLine{00042     -\/-\/\mbox{\hyperlink{class_set__players_a15e63a6a62a79ca94fc1efc2bcd5a588}{num}};}
+\DoxyCodeLine{00043 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_set__players_a9f4964e210cda1754b42c2ccb2d3f7ae}\label{class_set__players_a9f4964e210cda1754b42c2ccb2d3f7ae}} 
 \index{Set\_players@{Set\_players}!add\_tournament@{add\_tournament}}
 \index{add\_tournament@{add\_tournament}!Set\_players@{Set\_players}}
@@ -159,11 +230,65 @@ Delete a tournament from all the players.
 \begin{DoxyPostcond}{Postcondition}
 \mbox{\hyperlink{class_tournament}{Tournament}} deleted from all the players in the implicit parameter 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_set__players_ada5b3b0de2bf3c89d44cd9a75a3489ca}\label{class_set__players_ada5b3b0de2bf3c89d44cd9a75a3489ca}} 
+\mbox{\Hypertarget{class_set__players_a341494d26997bb09495a8cbaf9ab0bee}\label{class_set__players_a341494d26997bb09495a8cbaf9ab0bee}} 
+\index{Set\_players@{Set\_players}!get\_iterator@{get\_iterator}}
+\index{get\_iterator@{get\_iterator}!Set\_players@{Set\_players}}
+\doxysubsubsection{\texorpdfstring{get\_iterator()}{get\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily map$<$ string, \mbox{\hyperlink{class_player}{Player}} $>$\+::iterator Set\+\_\+players\+::get\+\_\+iterator (\begin{DoxyParamCaption}\item[{const string \&}]{id }\end{DoxyParamCaption})}
+
+
+
+Return a iterator to the element requested. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Return a iterator to the element requested if exists or player\+\_\+data.\+end() if not 
+\end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__players_8cc_source_l00045}{45}} of file \mbox{\hyperlink{set__players_8cc_source}{set\+\_\+players.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045                                                                       \{}
+\DoxyCodeLine{00046     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00047 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set__players_a74c85fd453aea2289ea4f70d46f29207}\label{class_set__players_a74c85fd453aea2289ea4f70d46f29207}} 
+\index{Set\_players@{Set\_players}!get\_iterator@{get\_iterator}}
+\index{get\_iterator@{get\_iterator}!Set\_players@{Set\_players}}
+\doxysubsubsection{\texorpdfstring{get\_iterator()}{get\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily map$<$ string, \mbox{\hyperlink{class_player}{Player}} $>$\+::iterator Set\+\_\+players\+::get\+\_\+iterator (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Return a iterator to the player in the ranking position requested. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Return a iterator to the player requested 
+\end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__players_8cc_source_l00049}{49}} of file \mbox{\hyperlink{set__players_8cc_source}{set\+\_\+players.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049                                                              \{}
+\DoxyCodeLine{00050     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}}[pos];}
+\DoxyCodeLine{00051 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set__players_acc9e62dd438b1939f5b5743843ed6aef}\label{class_set__players_acc9e62dd438b1939f5b5743843ed6aef}} 
 \index{Set\_players@{Set\_players}!get\_players@{get\_players}}
 \index{get\_players@{get\_players}!Set\_players@{Set\_players}}
 \doxysubsubsection{\texorpdfstring{get\_players()}{get\_players()}}
-{\footnotesize\ttfamily vector$<$ string $>$ Set\+\_\+players\+::get\+\_\+players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily map$<$ string, \mbox{\hyperlink{class_player}{Player}} $>$ Set\+\_\+players\+::get\+\_\+players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -175,11 +300,22 @@ true
 \begin{DoxyPostcond}{Postcondition}
 Return the players in the implicit parameter 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_set__players_ab44d75b687a163b06d18b753d71a7fda}\label{class_set__players_ab44d75b687a163b06d18b753d71a7fda}} 
+
+
+Definition at line \mbox{\hyperlink{set__players_8cc_source_l00054}{54}} of file \mbox{\hyperlink{set__players_8cc_source}{set\+\_\+players.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054                                              \{}
+\DoxyCodeLine{00055     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}};}
+\DoxyCodeLine{00056 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set__players_a1d0a62bf3339895dc2be80b6d49d1faa}\label{class_set__players_a1d0a62bf3339895dc2be80b6d49d1faa}} 
 \index{Set\_players@{Set\_players}!get\_ranking@{get\_ranking}}
 \index{get\_ranking@{get\_ranking}!Set\_players@{Set\_players}}
 \doxysubsubsection{\texorpdfstring{get\_ranking()}{get\_ranking()}}
-{\footnotesize\ttfamily vector$<$ string $>$ Set\+\_\+players\+::get\+\_\+ranking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily vector$<$ map$<$ string, \mbox{\hyperlink{class_player}{Player}} $>$\+::iterator $>$ Set\+\_\+players\+::get\+\_\+ranking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -191,6 +327,44 @@ true
 \begin{DoxyPostcond}{Postcondition}
 Return the ranking in the implicit parameter 
 \end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__players_8cc_source_l00094}{94}} of file \mbox{\hyperlink{set__players_8cc_source}{set\+\_\+players.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094                                                              \{}
+\DoxyCodeLine{00095     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}};}
+\DoxyCodeLine{00096 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set__players_aa4723d821c8bf5410666bdd77cb75c79}\label{class_set__players_aa4723d821c8bf5410666bdd77cb75c79}} 
+\index{Set\_players@{Set\_players}!get\_num@{get\_num}}
+\index{get\_num@{get\_num}!Set\_players@{Set\_players}}
+\doxysubsubsection{\texorpdfstring{get\_num()}{get\_num()}}
+{\footnotesize\ttfamily int Set\+\_\+players\+::get\+\_\+num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the queantity of players. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+return the quantity of players 
+\end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__players_8cc_source_l00090}{90}} of file \mbox{\hyperlink{set__players_8cc_source}{set\+\_\+players.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090                          \{}
+\DoxyCodeLine{00091     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__players_a15e63a6a62a79ca94fc1efc2bcd5a588}{num}};}
+\DoxyCodeLine{00092 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_set__players_a6fb442d27e5b8f70ea4f4cd1741a338b}\label{class_set__players_a6fb442d27e5b8f70ea4f4cd1741a338b}} 
 \index{Set\_players@{Set\_players}!recalculate\_ranking@{recalculate\_ranking}}
 \index{recalculate\_ranking@{recalculate\_ranking}!Set\_players@{Set\_players}}
@@ -223,11 +397,11 @@ true
 \begin{DoxyPostcond}{Postcondition}
 Print in the standard channel the players 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_set__players_ad6e2530c6b33d83726bf7d2bbe8f8f97}\label{class_set__players_ad6e2530c6b33d83726bf7d2bbe8f8f97}} 
+\mbox{\Hypertarget{class_set__players_ad4688bf691250ada7655a24b45870a81}\label{class_set__players_ad4688bf691250ada7655a24b45870a81}} 
 \index{Set\_players@{Set\_players}!player\_exists@{player\_exists}}
 \index{player\_exists@{player\_exists}!Set\_players@{Set\_players}}
 \doxysubsubsection{\texorpdfstring{player\_exists()}{player\_exists()}}
-{\footnotesize\ttfamily bool Set\+\_\+players\+::player\+\_\+exists (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Set\+\_\+players\+::player\+\_\+exists (\begin{DoxyParamCaption}\item[{const string \&}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -239,22 +413,17 @@ id is a player identifier
 \begin{DoxyPostcond}{Postcondition}
 true if player in the implicit parameter, false if not 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_set__players_a7bb08bb503c270caf51076500d212d69}\label{class_set__players_a7bb08bb503c270caf51076500d212d69}} 
-\index{Set\_players@{Set\_players}!get\_player@{get\_player}}
-\index{get\_player@{get\_player}!Set\_players@{Set\_players}}
-\doxysubsubsection{\texorpdfstring{get\_player()}{get\_player()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}} Set\+\_\+players\+::get\+\_\+player (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
 
 
+Definition at line \mbox{\hyperlink{set__players_8cc_source_l00058}{58}} of file \mbox{\hyperlink{set__players_8cc_source}{set\+\_\+players.\+cc}}.
 
-Get a player data with the identifier. 
 
-\begin{DoxyPrecond}{Precondition}
-id is a player identifier 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondition}
-Return the player requested 
-\end{DoxyPostcond}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058                                                 \{}
+\DoxyCodeLine{00059     \textcolor{keywordflow}{return} (\mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.find(\textcolor{keywordtype}{id}) != \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.end());}
+\DoxyCodeLine{00060 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_set__players_a6206ccc73a63eb2e64719333d8e409f8}\label{class_set__players_a6206ccc73a63eb2e64719333d8e409f8}} 
 \index{Set\_players@{Set\_players}!read@{read}}
 \index{read@{read}!Set\_players@{Set\_players}}
@@ -271,6 +440,54 @@ An integer P and P strings
 \begin{DoxyPostcond}{Postcondition}
 Players added to the implicit parameter 
 \end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__players_8cc_source_l00078}{78}} of file \mbox{\hyperlink{set__players_8cc_source}{set\+\_\+players.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078                        \{}
+\DoxyCodeLine{00079     \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{00080     cin >> n;}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{00083         \textcolor{keywordtype}{string} name;}
+\DoxyCodeLine{00084         cin >> name;}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086         \mbox{\hyperlink{class_set__players_ac4dc303d81e6c0dd3b255ab00d0dcc27}{add\_player}}(name);}
+\DoxyCodeLine{00087     \}}
+\DoxyCodeLine{00088 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set__players_a11cf560d381a06920872d8dc03ca45c5}\label{class_set__players_a11cf560d381a06920872d8dc03ca45c5}} 
+\index{Set\_players@{Set\_players}!print@{print}}
+\index{print@{print}!Set\_players@{Set\_players}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Set\+\_\+players\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print the data of all the players. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+printed the data of the players on the standard channel 
+\end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__players_8cc_source_l00098}{98}} of file \mbox{\hyperlink{set__players_8cc_source}{set\+\_\+players.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098                         \{}
+\DoxyCodeLine{00099     \textcolor{keywordflow}{for} (map<string, Player>::const\_iterator it = \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.begin(); it != \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.end(); ++it) \{}
+\DoxyCodeLine{00100         it-\/>second.print();}
+\DoxyCodeLine{00101     \}}
+\DoxyCodeLine{00102 \}}
+
+\end{DoxyCode}
 
 
 \doxysubsection{Member Data Documentation}
@@ -294,28 +511,19 @@ Definition at line \mbox{\hyperlink{set__players_8hh_source_l00023}{23}} of file
 
 Definition at line \mbox{\hyperlink{set__players_8hh_source_l00024}{24}} of file \mbox{\hyperlink{set__players_8hh_source}{set\+\_\+players.\+hh}}.
 
-\mbox{\Hypertarget{class_set__players_a0eb3cdc811ffbe32af45050bd268619b}\label{class_set__players_a0eb3cdc811ffbe32af45050bd268619b}} 
-\index{Set\_players@{Set\_players}!players@{players}}
-\index{players@{players}!Set\_players@{Set\_players}}
-\doxysubsubsection{\texorpdfstring{players}{players}}
-{\footnotesize\ttfamily vector$<$string$>$ Set\+\_\+players\+::players\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}\label{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}} 
+\index{Set\_players@{Set\_players}!ranking@{ranking}}
+\index{ranking@{ranking}!Set\_players@{Set\_players}}
+\doxysubsubsection{\texorpdfstring{ranking}{ranking}}
+{\footnotesize\ttfamily vector$<$map$<$string, \mbox{\hyperlink{class_player}{Player}}$>$\+::iterator$>$ Set\+\_\+players\+::ranking\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Definition at line \mbox{\hyperlink{set__players_8hh_source_l00025}{25}} of file \mbox{\hyperlink{set__players_8hh_source}{set\+\_\+players.\+hh}}.
 
-\mbox{\Hypertarget{class_set__players_ad4640eb2de0b542e8bc86eb5cef626d0}\label{class_set__players_ad4640eb2de0b542e8bc86eb5cef626d0}} 
-\index{Set\_players@{Set\_players}!ranking@{ranking}}
-\index{ranking@{ranking}!Set\_players@{Set\_players}}
-\doxysubsubsection{\texorpdfstring{ranking}{ranking}}
-{\footnotesize\ttfamily vector$<$string$>$ Set\+\_\+players\+::ranking\hspace{0.3cm}{\ttfamily [private]}}
 
 
-
-Definition at line \mbox{\hyperlink{set__players_8hh_source_l00026}{26}} of file \mbox{\hyperlink{set__players_8hh_source}{set\+\_\+players.\+hh}}.
-
-
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{set__players_8hh}{set\+\_\+players.\+hh}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{set__players_8hh}{set\+\_\+players.\+hh}}\item 
+\mbox{\hyperlink{set__players_8cc}{set\+\_\+players.\+cc}}\end{DoxyCompactItemize}

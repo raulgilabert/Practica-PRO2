@@ -1,0 +1,230 @@
+\hypertarget{program_8cc_source}{}\doxysection{program.\+cc}
+\mbox{\hyperlink{program_8cc}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00031}00031 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{set__categories_8hh}{set\_categories.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00032}00032 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{set__players_8hh}{set\_players.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00033}00033 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{set__tournament_8hh}{set\_tournament.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00034}00034 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{category_8hh}{category.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00035}00035 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{player_8hh}{player.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00036}00036 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{tournament_8hh}{tournament.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00038}00038 \textcolor{preprocessor}{\#ifndef NO\_DIAGRAM}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00039}00039 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00040}00040 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00042}00042 \textcolor{preprocessor}{\#include "{}BinTree.hh"{}}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00043}00043 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00045}00045 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00048}\mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{00048}} \textcolor{keywordtype}{int} \mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00049}00049     \mbox{\hyperlink{class_set__categories}{Set\_categories}} categories;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00050}00050     categories.\mbox{\hyperlink{class_set__categories_a2d84f4d1299b68c3aa70425ad30a97ce}{read}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00051}00051     cout << \textcolor{stringliteral}{"{}categories"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00053}00053     \mbox{\hyperlink{class_set__tournament}{Set\_tournament}} tournaments;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00054}00054     \textcolor{comment}{//tournaments.read();}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00055}00055     \textcolor{comment}{// Read tournaments}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00056}00056     \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00057}00057     cin >> n;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00059}00059     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00060}00060         \textcolor{keywordtype}{string} name;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00061}00061         \textcolor{keywordtype}{int} cat;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00062}00062         cin >> name >> cat;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00064}00064   cout << i << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00066}00066         tournaments.\mbox{\hyperlink{class_set__tournament_a3713da08ff5f0af3e00856765d89329d}{add\_tournament}}(name, cat);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00067}00067     \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00069}00069     cout << \textcolor{stringliteral}{"{}tournaments"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00070}00070     \mbox{\hyperlink{class_set__players}{Set\_players}} players;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00071}00071     players.\mbox{\hyperlink{class_set__players_a6206ccc73a63eb2e64719333d8e409f8}{read}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00073}00073     cout << \textcolor{stringliteral}{"{}players"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00074}00074     map<string, Tournament> tournaments\_playing;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00076}00076     \textcolor{keywordtype}{string} command;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00077}00077     cin >> command;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00079}00079     \textcolor{keywordflow}{while} (command != \textcolor{stringliteral}{"{}fin"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00080}00080         cout << \textcolor{charliteral}{'\#'} << command;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00081}00081         \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}nuevo\_jugador"{}} or command == \textcolor{stringliteral}{"{}nj"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00082}00082             \textcolor{keywordtype}{string} id;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00083}00083             cin >> id;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00085}00085             cout << \textcolor{charliteral}{' '} << \textcolor{keywordtype}{id} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00087}00087             \textcolor{keywordflow}{if} (players.\mbox{\hyperlink{class_set__players_ad4688bf691250ada7655a24b45870a81}{player\_exists}}(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00088}00088                 cout << \textcolor{stringliteral}{"{}error: ya existe un jugador con ese nombre"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00089}00089             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00090}00090             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00091}00091                 players.\mbox{\hyperlink{class_set__players_ac4dc303d81e6c0dd3b255ab00d0dcc27}{add\_player}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00092}00092                 cout << players.\mbox{\hyperlink{class_set__players_aa4723d821c8bf5410666bdd77cb75c79}{get\_num}}() << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00093}00093             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00094}00094         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00095}00095         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}nuevo\_torneo"{}} or command == \textcolor{stringliteral}{"{}nt"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00096}00096             \textcolor{keywordtype}{int} C = categories.\mbox{\hyperlink{class_set__categories_a009e2c0ff6358700dc8b0060173774b3}{num\_categories}}(), c;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00097}00097             \textcolor{keywordtype}{string} t;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00099}00099             cin >> t >> c;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00101}00101             cout << \textcolor{charliteral}{' '} << t << \textcolor{charliteral}{' '} << c << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00103}00103             \textcolor{keywordflow}{if} (c > 0 and c <= C) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00104}00104                 \textcolor{keywordflow}{if} (tournaments.\mbox{\hyperlink{class_set__tournament_abb5295730a14c11c794bde53c0e9fe8d}{tournament\_exists}}(t)) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00105}00105                     cout << \textcolor{stringliteral}{"{}error: ya existe un torneo con ese nombre"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00106}00106                 \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00107}00107                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00108}00108                     tournaments.\mbox{\hyperlink{class_set__tournament_a3713da08ff5f0af3e00856765d89329d}{add\_tournament}}(t, c);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00109}00109                     \textcolor{comment}{//players.add\_tournament(t);}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00110}00110                     cout << tournaments.\mbox{\hyperlink{class_set__tournament_af00c9ce9cb2d489a0c7b0db9b8e795a9}{num\_tournaments}}() << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00111}00111                 \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00112}00112             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00113}00113             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00114}00114                 cout << \textcolor{stringliteral}{"{}error: la categoria no existe"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00115}00115             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00116}00116         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00117}00117         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}baja\_jugador"{}} or command == \textcolor{stringliteral}{"{}bj"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00118}00118             \textcolor{keywordtype}{string} p;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00119}00119             cin >> p;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00121}00121             cout << \textcolor{charliteral}{' '} << p << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00123}00123             \textcolor{keywordflow}{if} (players.\mbox{\hyperlink{class_set__players_ad4688bf691250ada7655a24b45870a81}{player\_exists}}(p)) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00124}00124                 players.\mbox{\hyperlink{class_set__players_aa9b0633239a10c99ae54cad4e4aec719}{delete\_player}}(p);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00125}00125                 cout << players.\mbox{\hyperlink{class_set__players_aa4723d821c8bf5410666bdd77cb75c79}{get\_num}}() << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00126}00126             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00127}00127             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00128}00128                 cout << \textcolor{stringliteral}{"{}error: el jugador no existe"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00129}00129             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00130}00130         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00131}00131         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}baja\_torneo"{}} or command == \textcolor{stringliteral}{"{}bt"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00132}00132             \textcolor{keywordtype}{string} t;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00133}00133             cin >> t;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00135}00135             cout << \textcolor{charliteral}{' '} << t << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00136}00136 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00137}00137             \textcolor{keywordflow}{if} (tournaments.\mbox{\hyperlink{class_set__tournament_abb5295730a14c11c794bde53c0e9fe8d}{tournament\_exists}}(t)) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00138}00138                 \textcolor{keyword}{const} \mbox{\hyperlink{class_tournament}{Tournament}} tournament = tournaments.\mbox{\hyperlink{class_set__tournament_a74f27793f8920f8a3d7d5a7eaf3dadcb}{get\_tournament}}(t);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00139}00139                 tournaments.\mbox{\hyperlink{class_set__tournament_a6d00c072b338ff5b8135228170e58843}{delete\_tournament}}(t);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00140}00140                 \textcolor{comment}{//players.delete\_tournament(t);}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00141}00141                 cout << tournaments.\mbox{\hyperlink{class_set__tournament_af00c9ce9cb2d489a0c7b0db9b8e795a9}{num\_tournaments}}() << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00142}00142             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00143}00143             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00144}00144                 cout << \textcolor{stringliteral}{"{}error: el torneo no existe"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00145}00145             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00146}00146         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00147}00147         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}iniciar\_torneo"{}} or command == \textcolor{stringliteral}{"{}it"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00148}00148             \textcolor{keywordtype}{string} t;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00149}00149             cin >> t;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00151}00151             cout << \textcolor{charliteral}{' '} << t << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00153}00153             \textcolor{keywordflow}{if} (tournaments.\mbox{\hyperlink{class_set__tournament_abb5295730a14c11c794bde53c0e9fe8d}{tournament\_exists}}(t)) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00154}00154                 \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00155}00155                 cin >> n;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00156}00156 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00157}00157                 \mbox{\hyperlink{class_tournament}{Tournament}} tournament = tournaments.\mbox{\hyperlink{class_set__tournament_a74f27793f8920f8a3d7d5a7eaf3dadcb}{get\_tournament}}(t);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00158}00158 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00159}00159                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00160}00160                     \textcolor{keywordtype}{int} position\_in\_ranking;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00161}00161                     cin >> position\_in\_ranking;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00163}00163                     tournament.\mbox{\hyperlink{class_tournament_aa051aced27c59222cd948caaa175046e}{add\_player}}(}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00164}00164                             players.\mbox{\hyperlink{class_set__players_a341494d26997bb09495a8cbaf9ab0bee}{get\_iterator}}(position\_in\_ranking -\/ 1));}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00165}00165                 \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00166}00166 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00167}00167                 tournament.\mbox{\hyperlink{class_tournament_abab0c0beb48ebdd6fe4db3df151380a9}{inscriptions}}(n);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00168}00168 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00169}00169                 tournaments\_playing[t] = tournament;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00170}00170             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00171}00171             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00172}00172                 \textcolor{comment}{//cout << "{}error: el torneo no existe"{} << endl;}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00173}00173             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00174}00174         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00175}00175         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}finalizar\_torneo"{}} or command == \textcolor{stringliteral}{"{}ft"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00176}00176             \textcolor{keywordtype}{string} t;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00177}00177             cin >> t;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00179}00179       cout << \textcolor{charliteral}{' '} << t << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00181}00181       map<string, Tournament>::iterator tournament = }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00182}00182     tournaments\_playing.find(t);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00183}00183       \textcolor{comment}{// Check if tournament is being played}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00184}00184             \textcolor{keywordflow}{if} (tournament != tournaments\_playing.end()) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00185}00185     tournament-\/>second.\mbox{\hyperlink{class_tournament_abd59ee950baf3f75e49e8cfa13428409}{get\_results\_i}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00186}00186     cout << \textcolor{stringliteral}{"{}Nya! 1"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00187}00187     tournament-\/>second.calc\_winners\_i();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00188}00188     cout << \textcolor{stringliteral}{"{}Nya! 2"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00189}00189     tournament-\/>second.print\_tree\_i();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00190}00190     cout << \textcolor{stringliteral}{"{}Nya! 3"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00191}00191 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00192}00192     \textcolor{comment}{//                Tournament tournament = tournaments.get\_tournament(t);}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00193}00193 \textcolor{comment}{//                tournament.end\_tournament(players);}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00194}00194 \textcolor{comment}{//                tournament.print\_results();}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00195}00195             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00196}00196         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00197}00197         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}listar\_ranking"{}} or command == \textcolor{stringliteral}{"{}lr"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00198}00198             cout << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00199}00199             vector<map<string, Player>::iterator> ranking = }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00200}00200     players.\mbox{\hyperlink{class_set__players_a1d0a62bf3339895dc2be80b6d49d1faa}{get\_ranking}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00201}00201 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00202}00202             \textcolor{keywordtype}{int} size = ranking.size();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00203}00203 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00204}00204             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00205}00205                 map<string, Player>::iterator player = ranking[i];}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00206}00206                 cout << i + 1 << \textcolor{charliteral}{' '} << player-\/>second.get\_name() << \textcolor{charliteral}{' '} <<}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00207}00207                 player-\/>second.get\_points() << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00208}00208             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00209}00209         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00210}00210         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}listar\_jugadores"{}} or command == \textcolor{stringliteral}{"{}lj"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00211}00211             cout << endl << players.\mbox{\hyperlink{class_set__players_aa4723d821c8bf5410666bdd77cb75c79}{get\_num}}() << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00212}00212             players.\mbox{\hyperlink{class_set__players_a11cf560d381a06920872d8dc03ca45c5}{print}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00213}00213         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00214}00214         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}consultar\_jugador"{}} or command == \textcolor{stringliteral}{"{}cj"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00215}00215             \textcolor{keywordtype}{string} p;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00216}00216             cin >> p;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00217}00217 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00218}00218             cout << \textcolor{charliteral}{' '} << p << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00219}00219 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00220}00220             \textcolor{keywordflow}{if} (players.\mbox{\hyperlink{class_set__players_ad4688bf691250ada7655a24b45870a81}{player\_exists}}(p)) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00221}00221                 players.\mbox{\hyperlink{class_set__players_a341494d26997bb09495a8cbaf9ab0bee}{get\_iterator}}(p)-\/>second.print();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00222}00222             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00223}00223             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00224}00224                 cout << \textcolor{stringliteral}{"{}error: el jugador no existe"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00225}00225             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00226}00226         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00227}00227         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}listar\_torneos"{}} or command == \textcolor{stringliteral}{"{}lt"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00228}00228             cout << endl << tournaments.\mbox{\hyperlink{class_set__tournament_af00c9ce9cb2d489a0c7b0db9b8e795a9}{num\_tournaments}}() << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00229}00229 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00230}00230             tournaments.\mbox{\hyperlink{class_set__tournament_a593ef45ec5cd3ab09fdde083136a93d3}{print}}(categories);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00231}00231         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00232}00232         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}listar\_categorias"{}} or command == \textcolor{stringliteral}{"{}lc"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00233}00233             cout << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00234}00234             vector<Category> categories\_data = categories.\mbox{\hyperlink{class_set__categories_af0caa3e768ec0294a9953ce7b5e8a72b}{get\_categories}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00235}00235             \textcolor{keywordtype}{int} size = categories\_data.size();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00236}00236 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00237}00237             cout << size << \textcolor{charliteral}{' '} << categories.\mbox{\hyperlink{class_set__categories_a313c96f3edcf02306f72f6315db20746}{get\_levels}}() << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00238}00238 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00239}00239             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00240}00240                 \mbox{\hyperlink{class_category}{Category}} category = categories\_data[i];}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00241}00241                 cout << category.\mbox{\hyperlink{class_category_a30369ab22fdf70a96729b4722b8e078e}{get\_name}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00242}00242 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00243}00243                 vector<int> points\_per\_level = category.\mbox{\hyperlink{class_category_ace6dc37f4d0a839fa102d341aef7b3c5}{get\_points\_per\_level}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00244}00244                 \textcolor{keywordtype}{int} size2 = points\_per\_level.size();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00245}00245 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00246}00246                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < size2; ++j) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00247}00247                     cout << \textcolor{charliteral}{' '} << points\_per\_level[j];}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00248}00248                 \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00249}00249                 cout << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00250}00250             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00251}00251         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00252}00252 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00253}00253         cin >> command;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00254}00254     \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00255}00255 \}}
+
+\end{DoxyCode}

@@ -1,5 +1,7 @@
 <map id="tournament.hh" name="tournament.hh">
-<area shape="rect" id="node1" title="Specification of the class Tournament." alt="" coords="5,5,109,32"/>
-<area shape="rect" id="node2" href="$player_8hh.html" title="Specification of the class Player." alt="" coords="21,155,94,181"/>
-<area shape="rect" id="node3" href="$set__players_8hh.html" title="Specification of the class Set_players." alt="" coords="50,80,155,107"/>
+<area shape="rect" id="node1" title="Specification of the class Tournament." alt="" coords="35,5,139,32"/>
+<area shape="rect" id="node2" href="$player_8hh.html" title="Specification of the class Player." alt="" coords="5,155,79,181"/>
+<area shape="rect" id="node3" href="$set__players_8hh.html" title="Specification of the class Set_players." alt="" coords="35,80,140,107"/>
+<area shape="rect" id="node4" href="$set__categories_8hh.html" title="Specification of the class Set_categories." alt="" coords="164,80,288,107"/>
+<area shape="rect" id="node5" href="$category_8hh.html" title="Specification of the class Category." alt="" coords="182,155,270,181"/>
 </map>

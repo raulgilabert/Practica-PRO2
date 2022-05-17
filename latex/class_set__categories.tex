@@ -25,6 +25,12 @@ void \mbox{\hyperlink{class_set__categories_a5eb642f11f855c5748165f0bdd1c5709}{a
 void \mbox{\hyperlink{class_set__categories_a4a25f0d50b4a12225e47858d9b44722e}{delete\+\_\+tournament}} (int category, string tournament)
 \begin{DoxyCompactList}\small\item\em Delete a tournament from a category. \end{DoxyCompactList}\item 
 vector$<$ \mbox{\hyperlink{class_category}{Category}} $>$ \mbox{\hyperlink{class_set__categories_af0caa3e768ec0294a9953ce7b5e8a72b}{get\+\_\+categories}} ()
+\begin{DoxyCompactList}\small\item\em Get all the categories data. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_set__categories_ae0e0c39080d2ce8a11a5404b4f45aac2}{get\+\_\+name}} (int pos) const
+\begin{DoxyCompactList}\small\item\em Get the requested category\textquotesingle{}s name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_set__categories_a313c96f3edcf02306f72f6315db20746}{get\+\_\+levels}} ()
+\begin{DoxyCompactList}\small\item\em Get the levels quantity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_set__categories_a6ed8d7cc03176c81cb939867a4b0f375}{points\+\_\+level}} (int cat, int lvl)
 \item 
 void \mbox{\hyperlink{class_set__categories_a2d84f4d1299b68c3aa70425ad30a97ce}{read}} ()
 \begin{DoxyCompactList}\small\item\em Read the categories data. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -53,12 +59,32 @@ Definition at line \mbox{\hyperlink{set__categories_8hh_source_l00019}{19}} of f
 \doxysubsubsection{\texorpdfstring{Set\_categories()}{Set\_categories()}}
 {\footnotesize\ttfamily Set\+\_\+categories\+::\+Set\+\_\+categories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Definition at line \mbox{\hyperlink{set__categories_8cc_source_l00006}{6}} of file \mbox{\hyperlink{set__categories_8cc_source}{set\+\_\+categories.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006                                \{}
+\DoxyCodeLine{00007     \mbox{\hyperlink{class_set__categories_a4d2a30504e037b29137bff833a4cf01c}{num}} = \mbox{\hyperlink{class_set__categories_adc230f54da93c51d285626a75d0ef369}{levels}} = 0;}
+\DoxyCodeLine{00008 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_set__categories_aee9357b2ca34b4c6e1a4f7799978756e}\label{class_set__categories_aee9357b2ca34b4c6e1a4f7799978756e}} 
 \index{Set\_categories@{Set\_categories}!````~Set\_categories@{$\sim$Set\_categories}}
 \index{````~Set\_categories@{$\sim$Set\_categories}!Set\_categories@{Set\_categories}}
 \doxysubsubsection{\texorpdfstring{$\sim$Set\_categories()}{~Set\_categories()}}
 {\footnotesize\ttfamily Set\+\_\+categories\+::$\sim$\+Set\+\_\+categories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Definition at line \mbox{\hyperlink{set__categories_8cc_source_l00010}{10}} of file \mbox{\hyperlink{set__categories_8cc_source}{set\+\_\+categories.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010 \{\}}
+
+\end{DoxyCode}
 
 
 \doxysubsection{Member Function Documentation}
@@ -78,6 +104,18 @@ The implicit parameter does not include a category with the same identifier as c
 \begin{DoxyPostcond}{Postcondition}
 cat is added to the implicit parameter 
 \end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__categories_8cc_source_l00012}{12}} of file \mbox{\hyperlink{set__categories_8cc_source}{set\+\_\+categories.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012                                                      \{}
+\DoxyCodeLine{00013     \mbox{\hyperlink{class_set__categories_a4bba343807dfb17a91677fc3b2b5134b}{categories}}.push\_back(cat);}
+\DoxyCodeLine{00014     ++\mbox{\hyperlink{class_set__categories_a4d2a30504e037b29137bff833a4cf01c}{num}};}
+\DoxyCodeLine{00015 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_set__categories_a009e2c0ff6358700dc8b0060173774b3}\label{class_set__categories_a009e2c0ff6358700dc8b0060173774b3}} 
 \index{Set\_categories@{Set\_categories}!num\_categories@{num\_categories}}
 \index{num\_categories@{num\_categories}!Set\_categories@{Set\_categories}}
@@ -94,6 +132,17 @@ true
 \begin{DoxyPostcond}{Postcondition}
 Return num from the implicit parameter 
 \end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__categories_8cc_source_l00017}{17}} of file \mbox{\hyperlink{set__categories_8cc_source}{set\+\_\+categories.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017                                    \{}
+\DoxyCodeLine{00018     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__categories_a4d2a30504e037b29137bff833a4cf01c}{num}};}
+\DoxyCodeLine{00019 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_set__categories_a5eb642f11f855c5748165f0bdd1c5709}\label{class_set__categories_a5eb642f11f855c5748165f0bdd1c5709}} 
 \index{Set\_categories@{Set\_categories}!add\_tournament@{add\_tournament}}
 \index{add\_tournament@{add\_tournament}!Set\_categories@{Set\_categories}}
@@ -132,12 +181,98 @@ Deleted the tournament from the category
 \doxysubsubsection{\texorpdfstring{get\_categories()}{get\_categories()}}
 {\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_category}{Category}} $>$ Set\+\_\+categories\+::get\+\_\+categories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Get all the categories data \begin{DoxyPrecond}{Precondition}
+
+
+Get all the categories data. 
+
+\begin{DoxyPrecond}{Precondition}
 true 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
 Return the categories 
 \end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__categories_8cc_source_l00021}{21}} of file \mbox{\hyperlink{set__categories_8cc_source}{set\+\_\+categories.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021                                                 \{}
+\DoxyCodeLine{00022     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__categories_a4bba343807dfb17a91677fc3b2b5134b}{categories}};}
+\DoxyCodeLine{00023 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set__categories_ae0e0c39080d2ce8a11a5404b4f45aac2}\label{class_set__categories_ae0e0c39080d2ce8a11a5404b4f45aac2}} 
+\index{Set\_categories@{Set\_categories}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!Set\_categories@{Set\_categories}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily string Set\+\_\+categories\+::get\+\_\+name (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+Get the requested category\textquotesingle{}s name. 
+
+\begin{DoxyPrecond}{Precondition}
+0 \texorpdfstring{$<$}{<} pos \texorpdfstring{$<$}{<}= num 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+return name of the category with identifier pos 
+\end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__categories_8cc_source_l00047}{47}} of file \mbox{\hyperlink{set__categories_8cc_source}{set\+\_\+categories.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047                                              \{}
+\DoxyCodeLine{00048     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__categories_a4bba343807dfb17a91677fc3b2b5134b}{categories}}[pos -\/ 1].get\_name();}
+\DoxyCodeLine{00049 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set__categories_a313c96f3edcf02306f72f6315db20746}\label{class_set__categories_a313c96f3edcf02306f72f6315db20746}} 
+\index{Set\_categories@{Set\_categories}!get\_levels@{get\_levels}}
+\index{get\_levels@{get\_levels}!Set\_categories@{Set\_categories}}
+\doxysubsubsection{\texorpdfstring{get\_levels()}{get\_levels()}}
+{\footnotesize\ttfamily int Set\+\_\+categories\+::get\+\_\+levels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the levels quantity. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+return the quantity of levels from the implicit parameter 
+\end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__categories_8cc_source_l00043}{43}} of file \mbox{\hyperlink{set__categories_8cc_source}{set\+\_\+categories.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043                                \{}
+\DoxyCodeLine{00044     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__categories_adc230f54da93c51d285626a75d0ef369}{levels}};}
+\DoxyCodeLine{00045 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set__categories_a6ed8d7cc03176c81cb939867a4b0f375}\label{class_set__categories_a6ed8d7cc03176c81cb939867a4b0f375}} 
+\index{Set\_categories@{Set\_categories}!points\_level@{points\_level}}
+\index{points\_level@{points\_level}!Set\_categories@{Set\_categories}}
+\doxysubsubsection{\texorpdfstring{points\_level()}{points\_level()}}
+{\footnotesize\ttfamily int Set\+\_\+categories\+::points\+\_\+level (\begin{DoxyParamCaption}\item[{int}]{cat,  }\item[{int}]{lvl }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{set__categories_8cc_source_l00051}{51}} of file \mbox{\hyperlink{set__categories_8cc_source}{set\+\_\+categories.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051                                                  \{}
+\DoxyCodeLine{00052     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__categories_a4bba343807dfb17a91677fc3b2b5134b}{categories}}[cat -\/ 1].get\_points\_per\_level()[lvl -\/ 1];}
+\DoxyCodeLine{00053 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_set__categories_a2d84f4d1299b68c3aa70425ad30a97ce}\label{class_set__categories_a2d84f4d1299b68c3aa70425ad30a97ce}} 
 \index{Set\_categories@{Set\_categories}!read@{read}}
 \index{read@{read}!Set\_categories@{Set\_categories}}
@@ -154,6 +289,31 @@ Two integers (C and K), n categories identifiers and C$\ast$K integers in the st
 \begin{DoxyPostcond}{Postcondition}
 Added the data to the implicit parameter 
 \end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{set__categories_8cc_source_l00025}{25}} of file \mbox{\hyperlink{set__categories_8cc_source}{set\+\_\+categories.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025                           \{}
+\DoxyCodeLine{00026     \textcolor{keywordtype}{int} c, k;}
+\DoxyCodeLine{00027     cin >> c >> k;}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029     \mbox{\hyperlink{class_set__categories_adc230f54da93c51d285626a75d0ef369}{levels}} = k;}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < c; ++i) \{}
+\DoxyCodeLine{00032         \textcolor{keywordtype}{string} name;}
+\DoxyCodeLine{00033         cin >> name;}
+\DoxyCodeLine{00034         \mbox{\hyperlink{class_category}{Category}} cat(name);}
+\DoxyCodeLine{00035         \mbox{\hyperlink{class_set__categories_aa2f5376f08ed1aea1e7bcdd0bb91b369}{add\_category}}(cat);}
+\DoxyCodeLine{00036     \}}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < c; ++i) \{}
+\DoxyCodeLine{00039   \mbox{\hyperlink{class_set__categories_a4bba343807dfb17a91677fc3b2b5134b}{categories}}[i].set\_points\_per\_level(k);}
+\DoxyCodeLine{00040     \}}
+\DoxyCodeLine{00041 \}}
+
+\end{DoxyCode}
 
 
 \doxysubsection{Member Data Documentation}
@@ -189,6 +349,7 @@ Definition at line \mbox{\hyperlink{set__categories_8hh_source_l00023}{23}} of f
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{set__categories_8hh}{set\+\_\+categories.\+hh}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{set__categories_8hh}{set\+\_\+categories.\+hh}}\item 
+\mbox{\hyperlink{set__categories_8cc}{set\+\_\+categories.\+cc}}\end{DoxyCompactItemize}

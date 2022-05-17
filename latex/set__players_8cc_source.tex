@@ -1,0 +1,107 @@
+\hypertarget{set__players_8cc_source}{}\doxysection{set\+\_\+players.\+cc}
+\mbox{\hyperlink{set__players_8cc}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{set__players_8hh}{set\_players.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00002}00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{player_8hh}{player.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00004}00004 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00006}\mbox{\hyperlink{class_set__players_a64027e9a89abdb8def809626d00f54bc}{00006}} \mbox{\hyperlink{class_set__players_a64027e9a89abdb8def809626d00f54bc}{Set\_players::Set\_players}}() \{}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00007}00007     \mbox{\hyperlink{class_set__players_a15e63a6a62a79ca94fc1efc2bcd5a588}{num}} = 0;}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00008}00008 \}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00010}\mbox{\hyperlink{class_set__players_aa018f32a79c942d628451327d3af9d63}{00010}} \mbox{\hyperlink{class_set__players_aa018f32a79c942d628451327d3af9d63}{Set\_players::\string~Set\_players}}() \{\}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00012}\mbox{\hyperlink{class_set__players_ac4dc303d81e6c0dd3b255ab00d0dcc27}{00012}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_set__players_ac4dc303d81e6c0dd3b255ab00d0dcc27}{Set\_players::add\_player}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& \textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00013}00013     \mbox{\hyperlink{class_player}{Player}} p(\textcolor{keywordtype}{id}, ++\mbox{\hyperlink{class_set__players_a15e63a6a62a79ca94fc1efc2bcd5a588}{num}});}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00015}00015     \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}[id] = p;}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00017}00017     \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}}.push\_back(\mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.find(\textcolor{keywordtype}{id}));}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00018}00018 \}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00020}\mbox{\hyperlink{class_set__players_aa9b0633239a10c99ae54cad4e4aec719}{00020}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_set__players_aa9b0633239a10c99ae54cad4e4aec719}{Set\_players::delete\_player}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& \textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00021}00021     map<string, Player>::iterator p = \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00022}00022     \textcolor{keywordtype}{int} pos = p-\/>second.get\_position();}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00024}00024     \textcolor{keywordtype}{int} size = \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}}.size();}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00026}00026     \textcolor{comment}{//vector<map<string, Player>::iterator> new\_ranking(size);}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00028}00028     \textcolor{comment}{/*for (i = 0; i < pos -\/ 1; ++i) \{}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00029}00029 \textcolor{comment}{        new\_ranking[i] = ranking[i];}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00030}00030 \textcolor{comment}{    \}*/}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00032}00032     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = pos; i < size; ++i) \{}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00033}00033         \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}}[i -\/ 1] = \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}}[i];}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00034}00034         \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}}[i -\/ 1]-\/>second.decrease\_pos();}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00035}00035     \}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00037}00037     \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}}.pop\_back();}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00039}00039     \textcolor{comment}{//ranking = new\_ranking;}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00041}00041     \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.erase(p);}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00042}00042     -\/-\/\mbox{\hyperlink{class_set__players_a15e63a6a62a79ca94fc1efc2bcd5a588}{num}};}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00043}00043 \}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00045}\mbox{\hyperlink{class_set__players_a341494d26997bb09495a8cbaf9ab0bee}{00045}} map<string, Player>::iterator \mbox{\hyperlink{class_set__players_a341494d26997bb09495a8cbaf9ab0bee}{Set\_players::get\_iterator}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& \textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00046}00046     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00047}00047 \}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00049}\mbox{\hyperlink{class_set__players_a74c85fd453aea2289ea4f70d46f29207}{00049}} map<string, Player>::iterator \mbox{\hyperlink{class_set__players_a341494d26997bb09495a8cbaf9ab0bee}{Set\_players::get\_iterator}}(\textcolor{keywordtype}{int} pos) \{}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00050}00050     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}}[pos];}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00051}00051 \}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00054}\mbox{\hyperlink{class_set__players_acc9e62dd438b1939f5b5743843ed6aef}{00054}} map<string, Player> \mbox{\hyperlink{class_set__players_acc9e62dd438b1939f5b5743843ed6aef}{Set\_players::get\_players}}() \{}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00055}00055     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}};}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00056}00056 \}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00058}\mbox{\hyperlink{class_set__players_ad4688bf691250ada7655a24b45870a81}{00058}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_set__players_ad4688bf691250ada7655a24b45870a81}{Set\_players::player\_exists}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& \textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00059}00059     \textcolor{keywordflow}{return} (\mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.find(\textcolor{keywordtype}{id}) != \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.end());}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00060}00060 \}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00062}00062 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00063}00063 \textcolor{comment}{void Set\_players::add\_tournament(string tournament) \{}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00064}00064 \textcolor{comment}{    for (map<string, Player>::iterator it = players\_data.begin();}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00065}00065 \textcolor{comment}{      it != players\_data.end(); ++it) \{}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00066}00066 \textcolor{comment}{        it-\/>second.add\_tournament(tournament);}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00067}00067 \textcolor{comment}{    \}}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00068}00068 \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00069}00069 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00070}00070 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00071}00071 \textcolor{comment}{void Set\_players::delete\_tournament(const string\& id) \{}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00072}00072 \textcolor{comment}{    for (map<string, Player>::iterator it = players\_data.begin(); it != }}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00073}00073 \textcolor{comment}{      players\_data.end(); ++it) \{}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00074}00074 \textcolor{comment}{        it-\/>second.delete\_tournament(id);}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00075}00075 \textcolor{comment}{    \}}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00076}00076 \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00077}00077 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00078}\mbox{\hyperlink{class_set__players_a6206ccc73a63eb2e64719333d8e409f8}{00078}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_set__players_a6206ccc73a63eb2e64719333d8e409f8}{Set\_players::read}}() \{}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00079}00079     \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00080}00080     cin >> n;}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00082}00082     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00083}00083         \textcolor{keywordtype}{string} name;}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00084}00084         cin >> name;}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00086}00086         \mbox{\hyperlink{class_set__players_ac4dc303d81e6c0dd3b255ab00d0dcc27}{add\_player}}(name);}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00087}00087     \}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00088}00088 \}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00090}\mbox{\hyperlink{class_set__players_aa4723d821c8bf5410666bdd77cb75c79}{00090}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_set__players_aa4723d821c8bf5410666bdd77cb75c79}{Set\_players::get\_num}}() \{}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00091}00091     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__players_a15e63a6a62a79ca94fc1efc2bcd5a588}{num}};}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00092}00092 \}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00094}\mbox{\hyperlink{class_set__players_a1d0a62bf3339895dc2be80b6d49d1faa}{00094}} vector<map<string, Player>::iterator> \mbox{\hyperlink{class_set__players_a1d0a62bf3339895dc2be80b6d49d1faa}{Set\_players::get\_ranking}}() \{}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00095}00095     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_set__players_a44e299d1fb3e1695ad2f4c5a2ed7bd25}{ranking}};}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00096}00096 \}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00098}\mbox{\hyperlink{class_set__players_a11cf560d381a06920872d8dc03ca45c5}{00098}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_set__players_a11cf560d381a06920872d8dc03ca45c5}{Set\_players::print}}() \{}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00099}00099     \textcolor{keywordflow}{for} (map<string, Player>::const\_iterator it = \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.begin(); it != \mbox{\hyperlink{class_set__players_a2600e1d82effcdeb6ed500d9dc3b2d39}{players\_data}}.end(); ++it) \{}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00100}00100         it-\/>second.print();}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00101}00101     \}}
+\DoxyCodeLine{\Hypertarget{set__players_8cc_source_l00102}00102 \}}
+
+\end{DoxyCode}

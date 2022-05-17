@@ -12,21 +12,23 @@ Represents a player.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_player_a05402e93b2be9cb0bcda742a68f27b47}{Player}} (string \mbox{\hyperlink{class_player_acf0355128a99ee20ad9931b760fb2de1}{name}})
+\mbox{\hyperlink{class_player_a0f610a9015435f31e006e16c06c7065c}{Player}} (const string \&id, int pos)
+\item 
+\mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}} ()
 \item 
 \mbox{\hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{$\sim$\+Player}} ()
 \item 
-void \mbox{\hyperlink{class_player_a28864b044b23ceb997fd6295e1ad517e}{add\+\_\+tournament}} (string id)
-\begin{DoxyCompactList}\small\item\em Add tournament to the player map of points. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_player_ae07540cc4d29f55a9f9569b46d29abe8}{delete\+\_\+tournament}} (string id)
-\begin{DoxyCompactList}\small\item\em Delete tournament from the player map of points. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_a3f946130f829b0ade164d1c8b081de1b}{get\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em Return the position in ranking of the player. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_player_ab23a648d916e68452049de0d3709f5d2}{get\+\_\+points}} ()
 \begin{DoxyCompactList}\small\item\em Return the points of the player. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_player_a1fad3d0fd7e8209ec29cb60b16d48ba2}{calc\+\_\+points}} ()
-\begin{DoxyCompactList}\small\item\em Calculate the points of the player. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_player_aacd0bdb6d7c38196e0b8e38b5b6af4cd}{update\+\_\+data}} (bool tournament\+\_\+won, int \mbox{\hyperlink{class_player_a4a51f0af5e3f896ce8ee238c6085ac70}{sets\+\_\+won}}, int \mbox{\hyperlink{class_player_a904c73bbbbe8be6ca9022eb316619c78}{sets\+\_\+lost}}, int \mbox{\hyperlink{class_player_a17f0f9497a689695d342acb4928a654d}{games\+\_\+won}}, int \mbox{\hyperlink{class_player_ad015df8ddda23ab315a4d3bc3b576e1f}{games\+\_\+lost}})
+void \mbox{\hyperlink{class_player_afb70fff21860e1a2e9193227840fbb9a}{update\+\_\+data}} (int \mbox{\hyperlink{class_player_a4d13b6ff1d6997f8ba9fbd25211d19c4}{matches\+\_\+won}}, int \mbox{\hyperlink{class_player_a46ab532aa6ce561762738bac190efa4c}{matches\+\_\+lost}}, int \mbox{\hyperlink{class_player_a4a51f0af5e3f896ce8ee238c6085ac70}{sets\+\_\+won}}, int \mbox{\hyperlink{class_player_a904c73bbbbe8be6ca9022eb316619c78}{sets\+\_\+lost}}, int \mbox{\hyperlink{class_player_a17f0f9497a689695d342acb4928a654d}{games\+\_\+won}}, int \mbox{\hyperlink{class_player_ad015df8ddda23ab315a4d3bc3b576e1f}{games\+\_\+lost}})
 \begin{DoxyCompactList}\small\item\em update the tournaments, sets and games data \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_player_ae298148cd8152bbe1d2e237e76621ce2}{print}} ()
+void \mbox{\hyperlink{class_player_a64108cc326b51b8dc47a1e0418aa65f8}{decrease\+\_\+pos}} ()
+\begin{DoxyCompactList}\small\item\em Decrease the ranking position by one. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_player_afca8141f38b60b526fd2f874523a2726}{get\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em return player\textquotesingle{}s name \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ab035509e1a035f702694c50f60e06b8c}{print}} () const
 \begin{DoxyCompactList}\small\item\em Print the name, the position and the tournaments, sets and games data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -35,9 +37,9 @@ string \mbox{\hyperlink{class_player_acf0355128a99ee20ad9931b760fb2de1}{name}}
 \item 
 int \mbox{\hyperlink{class_player_ad613e8a3ba83abfefac0b4a37ce57741}{tournaments\+\_\+played}}
 \item 
-int \mbox{\hyperlink{class_player_ab71b2f36f67007fa31c567cd8a2d9a04}{tournaments\+\_\+won}}
+int \mbox{\hyperlink{class_player_a4d13b6ff1d6997f8ba9fbd25211d19c4}{matches\+\_\+won}}
 \item 
-int \mbox{\hyperlink{class_player_a0b03ad07bf383ea6bb67721608d6fab5}{tournaments\+\_\+lost}}
+int \mbox{\hyperlink{class_player_a46ab532aa6ce561762738bac190efa4c}{matches\+\_\+lost}}
 \item 
 int \mbox{\hyperlink{class_player_a4a51f0af5e3f896ce8ee238c6085ac70}{sets\+\_\+won}}
 \item 
@@ -47,28 +49,57 @@ int \mbox{\hyperlink{class_player_a17f0f9497a689695d342acb4928a654d}{games\+\_\+
 \item 
 int \mbox{\hyperlink{class_player_ad015df8ddda23ab315a4d3bc3b576e1f}{games\+\_\+lost}}
 \item 
+int \mbox{\hyperlink{class_player_ac793ef1d1e7c66b3b4a81a8b4ed005a5}{ranking}}
+\item 
 int \mbox{\hyperlink{class_player_adf0398ea8c1f29175204508ab642b64e}{points}}
-\item 
-map$<$ string, int $>$ \mbox{\hyperlink{class_player_a4117303db3022ea570530b5fb16f0d83}{points\+\_\+per\+\_\+tournament}}
-\item 
-int \mbox{\hyperlink{class_player_aa3d611ebcf0b9e7b403116295340ce00}{ranking\+\_\+position}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Represents a player. 
 
-Definition at line \mbox{\hyperlink{player_8hh_source_l00017}{17}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
+Definition at line \mbox{\hyperlink{player_8hh_source_l00018}{18}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_player_a05402e93b2be9cb0bcda742a68f27b47}\label{class_player_a05402e93b2be9cb0bcda742a68f27b47}} 
+\mbox{\Hypertarget{class_player_a0f610a9015435f31e006e16c06c7065c}\label{class_player_a0f610a9015435f31e006e16c06c7065c}} 
 \index{Player@{Player}!Player@{Player}}
 \index{Player@{Player}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
-{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{const string \&}]{id,  }\item[{int}]{pos }\end{DoxyParamCaption})}
 
+
+
+Definition at line \mbox{\hyperlink{player_8cc_source_l00005}{5}} of file \mbox{\hyperlink{player_8cc_source}{player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005                                         \{}
+\DoxyCodeLine{00006     \mbox{\hyperlink{class_player_acf0355128a99ee20ad9931b760fb2de1}{name}} = id;}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008     \mbox{\hyperlink{class_player_ad613e8a3ba83abfefac0b4a37ce57741}{tournaments\_played}} = \mbox{\hyperlink{class_player_a4d13b6ff1d6997f8ba9fbd25211d19c4}{matches\_won}} = \mbox{\hyperlink{class_player_a46ab532aa6ce561762738bac190efa4c}{matches\_lost}} = \mbox{\hyperlink{class_player_a4a51f0af5e3f896ce8ee238c6085ac70}{sets\_won}} = \mbox{\hyperlink{class_player_a904c73bbbbe8be6ca9022eb316619c78}{sets\_lost}} =}
+\DoxyCodeLine{00009             \mbox{\hyperlink{class_player_a17f0f9497a689695d342acb4928a654d}{games\_won}} = \mbox{\hyperlink{class_player_ad015df8ddda23ab315a4d3bc3b576e1f}{games\_lost}} = \mbox{\hyperlink{class_player_adf0398ea8c1f29175204508ab642b64e}{points}} = 0;}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011     \mbox{\hyperlink{class_player_ac793ef1d1e7c66b3b4a81a8b4ed005a5}{ranking}} = pos;}
+\DoxyCodeLine{00012 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}\label{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{player_8cc_source_l00014}{14}} of file \mbox{\hyperlink{player_8cc_source}{player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014 \{\}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_player_a749d2c00e1fe0f5c2746f7505a58c062}\label{class_player_a749d2c00e1fe0f5c2746f7505a58c062}} 
 \index{Player@{Player}!````~Player@{$\sim$Player}}
 \index{````~Player@{$\sim$Player}!Player@{Player}}
@@ -77,39 +108,44 @@ Definition at line \mbox{\hyperlink{player_8hh_source_l00017}{17}} of file \mbox
 
 
 
+Definition at line \mbox{\hyperlink{player_8cc_source_l00016}{16}} of file \mbox{\hyperlink{player_8cc_source}{player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016                 \{}
+\DoxyCodeLine{00017 \}}
+
+\end{DoxyCode}
+
+
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_player_a28864b044b23ceb997fd6295e1ad517e}\label{class_player_a28864b044b23ceb997fd6295e1ad517e}} 
-\index{Player@{Player}!add\_tournament@{add\_tournament}}
-\index{add\_tournament@{add\_tournament}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{add\_tournament()}{add\_tournament()}}
-{\footnotesize\ttfamily void Player\+::add\+\_\+tournament (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_player_a3f946130f829b0ade164d1c8b081de1b}\label{class_player_a3f946130f829b0ade164d1c8b081de1b}} 
+\index{Player@{Player}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily int Player\+::get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Add tournament to the player map of points. 
-
-\begin{DoxyPrecond}{Precondition}
-id is a tournament id 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondition}
-Added key id to the map in the implicit parameter 
-\end{DoxyPostcond}
-\mbox{\Hypertarget{class_player_ae07540cc4d29f55a9f9569b46d29abe8}\label{class_player_ae07540cc4d29f55a9f9569b46d29abe8}} 
-\index{Player@{Player}!delete\_tournament@{delete\_tournament}}
-\index{delete\_tournament@{delete\_tournament}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{delete\_tournament()}{delete\_tournament()}}
-{\footnotesize\ttfamily void Player\+::delete\+\_\+tournament (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
-
-
-
-Delete tournament from the player map of points. 
+Return the position in ranking of the player. 
 
 \begin{DoxyPrecond}{Precondition}
-id is a tournament id 
+true 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Removed key id from the map in the implicit parameter 
+Return position in ranking from the implicit parameter 
 \end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{player_8cc_source_l00023}{23}} of file \mbox{\hyperlink{player_8cc_source}{player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023                          \{}
+\DoxyCodeLine{00024     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_player_ac793ef1d1e7c66b3b4a81a8b4ed005a5}{ranking}};}
+\DoxyCodeLine{00025 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_player_ab23a648d916e68452049de0d3709f5d2}\label{class_player_ab23a648d916e68452049de0d3709f5d2}} 
 \index{Player@{Player}!get\_points@{get\_points}}
 \index{get\_points@{get\_points}!Player@{Player}}
@@ -126,43 +162,111 @@ true
 \begin{DoxyPostcond}{Postcondition}
 Return points from the implicit parameter 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_player_a1fad3d0fd7e8209ec29cb60b16d48ba2}\label{class_player_a1fad3d0fd7e8209ec29cb60b16d48ba2}} 
-\index{Player@{Player}!calc\_points@{calc\_points}}
-\index{calc\_points@{calc\_points}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{calc\_points()}{calc\_points()}}
-{\footnotesize\ttfamily void Player\+::calc\+\_\+points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+Definition at line \mbox{\hyperlink{player_8cc_source_l00019}{19}} of file \mbox{\hyperlink{player_8cc_source}{player.\+cc}}.
 
-Calculate the points of the player. 
 
-\begin{DoxyPrecond}{Precondition}
-true 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondition}
-The points in the implicit parameter are recalculated 
-\end{DoxyPostcond}
-\mbox{\Hypertarget{class_player_aacd0bdb6d7c38196e0b8e38b5b6af4cd}\label{class_player_aacd0bdb6d7c38196e0b8e38b5b6af4cd}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019                        \{}
+\DoxyCodeLine{00020     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_player_adf0398ea8c1f29175204508ab642b64e}{points}};}
+\DoxyCodeLine{00021 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_afb70fff21860e1a2e9193227840fbb9a}\label{class_player_afb70fff21860e1a2e9193227840fbb9a}} 
 \index{Player@{Player}!update\_data@{update\_data}}
 \index{update\_data@{update\_data}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{update\_data()}{update\_data()}}
-{\footnotesize\ttfamily void Player\+::update\+\_\+data (\begin{DoxyParamCaption}\item[{bool}]{tournament\+\_\+won,  }\item[{int}]{sets\+\_\+won,  }\item[{int}]{sets\+\_\+lost,  }\item[{int}]{games\+\_\+won,  }\item[{int}]{games\+\_\+lost }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Player\+::update\+\_\+data (\begin{DoxyParamCaption}\item[{int}]{matches\+\_\+won,  }\item[{int}]{matches\+\_\+lost,  }\item[{int}]{sets\+\_\+won,  }\item[{int}]{sets\+\_\+lost,  }\item[{int}]{games\+\_\+won,  }\item[{int}]{games\+\_\+lost }\end{DoxyParamCaption})}
 
 
 
 update the tournaments, sets and games data 
 
 \begin{DoxyPrecond}{Precondition}
-tournament\+\_\+won is true if the tournament is won by the player, sets\+\_\+won \texorpdfstring{$>$}{>}= 0, sets\+\_\+lost \texorpdfstring{$>$}{>}= 0, games\+\_\+won \texorpdfstring{$>$}{>}= 0, games\+\_\+lost \texorpdfstring{$>$}{>}= 0 
+matches\+\_\+won \texorpdfstring{$>$}{>}= 0, matches\+\_\+lost \texorpdfstring{$>$}{>}= 0, sets\+\_\+won \texorpdfstring{$>$}{>}= 0, sets\+\_\+lost \texorpdfstring{$>$}{>}= 0, games\+\_\+won \texorpdfstring{$>$}{>}= 0, games\+\_\+lost \texorpdfstring{$>$}{>}= 0 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
 The data in the implicit parameter is updated 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_player_ae298148cd8152bbe1d2e237e76621ce2}\label{class_player_ae298148cd8152bbe1d2e237e76621ce2}} 
+
+
+Definition at line \mbox{\hyperlink{player_8cc_source_l00032}{32}} of file \mbox{\hyperlink{player_8cc_source}{player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033                                                 \{}
+\DoxyCodeLine{00034     this-\/>\mbox{\hyperlink{class_player_ad613e8a3ba83abfefac0b4a37ce57741}{tournaments\_played}} += 1;}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036     this-\/>\mbox{\hyperlink{class_player_a4d13b6ff1d6997f8ba9fbd25211d19c4}{matches\_won}} += \mbox{\hyperlink{class_player_a4d13b6ff1d6997f8ba9fbd25211d19c4}{matches\_won}};}
+\DoxyCodeLine{00037     this-\/>\mbox{\hyperlink{class_player_a46ab532aa6ce561762738bac190efa4c}{matches\_lost}} += \mbox{\hyperlink{class_player_a46ab532aa6ce561762738bac190efa4c}{matches\_lost}};}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039     this-\/>\mbox{\hyperlink{class_player_a4a51f0af5e3f896ce8ee238c6085ac70}{sets\_won}} += \mbox{\hyperlink{class_player_a4a51f0af5e3f896ce8ee238c6085ac70}{sets\_won}};}
+\DoxyCodeLine{00040     this-\/>\mbox{\hyperlink{class_player_a904c73bbbbe8be6ca9022eb316619c78}{sets\_lost}} += \mbox{\hyperlink{class_player_a904c73bbbbe8be6ca9022eb316619c78}{sets\_lost}};}
+\DoxyCodeLine{00041     this-\/>\mbox{\hyperlink{class_player_a17f0f9497a689695d342acb4928a654d}{games\_won}} += \mbox{\hyperlink{class_player_a17f0f9497a689695d342acb4928a654d}{games\_won}};}
+\DoxyCodeLine{00042     this-\/>\mbox{\hyperlink{class_player_ad015df8ddda23ab315a4d3bc3b576e1f}{games\_lost}} += \mbox{\hyperlink{class_player_ad015df8ddda23ab315a4d3bc3b576e1f}{games\_lost}}; }
+\DoxyCodeLine{00043 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_a64108cc326b51b8dc47a1e0418aa65f8}\label{class_player_a64108cc326b51b8dc47a1e0418aa65f8}} 
+\index{Player@{Player}!decrease\_pos@{decrease\_pos}}
+\index{decrease\_pos@{decrease\_pos}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{decrease\_pos()}{decrease\_pos()}}
+{\footnotesize\ttfamily void Player\+::decrease\+\_\+pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Decrease the ranking position by one. 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+position in the implicit parameter decreased by one 
+\end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{player_8cc_source_l00059}{59}} of file \mbox{\hyperlink{player_8cc_source}{player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059                           \{}
+\DoxyCodeLine{00060     -\/-\/\mbox{\hyperlink{class_player_ac793ef1d1e7c66b3b4a81a8b4ed005a5}{ranking}};}
+\DoxyCodeLine{00061 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_afca8141f38b60b526fd2f874523a2726}\label{class_player_afca8141f38b60b526fd2f874523a2726}} 
+\index{Player@{Player}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily string Player\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return player\textquotesingle{}s name 
+
+\begin{DoxyPrecond}{Precondition}
+true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+return player\textquotesingle{}s name from the implicit parameter 
+\end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{player_8cc_source_l00045}{45}} of file \mbox{\hyperlink{player_8cc_source}{player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045                         \{}
+\DoxyCodeLine{00046     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_player_acf0355128a99ee20ad9931b760fb2de1}{name}};}
+\DoxyCodeLine{00047 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_ab035509e1a035f702694c50f60e06b8c}\label{class_player_ab035509e1a035f702694c50f60e06b8c}} 
 \index{Player@{Player}!print@{print}}
 \index{print@{print}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{print()}{print()}}
-{\footnotesize\ttfamily void Player\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Player\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -176,6 +280,23 @@ Prints in the standard channel the name, the position in the ranking, the points
 \end{DoxyPostcond}
 
 
+Definition at line \mbox{\hyperlink{player_8cc_source_l00049}{49}} of file \mbox{\hyperlink{player_8cc_source}{player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049                          \{}
+\DoxyCodeLine{00050     cout << \mbox{\hyperlink{class_player_acf0355128a99ee20ad9931b760fb2de1}{name}};}
+\DoxyCodeLine{00051     cout << \textcolor{stringliteral}{"{} Rk:"{}} << \mbox{\hyperlink{class_player_ac793ef1d1e7c66b3b4a81a8b4ed005a5}{ranking}};}
+\DoxyCodeLine{00052     cout << \textcolor{stringliteral}{"{} Ps:"{}} << \mbox{\hyperlink{class_player_adf0398ea8c1f29175204508ab642b64e}{points}};}
+\DoxyCodeLine{00053     cout << \textcolor{stringliteral}{"{} Ts:"{}} << \mbox{\hyperlink{class_player_ad613e8a3ba83abfefac0b4a37ce57741}{tournaments\_played}};}
+\DoxyCodeLine{00054     cout << \textcolor{stringliteral}{"{} WM:"{}} << \mbox{\hyperlink{class_player_a4d13b6ff1d6997f8ba9fbd25211d19c4}{matches\_won}} << \textcolor{stringliteral}{"{} LM:"{}} << \mbox{\hyperlink{class_player_a46ab532aa6ce561762738bac190efa4c}{matches\_lost}};}
+\DoxyCodeLine{00055     cout << \textcolor{stringliteral}{"{} WS:"{}} << \mbox{\hyperlink{class_player_a4a51f0af5e3f896ce8ee238c6085ac70}{sets\_won}} << \textcolor{stringliteral}{"{} LS:"{}} << \mbox{\hyperlink{class_player_a904c73bbbbe8be6ca9022eb316619c78}{sets\_lost}};}
+\DoxyCodeLine{00056     cout << \textcolor{stringliteral}{"{} WG:"{}} << \mbox{\hyperlink{class_player_a17f0f9497a689695d342acb4928a654d}{games\_won}} << \textcolor{stringliteral}{"{} LG:"{}} << \mbox{\hyperlink{class_player_ad015df8ddda23ab315a4d3bc3b576e1f}{games\_lost}} << endl;}
+\DoxyCodeLine{00057 \}}
+
+\end{DoxyCode}
+
+
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{class_player_acf0355128a99ee20ad9931b760fb2de1}\label{class_player_acf0355128a99ee20ad9931b760fb2de1}} 
 \index{Player@{Player}!name@{name}}
@@ -185,7 +306,7 @@ Prints in the standard channel the name, the position in the ranking, the points
 
 
 
-Definition at line \mbox{\hyperlink{player_8hh_source_l00019}{19}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
+Definition at line \mbox{\hyperlink{player_8hh_source_l00020}{20}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
 
 \mbox{\Hypertarget{class_player_ad613e8a3ba83abfefac0b4a37ce57741}\label{class_player_ad613e8a3ba83abfefac0b4a37ce57741}} 
 \index{Player@{Player}!tournaments\_played@{tournaments\_played}}
@@ -195,27 +316,27 @@ Definition at line \mbox{\hyperlink{player_8hh_source_l00019}{19}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{player_8hh_source_l00021}{21}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
-
-\mbox{\Hypertarget{class_player_ab71b2f36f67007fa31c567cd8a2d9a04}\label{class_player_ab71b2f36f67007fa31c567cd8a2d9a04}} 
-\index{Player@{Player}!tournaments\_won@{tournaments\_won}}
-\index{tournaments\_won@{tournaments\_won}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{tournaments\_won}{tournaments\_won}}
-{\footnotesize\ttfamily int Player\+::tournaments\+\_\+won\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
 Definition at line \mbox{\hyperlink{player_8hh_source_l00022}{22}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
 
-\mbox{\Hypertarget{class_player_a0b03ad07bf383ea6bb67721608d6fab5}\label{class_player_a0b03ad07bf383ea6bb67721608d6fab5}} 
-\index{Player@{Player}!tournaments\_lost@{tournaments\_lost}}
-\index{tournaments\_lost@{tournaments\_lost}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{tournaments\_lost}{tournaments\_lost}}
-{\footnotesize\ttfamily int Player\+::tournaments\+\_\+lost\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_player_a4d13b6ff1d6997f8ba9fbd25211d19c4}\label{class_player_a4d13b6ff1d6997f8ba9fbd25211d19c4}} 
+\index{Player@{Player}!matches\_won@{matches\_won}}
+\index{matches\_won@{matches\_won}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{matches\_won}{matches\_won}}
+{\footnotesize\ttfamily int Player\+::matches\+\_\+won\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Definition at line \mbox{\hyperlink{player_8hh_source_l00023}{23}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
+
+\mbox{\Hypertarget{class_player_a46ab532aa6ce561762738bac190efa4c}\label{class_player_a46ab532aa6ce561762738bac190efa4c}} 
+\index{Player@{Player}!matches\_lost@{matches\_lost}}
+\index{matches\_lost@{matches\_lost}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{matches\_lost}{matches\_lost}}
+{\footnotesize\ttfamily int Player\+::matches\+\_\+lost\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{player_8hh_source_l00024}{24}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
 
 \mbox{\Hypertarget{class_player_a4a51f0af5e3f896ce8ee238c6085ac70}\label{class_player_a4a51f0af5e3f896ce8ee238c6085ac70}} 
 \index{Player@{Player}!sets\_won@{sets\_won}}
@@ -225,7 +346,7 @@ Definition at line \mbox{\hyperlink{player_8hh_source_l00023}{23}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{player_8hh_source_l00024}{24}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
+Definition at line \mbox{\hyperlink{player_8hh_source_l00025}{25}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
 
 \mbox{\Hypertarget{class_player_a904c73bbbbe8be6ca9022eb316619c78}\label{class_player_a904c73bbbbe8be6ca9022eb316619c78}} 
 \index{Player@{Player}!sets\_lost@{sets\_lost}}
@@ -235,7 +356,7 @@ Definition at line \mbox{\hyperlink{player_8hh_source_l00024}{24}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{player_8hh_source_l00025}{25}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
+Definition at line \mbox{\hyperlink{player_8hh_source_l00026}{26}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
 
 \mbox{\Hypertarget{class_player_a17f0f9497a689695d342acb4928a654d}\label{class_player_a17f0f9497a689695d342acb4928a654d}} 
 \index{Player@{Player}!games\_won@{games\_won}}
@@ -245,7 +366,7 @@ Definition at line \mbox{\hyperlink{player_8hh_source_l00025}{25}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{player_8hh_source_l00026}{26}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
+Definition at line \mbox{\hyperlink{player_8hh_source_l00027}{27}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
 
 \mbox{\Hypertarget{class_player_ad015df8ddda23ab315a4d3bc3b576e1f}\label{class_player_ad015df8ddda23ab315a4d3bc3b576e1f}} 
 \index{Player@{Player}!games\_lost@{games\_lost}}
@@ -255,7 +376,17 @@ Definition at line \mbox{\hyperlink{player_8hh_source_l00026}{26}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{player_8hh_source_l00027}{27}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
+Definition at line \mbox{\hyperlink{player_8hh_source_l00028}{28}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
+
+\mbox{\Hypertarget{class_player_ac793ef1d1e7c66b3b4a81a8b4ed005a5}\label{class_player_ac793ef1d1e7c66b3b4a81a8b4ed005a5}} 
+\index{Player@{Player}!ranking@{ranking}}
+\index{ranking@{ranking}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{ranking}{ranking}}
+{\footnotesize\ttfamily int Player\+::ranking\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{player_8hh_source_l00030}{30}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
 
 \mbox{\Hypertarget{class_player_adf0398ea8c1f29175204508ab642b64e}\label{class_player_adf0398ea8c1f29175204508ab642b64e}} 
 \index{Player@{Player}!points@{points}}
@@ -265,30 +396,11 @@ Definition at line \mbox{\hyperlink{player_8hh_source_l00027}{27}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{player_8hh_source_l00029}{29}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
-
-\mbox{\Hypertarget{class_player_a4117303db3022ea570530b5fb16f0d83}\label{class_player_a4117303db3022ea570530b5fb16f0d83}} 
-\index{Player@{Player}!points\_per\_tournament@{points\_per\_tournament}}
-\index{points\_per\_tournament@{points\_per\_tournament}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{points\_per\_tournament}{points\_per\_tournament}}
-{\footnotesize\ttfamily map$<$string, int$>$ Player\+::points\+\_\+per\+\_\+tournament\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line \mbox{\hyperlink{player_8hh_source_l00030}{30}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
-
-\mbox{\Hypertarget{class_player_aa3d611ebcf0b9e7b403116295340ce00}\label{class_player_aa3d611ebcf0b9e7b403116295340ce00}} 
-\index{Player@{Player}!ranking\_position@{ranking\_position}}
-\index{ranking\_position@{ranking\_position}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{ranking\_position}{ranking\_position}}
-{\footnotesize\ttfamily int Player\+::ranking\+\_\+position\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
 Definition at line \mbox{\hyperlink{player_8hh_source_l00032}{32}} of file \mbox{\hyperlink{player_8hh_source}{player.\+hh}}.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{player_8hh}{player.\+hh}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{player_8hh}{player.\+hh}}\item 
+\mbox{\hyperlink{player_8cc}{player.\+cc}}\end{DoxyCompactItemize}

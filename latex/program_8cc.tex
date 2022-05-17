@@ -1,0 +1,244 @@
+\hypertarget{program_8cc}{}\doxysection{program.\+cc File Reference}
+\label{program_8cc}\index{program.cc@{program.cc}}
+Include dependency graph for program.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{program_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main program for the practice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{program.cc@{program.cc}!main@{main}}
+\index{main@{main}!program.cc@{program.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main program for the practice. 
+
+
+
+Definition at line \mbox{\hyperlink{program_8cc_source_l00048}{48}} of file \mbox{\hyperlink{program_8cc_source}{program.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048            \{}
+\DoxyCodeLine{00049     \mbox{\hyperlink{class_set__categories}{Set\_categories}} categories;}
+\DoxyCodeLine{00050     categories.\mbox{\hyperlink{class_set__categories_a2d84f4d1299b68c3aa70425ad30a97ce}{read}}();}
+\DoxyCodeLine{00051     cout << \textcolor{stringliteral}{"{}categories"{}} << endl;}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053     \mbox{\hyperlink{class_set__tournament}{Set\_tournament}} tournaments;}
+\DoxyCodeLine{00054     \textcolor{comment}{//tournaments.read();}}
+\DoxyCodeLine{00055     \textcolor{comment}{// Read tournaments}}
+\DoxyCodeLine{00056     \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{00057     cin >> n;}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{00060         \textcolor{keywordtype}{string} name;}
+\DoxyCodeLine{00061         \textcolor{keywordtype}{int} cat;}
+\DoxyCodeLine{00062         cin >> name >> cat;}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064   cout << i << endl;}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066         tournaments.\mbox{\hyperlink{class_set__tournament_a3713da08ff5f0af3e00856765d89329d}{add\_tournament}}(name, cat);}
+\DoxyCodeLine{00067     \}}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069     cout << \textcolor{stringliteral}{"{}tournaments"{}} << endl;}
+\DoxyCodeLine{00070     \mbox{\hyperlink{class_set__players}{Set\_players}} players;}
+\DoxyCodeLine{00071     players.\mbox{\hyperlink{class_set__players_a6206ccc73a63eb2e64719333d8e409f8}{read}}();}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073     cout << \textcolor{stringliteral}{"{}players"{}} << endl;}
+\DoxyCodeLine{00074     map<string, Tournament> tournaments\_playing;}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076     \textcolor{keywordtype}{string} command;}
+\DoxyCodeLine{00077     cin >> command;}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079     \textcolor{keywordflow}{while} (command != \textcolor{stringliteral}{"{}fin"{}}) \{}
+\DoxyCodeLine{00080         cout << \textcolor{charliteral}{'\#'} << command;}
+\DoxyCodeLine{00081         \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}nuevo\_jugador"{}} or command == \textcolor{stringliteral}{"{}nj"{}}) \{}
+\DoxyCodeLine{00082             \textcolor{keywordtype}{string} id;}
+\DoxyCodeLine{00083             cin >> id;}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00085             cout << \textcolor{charliteral}{' '} << \textcolor{keywordtype}{id} << endl;}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087             \textcolor{keywordflow}{if} (players.\mbox{\hyperlink{class_set__players_ad4688bf691250ada7655a24b45870a81}{player\_exists}}(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{00088                 cout << \textcolor{stringliteral}{"{}error: ya existe un jugador con ese nombre"{}} << endl;}
+\DoxyCodeLine{00089             \}}
+\DoxyCodeLine{00090             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00091                 players.\mbox{\hyperlink{class_set__players_ac4dc303d81e6c0dd3b255ab00d0dcc27}{add\_player}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00092                 cout << players.\mbox{\hyperlink{class_set__players_aa4723d821c8bf5410666bdd77cb75c79}{get\_num}}() << endl;}
+\DoxyCodeLine{00093             \}}
+\DoxyCodeLine{00094         \}}
+\DoxyCodeLine{00095         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}nuevo\_torneo"{}} or command == \textcolor{stringliteral}{"{}nt"{}}) \{}
+\DoxyCodeLine{00096             \textcolor{keywordtype}{int} C = categories.\mbox{\hyperlink{class_set__categories_a009e2c0ff6358700dc8b0060173774b3}{num\_categories}}(), c;}
+\DoxyCodeLine{00097             \textcolor{keywordtype}{string} t;}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099             cin >> t >> c;}
+\DoxyCodeLine{00100 }
+\DoxyCodeLine{00101             cout << \textcolor{charliteral}{' '} << t << \textcolor{charliteral}{' '} << c << endl;}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103             \textcolor{keywordflow}{if} (c > 0 and c <= C) \{}
+\DoxyCodeLine{00104                 \textcolor{keywordflow}{if} (tournaments.\mbox{\hyperlink{class_set__tournament_abb5295730a14c11c794bde53c0e9fe8d}{tournament\_exists}}(t)) \{}
+\DoxyCodeLine{00105                     cout << \textcolor{stringliteral}{"{}error: ya existe un torneo con ese nombre"{}} << endl;}
+\DoxyCodeLine{00106                 \}}
+\DoxyCodeLine{00107                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00108                     tournaments.\mbox{\hyperlink{class_set__tournament_a3713da08ff5f0af3e00856765d89329d}{add\_tournament}}(t, c);}
+\DoxyCodeLine{00109                     \textcolor{comment}{//players.add\_tournament(t);}}
+\DoxyCodeLine{00110                     cout << tournaments.\mbox{\hyperlink{class_set__tournament_af00c9ce9cb2d489a0c7b0db9b8e795a9}{num\_tournaments}}() << endl;}
+\DoxyCodeLine{00111                 \}}
+\DoxyCodeLine{00112             \}}
+\DoxyCodeLine{00113             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00114                 cout << \textcolor{stringliteral}{"{}error: la categoria no existe"{}} << endl;}
+\DoxyCodeLine{00115             \}}
+\DoxyCodeLine{00116         \}}
+\DoxyCodeLine{00117         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}baja\_jugador"{}} or command == \textcolor{stringliteral}{"{}bj"{}}) \{}
+\DoxyCodeLine{00118             \textcolor{keywordtype}{string} p;}
+\DoxyCodeLine{00119             cin >> p;}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121             cout << \textcolor{charliteral}{' '} << p << endl;}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123             \textcolor{keywordflow}{if} (players.\mbox{\hyperlink{class_set__players_ad4688bf691250ada7655a24b45870a81}{player\_exists}}(p)) \{}
+\DoxyCodeLine{00124                 players.\mbox{\hyperlink{class_set__players_aa9b0633239a10c99ae54cad4e4aec719}{delete\_player}}(p);}
+\DoxyCodeLine{00125                 cout << players.\mbox{\hyperlink{class_set__players_aa4723d821c8bf5410666bdd77cb75c79}{get\_num}}() << endl;}
+\DoxyCodeLine{00126             \}}
+\DoxyCodeLine{00127             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00128                 cout << \textcolor{stringliteral}{"{}error: el jugador no existe"{}} << endl;}
+\DoxyCodeLine{00129             \}}
+\DoxyCodeLine{00130         \}}
+\DoxyCodeLine{00131         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}baja\_torneo"{}} or command == \textcolor{stringliteral}{"{}bt"{}}) \{}
+\DoxyCodeLine{00132             \textcolor{keywordtype}{string} t;}
+\DoxyCodeLine{00133             cin >> t;}
+\DoxyCodeLine{00134 }
+\DoxyCodeLine{00135             cout << \textcolor{charliteral}{' '} << t << endl;}
+\DoxyCodeLine{00136 }
+\DoxyCodeLine{00137             \textcolor{keywordflow}{if} (tournaments.\mbox{\hyperlink{class_set__tournament_abb5295730a14c11c794bde53c0e9fe8d}{tournament\_exists}}(t)) \{}
+\DoxyCodeLine{00138                 \textcolor{keyword}{const} \mbox{\hyperlink{class_tournament}{Tournament}} tournament = tournaments.\mbox{\hyperlink{class_set__tournament_a74f27793f8920f8a3d7d5a7eaf3dadcb}{get\_tournament}}(t);}
+\DoxyCodeLine{00139                 tournaments.\mbox{\hyperlink{class_set__tournament_a6d00c072b338ff5b8135228170e58843}{delete\_tournament}}(t);}
+\DoxyCodeLine{00140                 \textcolor{comment}{//players.delete\_tournament(t);}}
+\DoxyCodeLine{00141                 cout << tournaments.\mbox{\hyperlink{class_set__tournament_af00c9ce9cb2d489a0c7b0db9b8e795a9}{num\_tournaments}}() << endl;}
+\DoxyCodeLine{00142             \}}
+\DoxyCodeLine{00143             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00144                 cout << \textcolor{stringliteral}{"{}error: el torneo no existe"{}} << endl;}
+\DoxyCodeLine{00145             \}}
+\DoxyCodeLine{00146         \}}
+\DoxyCodeLine{00147         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}iniciar\_torneo"{}} or command == \textcolor{stringliteral}{"{}it"{}}) \{}
+\DoxyCodeLine{00148             \textcolor{keywordtype}{string} t;}
+\DoxyCodeLine{00149             cin >> t;}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151             cout << \textcolor{charliteral}{' '} << t << endl;}
+\DoxyCodeLine{00152 }
+\DoxyCodeLine{00153             \textcolor{keywordflow}{if} (tournaments.\mbox{\hyperlink{class_set__tournament_abb5295730a14c11c794bde53c0e9fe8d}{tournament\_exists}}(t)) \{}
+\DoxyCodeLine{00154                 \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{00155                 cin >> n;}
+\DoxyCodeLine{00156 }
+\DoxyCodeLine{00157                 \mbox{\hyperlink{class_tournament}{Tournament}} tournament = tournaments.\mbox{\hyperlink{class_set__tournament_a74f27793f8920f8a3d7d5a7eaf3dadcb}{get\_tournament}}(t);}
+\DoxyCodeLine{00158 }
+\DoxyCodeLine{00159                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{00160                     \textcolor{keywordtype}{int} position\_in\_ranking;}
+\DoxyCodeLine{00161                     cin >> position\_in\_ranking;}
+\DoxyCodeLine{00162 }
+\DoxyCodeLine{00163                     tournament.\mbox{\hyperlink{class_tournament_aa051aced27c59222cd948caaa175046e}{add\_player}}(}
+\DoxyCodeLine{00164                             players.\mbox{\hyperlink{class_set__players_a341494d26997bb09495a8cbaf9ab0bee}{get\_iterator}}(position\_in\_ranking -\/ 1));}
+\DoxyCodeLine{00165                 \}}
+\DoxyCodeLine{00166 }
+\DoxyCodeLine{00167                 tournament.\mbox{\hyperlink{class_tournament_abab0c0beb48ebdd6fe4db3df151380a9}{inscriptions}}(n);}
+\DoxyCodeLine{00168 }
+\DoxyCodeLine{00169                 tournaments\_playing[t] = tournament;}
+\DoxyCodeLine{00170             \}}
+\DoxyCodeLine{00171             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00172                 \textcolor{comment}{//cout << "{}error: el torneo no existe"{} << endl;}}
+\DoxyCodeLine{00173             \}}
+\DoxyCodeLine{00174         \}}
+\DoxyCodeLine{00175         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}finalizar\_torneo"{}} or command == \textcolor{stringliteral}{"{}ft"{}}) \{}
+\DoxyCodeLine{00176             \textcolor{keywordtype}{string} t;}
+\DoxyCodeLine{00177             cin >> t;}
+\DoxyCodeLine{00178 }
+\DoxyCodeLine{00179       cout << \textcolor{charliteral}{' '} << t << endl;}
+\DoxyCodeLine{00180 }
+\DoxyCodeLine{00181       map<string, Tournament>::iterator tournament = }
+\DoxyCodeLine{00182     tournaments\_playing.find(t);}
+\DoxyCodeLine{00183       \textcolor{comment}{// Check if tournament is being played}}
+\DoxyCodeLine{00184             \textcolor{keywordflow}{if} (tournament != tournaments\_playing.end()) \{}
+\DoxyCodeLine{00185     tournament-\/>second.\mbox{\hyperlink{class_tournament_abd59ee950baf3f75e49e8cfa13428409}{get\_results\_i}}();}
+\DoxyCodeLine{00186     cout << \textcolor{stringliteral}{"{}Nya! 1"{}} << endl;}
+\DoxyCodeLine{00187     tournament-\/>second.calc\_winners\_i();}
+\DoxyCodeLine{00188     cout << \textcolor{stringliteral}{"{}Nya! 2"{}} << endl;}
+\DoxyCodeLine{00189     tournament-\/>second.print\_tree\_i();}
+\DoxyCodeLine{00190     cout << \textcolor{stringliteral}{"{}Nya! 3"{}} << endl;}
+\DoxyCodeLine{00191 }
+\DoxyCodeLine{00192     \textcolor{comment}{//                Tournament tournament = tournaments.get\_tournament(t);}}
+\DoxyCodeLine{00193 \textcolor{comment}{//                tournament.end\_tournament(players);}}
+\DoxyCodeLine{00194 \textcolor{comment}{//                tournament.print\_results();}}
+\DoxyCodeLine{00195             \}}
+\DoxyCodeLine{00196         \}}
+\DoxyCodeLine{00197         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}listar\_ranking"{}} or command == \textcolor{stringliteral}{"{}lr"{}}) \{}
+\DoxyCodeLine{00198             cout << endl;}
+\DoxyCodeLine{00199             vector<map<string, Player>::iterator> ranking = }
+\DoxyCodeLine{00200     players.\mbox{\hyperlink{class_set__players_a1d0a62bf3339895dc2be80b6d49d1faa}{get\_ranking}}();}
+\DoxyCodeLine{00201 }
+\DoxyCodeLine{00202             \textcolor{keywordtype}{int} size = ranking.size();}
+\DoxyCodeLine{00203 }
+\DoxyCodeLine{00204             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{00205                 map<string, Player>::iterator player = ranking[i];}
+\DoxyCodeLine{00206                 cout << i + 1 << \textcolor{charliteral}{' '} << player-\/>second.get\_name() << \textcolor{charliteral}{' '} <<}
+\DoxyCodeLine{00207                 player-\/>second.get\_points() << endl;}
+\DoxyCodeLine{00208             \}}
+\DoxyCodeLine{00209         \}}
+\DoxyCodeLine{00210         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}listar\_jugadores"{}} or command == \textcolor{stringliteral}{"{}lj"{}}) \{}
+\DoxyCodeLine{00211             cout << endl << players.\mbox{\hyperlink{class_set__players_aa4723d821c8bf5410666bdd77cb75c79}{get\_num}}() << endl;}
+\DoxyCodeLine{00212             players.\mbox{\hyperlink{class_set__players_a11cf560d381a06920872d8dc03ca45c5}{print}}();}
+\DoxyCodeLine{00213         \}}
+\DoxyCodeLine{00214         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}consultar\_jugador"{}} or command == \textcolor{stringliteral}{"{}cj"{}}) \{}
+\DoxyCodeLine{00215             \textcolor{keywordtype}{string} p;}
+\DoxyCodeLine{00216             cin >> p;}
+\DoxyCodeLine{00217 }
+\DoxyCodeLine{00218             cout << \textcolor{charliteral}{' '} << p << endl;}
+\DoxyCodeLine{00219 }
+\DoxyCodeLine{00220             \textcolor{keywordflow}{if} (players.\mbox{\hyperlink{class_set__players_ad4688bf691250ada7655a24b45870a81}{player\_exists}}(p)) \{}
+\DoxyCodeLine{00221                 players.\mbox{\hyperlink{class_set__players_a341494d26997bb09495a8cbaf9ab0bee}{get\_iterator}}(p)-\/>second.print();}
+\DoxyCodeLine{00222             \}}
+\DoxyCodeLine{00223             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00224                 cout << \textcolor{stringliteral}{"{}error: el jugador no existe"{}} << endl;}
+\DoxyCodeLine{00225             \}}
+\DoxyCodeLine{00226         \}}
+\DoxyCodeLine{00227         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}listar\_torneos"{}} or command == \textcolor{stringliteral}{"{}lt"{}}) \{}
+\DoxyCodeLine{00228             cout << endl << tournaments.\mbox{\hyperlink{class_set__tournament_af00c9ce9cb2d489a0c7b0db9b8e795a9}{num\_tournaments}}() << endl;}
+\DoxyCodeLine{00229 }
+\DoxyCodeLine{00230             tournaments.\mbox{\hyperlink{class_set__tournament_a593ef45ec5cd3ab09fdde083136a93d3}{print}}(categories);}
+\DoxyCodeLine{00231         \}}
+\DoxyCodeLine{00232         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}listar\_categorias"{}} or command == \textcolor{stringliteral}{"{}lc"{}}) \{}
+\DoxyCodeLine{00233             cout << endl;}
+\DoxyCodeLine{00234             vector<Category> categories\_data = categories.\mbox{\hyperlink{class_set__categories_af0caa3e768ec0294a9953ce7b5e8a72b}{get\_categories}}();}
+\DoxyCodeLine{00235             \textcolor{keywordtype}{int} size = categories\_data.size();}
+\DoxyCodeLine{00236 }
+\DoxyCodeLine{00237             cout << size << \textcolor{charliteral}{' '} << categories.\mbox{\hyperlink{class_set__categories_a313c96f3edcf02306f72f6315db20746}{get\_levels}}() << endl;}
+\DoxyCodeLine{00238 }
+\DoxyCodeLine{00239             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{00240                 \mbox{\hyperlink{class_category}{Category}} category = categories\_data[i];}
+\DoxyCodeLine{00241                 cout << category.\mbox{\hyperlink{class_category_a30369ab22fdf70a96729b4722b8e078e}{get\_name}}();}
+\DoxyCodeLine{00242 }
+\DoxyCodeLine{00243                 vector<int> points\_per\_level = category.\mbox{\hyperlink{class_category_ace6dc37f4d0a839fa102d341aef7b3c5}{get\_points\_per\_level}}();}
+\DoxyCodeLine{00244                 \textcolor{keywordtype}{int} size2 = points\_per\_level.size();}
+\DoxyCodeLine{00245 }
+\DoxyCodeLine{00246                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < size2; ++j) \{}
+\DoxyCodeLine{00247                     cout << \textcolor{charliteral}{' '} << points\_per\_level[j];}
+\DoxyCodeLine{00248                 \}}
+\DoxyCodeLine{00249                 cout << endl;}
+\DoxyCodeLine{00250             \}}
+\DoxyCodeLine{00251         \}}
+\DoxyCodeLine{00252 }
+\DoxyCodeLine{00253         cin >> command;}
+\DoxyCodeLine{00254     \}}
+\DoxyCodeLine{00255 \}}
+
+\end{DoxyCode}

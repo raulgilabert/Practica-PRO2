@@ -1,0 +1,181 @@
+\hypertarget{tournament_8cc_source}{}\doxysection{tournament.\+cc}
+\mbox{\hyperlink{tournament_8cc}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{tournament_8hh}{tournament.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00002}00002 \textcolor{preprocessor}{\#include "{}BinTree.hh"{}}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00004}00004 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00006}\mbox{\hyperlink{class_tournament_a17239ab31a8eb50fbb7cf22ff70a82f1}{00006}} \mbox{\hyperlink{class_tournament_a87cc832c6612caebcab61d1bea7ef1ac}{Tournament::Tournament}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& \textcolor{keywordtype}{id}, \textcolor{keywordtype}{int} category) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00007}00007     this-\/>\textcolor{keywordtype}{id} = \mbox{\hyperlink{class_tournament_a8d5a69afdfcd948e7d045bcd38fa94f4}{id}};}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00008}00008     this-\/>category = \mbox{\hyperlink{class_tournament_afe0ad181e8c5b1feb708dc4f07d90651}{category}};}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00009}00009 \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00011}\mbox{\hyperlink{class_tournament_a87cc832c6612caebcab61d1bea7ef1ac}{00011}} \mbox{\hyperlink{class_tournament_a87cc832c6612caebcab61d1bea7ef1ac}{Tournament::Tournament}}() \{\}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00013}\mbox{\hyperlink{class_tournament_a3cd15abb3e9599c60ae124fed5a04ee5}{00013}} \mbox{\hyperlink{class_tournament_a3cd15abb3e9599c60ae124fed5a04ee5}{Tournament::\string~Tournament}}() \{\}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00015}\mbox{\hyperlink{class_tournament_aa051aced27c59222cd948caaa175046e}{00015}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_aa051aced27c59222cd948caaa175046e}{Tournament::add\_player}}(map<string, Player>::iterator player) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00016}00016     \mbox{\hyperlink{class_tournament_a6c7874953896c68084dd05094dab3586}{players}}.push\_back(player);}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00017}00017 \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00019}\mbox{\hyperlink{class_tournament_a4648690ed8b2360f09468922d54e11d5}{00019}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tournament_a4648690ed8b2360f09468922d54e11d5}{Tournament::get\_category}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00020}00020     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_tournament_afe0ad181e8c5b1feb708dc4f07d90651}{category}};}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00021}00021 \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00023}\mbox{\hyperlink{class_tournament_a335bbe9644fbea08dde60ee5af6f70f4}{00023}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_a335bbe9644fbea08dde60ee5af6f70f4}{Tournament::get\_results}}(BinTree<element>\& a) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00024}00024     \textcolor{keywordtype}{string} result;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00025}00025     cin >> result;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00027}00027     \textcolor{keywordflow}{if} (result != \textcolor{stringliteral}{"{}0"{}}) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00028}00028   \mbox{\hyperlink{structelement}{element}} elem = a.value();}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00030}00030   elem.\mbox{\hyperlink{structelement_ab363dc4a109cc909c020337d9c3e419e}{points}} = result;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00032}00032   BinTree<element> left = a.left(), right = a.right();}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00034}00034   \mbox{\hyperlink{class_tournament_a335bbe9644fbea08dde60ee5af6f70f4}{get\_results}}(left);}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00035}00035   \mbox{\hyperlink{class_tournament_a335bbe9644fbea08dde60ee5af6f70f4}{get\_results}}(right);}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00036}00036   }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00038}00038   a = BinTree<element>(elem, left, right);}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00039}00039     \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00040}00040 \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00042}\mbox{\hyperlink{class_tournament_abd59ee950baf3f75e49e8cfa13428409}{00042}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_abd59ee950baf3f75e49e8cfa13428409}{Tournament::get\_results\_i}}() \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00043}00043     \mbox{\hyperlink{class_tournament_a335bbe9644fbea08dde60ee5af6f70f4}{get\_results}}(\mbox{\hyperlink{class_tournament_acaaab9f7af1c9a05922ddbff61490a47}{matches}});}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00044}00044 \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00046}00046 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00047}00047 \textcolor{comment}{void Tournament::end\_tournament(Set\_players \&players) \{}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00048}00048 \textcolor{comment}{    }}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00049}00049 \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00050}00050 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00052}\mbox{\hyperlink{class_tournament_a903fd4af75504693ea897d3c988a6024}{00052}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_a903fd4af75504693ea897d3c988a6024}{Tournament::print\_results}}() \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00054}00054 \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00056}\mbox{\hyperlink{class_tournament_acd98e0ba6e192539401583b1a090ba5a}{00056}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tournament_acd98e0ba6e192539401583b1a090ba5a}{Tournament::get\_winner}}(\textcolor{keywordtype}{int} a, \textcolor{keywordtype}{int} b, \textcolor{keywordtype}{string} matches) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00057}00057     \textcolor{keywordtype}{int} size = \mbox{\hyperlink{class_tournament_acaaab9f7af1c9a05922ddbff61490a47}{matches}}.size();}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00058}00058     \textcolor{keywordflow}{if} (size == 3) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00059}00059   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_tournament_acaaab9f7af1c9a05922ddbff61490a47}{matches}}[0] == 1)}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00060}00060       \textcolor{keywordflow}{return} a;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00061}00061   \textcolor{keywordflow}{return} b;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00062}00062     \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00064}00064     \textcolor{keywordtype}{int} win\_a = 0, win\_b = 0;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00066}00066     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size/4 + 1; ++i) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00067}00067   cout << i << endl << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_tournament_acaaab9f7af1c9a05922ddbff61490a47}{matches}}[i*4] << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_tournament_acaaab9f7af1c9a05922ddbff61490a47}{matches}}[i*4 + 2] << }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00068}00068       endl;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00069}00069   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_tournament_acaaab9f7af1c9a05922ddbff61490a47}{matches}}[i*4] > \mbox{\hyperlink{class_tournament_acaaab9f7af1c9a05922ddbff61490a47}{matches}}[i*4 + 2])}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00070}00070       ++win\_a;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00071}00071   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00072}00072       ++win\_b;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00073}00073     \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00075}00075     \textcolor{keywordflow}{if} (win\_a > win\_b)}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00076}00076   \textcolor{keywordflow}{return} a;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00077}00077     \textcolor{keywordflow}{return} b;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00078}00078 \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00080}\mbox{\hyperlink{class_tournament_af82c7b6ae87f46741b45fd043a270ead}{00080}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tournament_af82c7b6ae87f46741b45fd043a270ead}{Tournament::calc\_winners}}(BinTree<element>\& a, \textcolor{keywordtype}{int} height) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00081}00081     \textcolor{keywordflow}{if} (a.empty()) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00082}00082   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00083}00083     \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00085}00085     cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}} << endl << \textcolor{stringliteral}{"{}player: "{}} << a.value().player << \textcolor{stringliteral}{"{}: "{}}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00086}00086   << endl << a.empty() << endl;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00087}00087     }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00088}00088     BinTree<element> left = a.left(), right = a.right();}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00090}00090     \textcolor{keywordtype}{int} left\_w = \mbox{\hyperlink{class_tournament_af82c7b6ae87f46741b45fd043a270ead}{calc\_winners}}(left, ++height), }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00091}00091   right\_w = \mbox{\hyperlink{class_tournament_af82c7b6ae87f46741b45fd043a270ead}{calc\_winners}}(right, height);}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00093}00093     cout << \textcolor{stringliteral}{"{}comparing "{}} << left\_w << \textcolor{charliteral}{' '} << right\_w << endl;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00095}00095     \textcolor{keywordflow}{if} (left\_w == 0) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00096}00096   \textcolor{keywordflow}{if} (right\_w == 0) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00097}00097       cout << \textcolor{stringliteral}{"{}returning own value: "{}} << a.value().player << endl;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00098}00098       \textcolor{keywordflow}{return} a.value().player;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00099}00099   \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00100}00100   \textcolor{keywordflow}{return} right\_w;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00101}00101     \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00103}00103     \mbox{\hyperlink{structelement}{element}} elem = a.value();}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00105}00105     elem.\mbox{\hyperlink{structelement_ac6c6ff3ce2cb5fbc96e771fd4a17354a}{left}} = left\_w;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00106}00106     elem.\mbox{\hyperlink{structelement_ac3a0d727a849f83d0375bf9b1d351807}{right}} = right\_w;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00108}00108     cout << \textcolor{stringliteral}{"{}pre"{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00109}00109     a = BinTree<element>(elem, left, right);}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00110}00110     cout << \textcolor{stringliteral}{"{}post"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00112}00112     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_tournament_acd98e0ba6e192539401583b1a090ba5a}{get\_winner}}(left\_w, right\_w, a.value().points);}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00113}00113 \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00115}\mbox{\hyperlink{class_tournament_a16ec4e260e599c693349eb6d7fce9766}{00115}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tournament_a16ec4e260e599c693349eb6d7fce9766}{Tournament::calc\_winners\_i}}() \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00116}00116     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_tournament_af82c7b6ae87f46741b45fd043a270ead}{calc\_winners}}(\mbox{\hyperlink{class_tournament_acaaab9f7af1c9a05922ddbff61490a47}{matches}}, 1);}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00117}00117 \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00120}\mbox{\hyperlink{class_tournament_a3fd25c4a695c853d87f520fb69c91ce4}{00120}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_a3fd25c4a695c853d87f520fb69c91ce4}{Tournament::print\_tree}}(\textcolor{keyword}{const} BinTree<element>\& a) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00121}00121     \textcolor{keywordflow}{if} (not a.left().empty()) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00122}00122   cout << a.value().left << \textcolor{charliteral}{' '} << a.value().right << \textcolor{charliteral}{' '} << }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00123}00123       a.value().player << \textcolor{charliteral}{' '} << a.value().points << endl;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00125}00125   cout << \textcolor{charliteral}{'('};}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00126}00126   cout << a.value().left << \textcolor{charliteral}{'.'} << }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00127}00127       \mbox{\hyperlink{class_tournament_a6c7874953896c68084dd05094dab3586}{players}}[a.value().left -\/ 1]-\/>second.get\_name() << \textcolor{stringliteral}{"{} vs "{}} << }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00128}00128       a.value().right << \textcolor{charliteral}{'.'} << }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00129}00129       \mbox{\hyperlink{class_tournament_a6c7874953896c68084dd05094dab3586}{players}}[a.value().right -\/ 1]-\/>second.get\_name() << \textcolor{charliteral}{' '} <<}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00130}00130       a.value().points;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00132}00132   \mbox{\hyperlink{class_tournament_a3fd25c4a695c853d87f520fb69c91ce4}{print\_tree}}(a.left());}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00133}00133   \mbox{\hyperlink{class_tournament_a3fd25c4a695c853d87f520fb69c91ce4}{print\_tree}}(a.right());}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00134}00134   cout << \textcolor{charliteral}{')'};}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00135}00135     \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00136}00136 \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00139}\mbox{\hyperlink{class_tournament_a8eae45861a5acd0f588fd5bd6b6e9db1}{00139}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_a8eae45861a5acd0f588fd5bd6b6e9db1}{Tournament::print\_tree\_i}}() \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00140}00140     cout << \textcolor{stringliteral}{"{}Nya! owo"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00141}00141     \mbox{\hyperlink{class_tournament_a3fd25c4a695c853d87f520fb69c91ce4}{print\_tree}}(\mbox{\hyperlink{class_tournament_acaaab9f7af1c9a05922ddbff61490a47}{matches}});}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00142}00142     cout << \textcolor{stringliteral}{"{}Nya! uwu"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00143}00143 \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00146}\mbox{\hyperlink{class_tournament_aff56176a7bd6f499a7cb9f2bd0ec032a}{00146}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_aff56176a7bd6f499a7cb9f2bd0ec032a}{Tournament::print}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_set__categories}{Set\_categories}}\& cat)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00147}00147     cout << \textcolor{keywordtype}{id} << \textcolor{charliteral}{' '} << cat.\mbox{\hyperlink{class_set__categories_ae0e0c39080d2ce8a11a5404b4f45aac2}{get\_name}}(\mbox{\hyperlink{class_tournament_afe0ad181e8c5b1feb708dc4f07d90651}{category}});}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00148}00148 \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00149}00149 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00150}\mbox{\hyperlink{class_tournament_a6e42b8b9881ba3eb1274a492afa93aec}{00150}} BinTree<element> \mbox{\hyperlink{class_tournament_a6e42b8b9881ba3eb1274a492afa93aec}{Tournament::inscriptions\_t}}(\textcolor{keywordtype}{int} nodes, \textcolor{keywordtype}{int} n, \textcolor{keywordtype}{int} pos) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00151}00151     \mbox{\hyperlink{structelement}{element}} elem;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00152}00152     elem.\mbox{\hyperlink{structelement_a4036eff277b3a6c37544c76e64026a13}{player}} = pos;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00154}00154     \textcolor{keywordflow}{if} (n <= nodes) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00155}00155         cout << pos << \textcolor{charliteral}{'.'} << \mbox{\hyperlink{class_tournament_a6c7874953896c68084dd05094dab3586}{players}}[pos -\/ 1]-\/>second.get\_name();}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00156}00156         \textcolor{keywordflow}{return} BinTree<element>(elem);}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00157}00157     \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00158}00158 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00159}00159     nodes *= 2;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00160}00160     \textcolor{keywordflow}{if} ((nodes > n) and (nodes -\/ n >= pos)) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00161}00161         cout << pos << \textcolor{charliteral}{'.'} << \mbox{\hyperlink{class_tournament_a6c7874953896c68084dd05094dab3586}{players}}[pos -\/ 1]-\/>second.get\_name();}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00162}00162         \textcolor{keywordflow}{return} BinTree<element>(elem);}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00163}00163     \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00164}00164     BinTree<element> left, right;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00165}00165     cout << \textcolor{charliteral}{'('};}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00166}00166     left = \mbox{\hyperlink{class_tournament_a6e42b8b9881ba3eb1274a492afa93aec}{inscriptions\_t}}(nodes, n, pos);}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00167}00167     cout << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00168}00168     right = \mbox{\hyperlink{class_tournament_a6e42b8b9881ba3eb1274a492afa93aec}{inscriptions\_t}}(nodes, n, nodes + 1 -\/ pos);}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00169}00169     cout << \textcolor{charliteral}{')'};}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00170}00170     \textcolor{keywordflow}{return} BinTree<element>(elem, left, right);}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00171}00171 \}}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00172}00172 }
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00173}\mbox{\hyperlink{class_tournament_abab0c0beb48ebdd6fe4db3df151380a9}{00173}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_abab0c0beb48ebdd6fe4db3df151380a9}{Tournament::inscriptions}}(\textcolor{keywordtype}{int} n) \{}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00174}00174     \mbox{\hyperlink{class_tournament_acaaab9f7af1c9a05922ddbff61490a47}{matches}} = \mbox{\hyperlink{class_tournament_a6e42b8b9881ba3eb1274a492afa93aec}{inscriptions\_t}}(1, n, 1);}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00175}00175     cout << endl;}
+\DoxyCodeLine{\Hypertarget{tournament_8cc_source_l00176}00176 \}}
+
+\end{DoxyCode}

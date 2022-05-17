@@ -11,33 +11,73 @@
 \DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00011}00011 }
 \DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00012}00012 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{player_8hh}{player.hh}}"{}}}
 \DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00013}00013 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{set__players_8hh}{set\_players.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00014}00014 }
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00015}00015 \textcolor{keyword}{using namespace }std;}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00016}00016 }
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00019}\mbox{\hyperlink{class_tournament}{00019}} \textcolor{keyword}{class }\mbox{\hyperlink{class_tournament}{Tournament}} \{}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00020}00020 \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00021}\mbox{\hyperlink{class_tournament_a8d5a69afdfcd948e7d045bcd38fa94f4}{00021}}     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_tournament_a8d5a69afdfcd948e7d045bcd38fa94f4}{id}};}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00022}\mbox{\hyperlink{class_tournament_a0c15a5159c624c627cec923d12314940}{00022}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tournament_a0c15a5159c624c627cec923d12314940}{num\_registered}};}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00023}\mbox{\hyperlink{class_tournament_a770ac33380e96369af02c00575c38466}{00023}}     vector<Player> \mbox{\hyperlink{class_tournament_a770ac33380e96369af02c00575c38466}{players}};}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00024}\mbox{\hyperlink{class_tournament_afe0ad181e8c5b1feb708dc4f07d90651}{00024}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tournament_afe0ad181e8c5b1feb708dc4f07d90651}{category}};}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00025}\mbox{\hyperlink{class_tournament_a0878527032dd63e7b3e46cdedc1bd555}{00025}}     BinTree<string> \mbox{\hyperlink{class_tournament_a0878527032dd63e7b3e46cdedc1bd555}{matches}};}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00026}00026 }
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00031}\mbox{\hyperlink{class_tournament_adba6ef8314f6b904fe22a20eb724b14c}{00031}}     BinTree<string> \mbox{\hyperlink{class_tournament_adba6ef8314f6b904fe22a20eb724b14c}{result\_tournament}}();}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00032}00032 }
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00033}00033 \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00034}\mbox{\hyperlink{class_tournament_aa31684f469ee8ecb4e750a31db9ffa41}{00034}}     \mbox{\hyperlink{class_tournament_aa31684f469ee8ecb4e750a31db9ffa41}{Tournament}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tournament_afe0ad181e8c5b1feb708dc4f07d90651}{category}});}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00035}00035 }
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00036}\mbox{\hyperlink{class_tournament_a3cd15abb3e9599c60ae124fed5a04ee5}{00036}}     \mbox{\hyperlink{class_tournament_a3cd15abb3e9599c60ae124fed5a04ee5}{\string~Tournament}}();}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00037}00037 }
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00041}\mbox{\hyperlink{class_tournament_a650798aadb454b8727b35e9e3ddacd39}{00041}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_a650798aadb454b8727b35e9e3ddacd39}{add\_player}}(\mbox{\hyperlink{class_player}{Player}} player);}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00042}00042 }
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00046}\mbox{\hyperlink{class_tournament_a4648690ed8b2360f09468922d54e11d5}{00046}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tournament_a4648690ed8b2360f09468922d54e11d5}{get\_category}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00047}00047 }
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00052}\mbox{\hyperlink{class_tournament_a688e014acbbd375f57f816dc3334e35d}{00052}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_a688e014acbbd375f57f816dc3334e35d}{end\_tournament}}(\mbox{\hyperlink{class_set__players}{Set\_players}}\& \mbox{\hyperlink{class_tournament_a770ac33380e96369af02c00575c38466}{players}});}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00014}00014 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{set__categories_8hh}{set\_categories.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00016}00016 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00018}\mbox{\hyperlink{structelement}{00018}} \textcolor{keyword}{struct }\mbox{\hyperlink{structelement}{element}} \{}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00019}\mbox{\hyperlink{structelement_a4036eff277b3a6c37544c76e64026a13}{00019}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{structelement_a4036eff277b3a6c37544c76e64026a13}{player}};}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00020}\mbox{\hyperlink{structelement_ab363dc4a109cc909c020337d9c3e419e}{00020}}     \textcolor{keywordtype}{string} \mbox{\hyperlink{structelement_ab363dc4a109cc909c020337d9c3e419e}{points}};}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00021}\mbox{\hyperlink{structelement_ac6c6ff3ce2cb5fbc96e771fd4a17354a}{00021}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{structelement_ac6c6ff3ce2cb5fbc96e771fd4a17354a}{left}};}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00022}\mbox{\hyperlink{structelement_ac3a0d727a849f83d0375bf9b1d351807}{00022}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{structelement_ac3a0d727a849f83d0375bf9b1d351807}{right}};}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00023}00023 \};}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00027}\mbox{\hyperlink{class_tournament}{00027}} \textcolor{keyword}{class }\mbox{\hyperlink{class_tournament}{Tournament}} \{}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00028}00028 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00029}\mbox{\hyperlink{class_tournament_a8d5a69afdfcd948e7d045bcd38fa94f4}{00029}}     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_tournament_a8d5a69afdfcd948e7d045bcd38fa94f4}{id}};}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00030}\mbox{\hyperlink{class_tournament_a0c15a5159c624c627cec923d12314940}{00030}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tournament_a0c15a5159c624c627cec923d12314940}{num\_registered}};}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00031}\mbox{\hyperlink{class_tournament_a6c7874953896c68084dd05094dab3586}{00031}}     vector<map<string, Player>::iterator> \mbox{\hyperlink{class_tournament_a6c7874953896c68084dd05094dab3586}{players}};}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00032}\mbox{\hyperlink{class_tournament_afe0ad181e8c5b1feb708dc4f07d90651}{00032}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tournament_afe0ad181e8c5b1feb708dc4f07d90651}{category}};}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00033}\mbox{\hyperlink{class_tournament_ad5c068673a2546b1ec5d6e59da97baeb}{00033}}     vector<int> \mbox{\hyperlink{class_tournament_ad5c068673a2546b1ec5d6e59da97baeb}{points}};}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00035}\mbox{\hyperlink{class_tournament_acaaab9f7af1c9a05922ddbff61490a47}{00035}}     BinTree<element> \mbox{\hyperlink{class_tournament_acaaab9f7af1c9a05922ddbff61490a47}{matches}};}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00037}00037     \textcolor{comment}{//BinTree<int> matches;}}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00039}00039     \textcolor{comment}{//BinTree<string> results;}}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00045}\mbox{\hyperlink{class_tournament_adba6ef8314f6b904fe22a20eb724b14c}{00045}}     BinTree<string> \mbox{\hyperlink{class_tournament_adba6ef8314f6b904fe22a20eb724b14c}{result\_tournament}}();}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00047}00047     \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tournament_acd98e0ba6e192539401583b1a090ba5a}{get\_winner}}(\textcolor{keywordtype}{int} a, \textcolor{keywordtype}{int} b, \textcolor{keywordtype}{string} \mbox{\hyperlink{class_tournament_acaaab9f7af1c9a05922ddbff61490a47}{matches}});}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00049}00049 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00050}00050     \mbox{\hyperlink{class_tournament_a87cc832c6612caebcab61d1bea7ef1ac}{Tournament}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& \textcolor{keywordtype}{id}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tournament_afe0ad181e8c5b1feb708dc4f07d90651}{category}});}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00052}00052     \mbox{\hyperlink{class_tournament_a87cc832c6612caebcab61d1bea7ef1ac}{Tournament}}();}
 \DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00053}00053 }
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00057}\mbox{\hyperlink{class_tournament_a903fd4af75504693ea897d3c988a6024}{00057}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_a903fd4af75504693ea897d3c988a6024}{print\_results}}();}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00058}00058 \};}
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00059}00059 }
-\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00060}00060 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00054}00054     \mbox{\hyperlink{class_tournament_a3cd15abb3e9599c60ae124fed5a04ee5}{\string~Tournament}}();}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00059}00059     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_aa051aced27c59222cd948caaa175046e}{add\_player}}(map<string, Player>::iterator player);}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00061}\mbox{\hyperlink{class_tournament_af114b9c9cb1b932d74fa3e4e0ae65c1d}{00061}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_af114b9c9cb1b932d74fa3e4e0ae65c1d}{create\_matches}}();}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00066}00066     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tournament_a4648690ed8b2360f09468922d54e11d5}{get\_category}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00073}00073     BinTree<element> \mbox{\hyperlink{class_tournament_a6e42b8b9881ba3eb1274a492afa93aec}{inscriptions\_t}}(\textcolor{keywordtype}{int} nodes, \textcolor{keywordtype}{int} n, \textcolor{keywordtype}{int} pos);}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00079}00079     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_abab0c0beb48ebdd6fe4db3df151380a9}{inscriptions}}(\textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00081}00081     }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00082}00082     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_a335bbe9644fbea08dde60ee5af6f70f4}{get\_results}}(BinTree<element>\& results);}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00083}00083     }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00084}00084     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_abd59ee950baf3f75e49e8cfa13428409}{get\_results\_i}}();}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00087}00087     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tournament_af82c7b6ae87f46741b45fd043a270ead}{calc\_winners}}(BinTree<element>\& a, \textcolor{keywordtype}{int} height);}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00088}00088     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tournament_a16ec4e260e599c693349eb6d7fce9766}{calc\_winners\_i}}();}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00094}\mbox{\hyperlink{class_tournament_a688e014acbbd375f57f816dc3334e35d}{00094}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_a688e014acbbd375f57f816dc3334e35d}{end\_tournament}}(\mbox{\hyperlink{class_set__players}{Set\_players}}\& \mbox{\hyperlink{class_tournament_a6c7874953896c68084dd05094dab3586}{players}});}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00099}00099     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_a903fd4af75504693ea897d3c988a6024}{print\_results}}();}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00104}00104     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_aff56176a7bd6f499a7cb9f2bd0ec032a}{print}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_set__categories}{Set\_categories}}\& cat) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00106}00106     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_a3fd25c4a695c853d87f520fb69c91ce4}{print\_tree}}(\textcolor{keyword}{const} BinTree<element>\& a);}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00108}00108     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tournament_a8eae45861a5acd0f588fd5bd6b6e9db1}{print\_tree\_i}}();}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00109}00109 \};}
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{tournament_8hh_source_l00111}00111 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

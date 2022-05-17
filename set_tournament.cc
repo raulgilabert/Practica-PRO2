@@ -9,22 +9,23 @@ Set_tournament::Set_tournament() {
 
 Set_tournament::~Set_tournament() {}
 
-void Set_tournament::add_tournament(string id, int category) {
+void Set_tournament::add_tournament(const string& id, int category) {
     Tournament tournament(id, category);
     tournaments[id] = tournament;
     
     ++num;
 }
 
-bool Set_tournament::tournament_exists(string id) {
+bool Set_tournament::tournament_exists(const string& id) {
     return (tournaments.find(id) != tournaments.end());
 }
 
-Tournament Set_tournament::get_tournament(string id) {
-    return tournaments.find(id)->second;
+map<string, Tournament>::iterator Set_tournament::get_tournament(const 
+	string& id) {
+    return tournaments.find(id);
 }
 
-void Set_tournament::delete_tournament(string id) {
+void Set_tournament::delete_tournament(const string& id) {
     tournaments.erase(id);
     --num;
 }
@@ -47,8 +48,16 @@ void Set_tournament::read() {
 }
 
 void Set_tournament::print(const Set_categories& cat) {
-    for (map<string, Tournament>::const_iterator it = tournaments.begin(); it != tournaments.end(); ++it) {
+    for (map<string, Tournament>::const_iterator it = tournaments.begin(); 
+	    it != tournaments.end(); ++it) {
         it->second.print(cat);
         cout << endl;
+    }
+}
+
+void Set_tournament::delete_player(const string& id) {
+    for (map<string, Tournament>::iterator it = tournaments.begin();
+	    it != tournaments.end(); ++it) {
+        it->second.delete_player(id);
     }
 }

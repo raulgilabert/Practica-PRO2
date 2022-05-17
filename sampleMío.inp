@@ -1,0 +1,144 @@
+3 8
+Torneos_Grandes
+Torneos_Medianos
+Torneos_Pequenos
+2000 1200 720 360 180 90 45 10
+1000  600 360 180  90 45 10  0
+ 300  180  90  45   20 0  0  0
+
+6
+Tokyo-3            1
+Paris              1
+Shiganshina        3
+Trost              2
+Liberio            1
+Ciudad_Subterranea 3
+
+60
+Djokovic
+Medvedev
+Zverev
+Ismacarrones
+Tsitsipas
+Nadal
+Berrettini
+Juancabron
+Rublev
+Ruud
+Auger-Aliassime
+Sinner
+Hurkacz
+El-Nano
+Norrie
+Schwartzman
+Shapovalov
+Alexhumado
+Bautista
+Fritz
+Carreno
+Juan
+Opelka
+JL-Rapgod
+Basilashvili
+Alcaraz
+Sonego
+Karatsev
+Isner
+Cilic
+Eren-Llega
+Monfils
+Khachanov
+Garin
+Evans
+Chinji
+Federer
+Bublik
+Ramos
+De-Minaur
+Dimitrov
+Tiafoe
+Harris
+Francisco
+Fucsovics
+Delbonis
+Fognini
+Paul
+Korda
+Humbert
+Nishikori
+Davidovich
+Krajinovic
+Ivashka
+Lajovic
+Brooksby
+Goffin
+Paire
+Thiem
+Silla
+
+listar_torneos
+
+listar_ranking
+
+nj Javier-Croquetas
+
+listar_jugadores
+
+listar_categorias
+
+it Tokyo-3
+32
+ 1  2  3  4  5  7  8  9 12 14 16 17 18 19 20 23
+34 35 37 38 40 41 42 43 44 45 47 48 49 51 52 55
+
+cj Paire
+
+iniciar_torneo Ciudad_Subterranea
+14
+ 6 10 11 21 22 24 25
+26 28 29 31 32 53 60
+
+finalizar_torneo Tokyo-3
+
+consultar_jugador Silla
+
+finalizar_torneo Ciudad_Subterranea
+1-0
+6-4,6-3
+4-6,6-2,5-7
+0
+4-6,6-0,6-1
+0 0
+1-6,5-7
+6-3,6-4
+0 0
+7-6,6-7,7-6
+0 0
+6-4,6-3
+5-7,5-7
+0
+6-3,6-4
+0 0
+4-6,5-7
+7-6,7-5
+0 0
+0-1
+0 0
+
+consultar_jugador Silla
+
+bj Silla
+
+cj Silla
+
+nj Silla
+
+cj Silla
+
+nt Ciudad_Sin_Nombre 1
+
+bt Ciudad_Subterranea
+
+listar_torneos
+
+

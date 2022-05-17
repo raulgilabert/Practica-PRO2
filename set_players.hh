@@ -29,6 +29,9 @@ private:
      * \post Players sorted by their name */
     void sort_players();
 
+    static bool cmp(map<string, Player>::iterator a, map<string,
+                    Player>::iterator b);
+
 public:
     Set_players();
 
@@ -37,12 +40,12 @@ public:
     /** @brief Add the player
      * \pre id is a player identifier
      * \post Player added to the implicit parameter */
-    void add_player(string id);
+    void add_player(const string& id);
 
     /** @brief Delete the player
      * \pre id is a player identifier
      * \post Player deleted from the implicit parameter */
-    void delete_player(string id);
+    void delete_player(const string& id);
 
     /** @brief Add a tournament to all the players
      * \pre Tournament is a tournament id
@@ -59,7 +62,7 @@ public:
      * \pre true
      * \post Return a iterator to the element requested if exists or
      * player_data.end() if not */
-    map<string, Player>::iterator get_iterator(string id);
+    map<string, Player>::iterator get_iterator(const string& id);
 
     /** @brief Return a iterator to the player in the ranking position requested
      * \pre true
@@ -82,6 +85,8 @@ public:
      * \post return the quantity of players */
     int get_num();
 
+    void modify_points(const string& id, int quantity);
+
     /** @brief Recalculate the ranking
      * \pre true
      * \post Ranking in the implicit parameter is recalculated */
@@ -95,7 +100,7 @@ public:
     /** @brief Check if the player exist
      * \pre id is a player identifier
      * \post true if player in the implicit parameter, false if not */
-    bool player_exists(string id);
+    bool player_exists(const string& id);
 
     /** @brief Read the players identifier
      * \pre An integer P and P strings

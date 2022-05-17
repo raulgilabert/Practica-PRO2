@@ -1,0 +1,66 @@
+\hypertarget{player_8cc_source}{}\doxysection{player.\+cc}
+\mbox{\hyperlink{player_8cc}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{player_8hh}{player.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00003}00003 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00005}\mbox{\hyperlink{class_player_a0f610a9015435f31e006e16c06c7065c}{00005}} \mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player::Player}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& \textcolor{keywordtype}{id}, \textcolor{keywordtype}{int} pos) \{}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00006}00006     \mbox{\hyperlink{class_player_acf0355128a99ee20ad9931b760fb2de1}{name}} = id;}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00008}00008     \mbox{\hyperlink{class_player_ad613e8a3ba83abfefac0b4a37ce57741}{tournaments\_played}} = \mbox{\hyperlink{class_player_a4d13b6ff1d6997f8ba9fbd25211d19c4}{matches\_won}} = \mbox{\hyperlink{class_player_a46ab532aa6ce561762738bac190efa4c}{matches\_lost}} = \mbox{\hyperlink{class_player_a4a51f0af5e3f896ce8ee238c6085ac70}{sets\_won}} = \mbox{\hyperlink{class_player_a904c73bbbbe8be6ca9022eb316619c78}{sets\_lost}} =}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00009}00009             \mbox{\hyperlink{class_player_a17f0f9497a689695d342acb4928a654d}{games\_won}} = \mbox{\hyperlink{class_player_ad015df8ddda23ab315a4d3bc3b576e1f}{games\_lost}} = \mbox{\hyperlink{class_player_adf0398ea8c1f29175204508ab642b64e}{points}} = 0;}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00011}00011     \mbox{\hyperlink{class_player_ac793ef1d1e7c66b3b4a81a8b4ed005a5}{ranking}} = pos;}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00012}00012 \}}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00014}\mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{00014}} \mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player::Player}}() \{\}}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00016}\mbox{\hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{00016}} \mbox{\hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{Player::\string~Player}}() \{}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00017}00017 \}}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00019}\mbox{\hyperlink{class_player_ab23a648d916e68452049de0d3709f5d2}{00019}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_player_ab23a648d916e68452049de0d3709f5d2}{Player::get\_points}}() \{}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00020}00020     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_player_adf0398ea8c1f29175204508ab642b64e}{points}};}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00021}00021 \}}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00023}\mbox{\hyperlink{class_player_a3f946130f829b0ade164d1c8b081de1b}{00023}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_player_a3f946130f829b0ade164d1c8b081de1b}{Player::get\_position}}() \{}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00024}00024     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_player_ac793ef1d1e7c66b3b4a81a8b4ed005a5}{ranking}};}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00025}00025 \}}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00027}00027 \textcolor{comment}{// Se puede hacer más eficiente recalculando los puntos eliminando únicamente}}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00028}00028 \textcolor{comment}{// al acabar un torneo los puntos que están guardados en el vector del total y}}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00029}00029 \textcolor{comment}{// sumando la nueva puntuación del torneo}}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00032}\mbox{\hyperlink{class_player_afb70fff21860e1a2e9193227840fbb9a}{00032}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_afb70fff21860e1a2e9193227840fbb9a}{Player::update\_data}}(\textcolor{keywordtype}{int} matches\_won, \textcolor{keywordtype}{int} matches\_lost, \textcolor{keywordtype}{int} sets\_won,}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00033}00033   \textcolor{keywordtype}{int} sets\_lost, \textcolor{keywordtype}{int} games\_won, \textcolor{keywordtype}{int} games\_lost) \{}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00034}00034     this-\/>\mbox{\hyperlink{class_player_ad613e8a3ba83abfefac0b4a37ce57741}{tournaments\_played}} += 1;}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00036}00036     this-\/>matches\_won += \mbox{\hyperlink{class_player_a4d13b6ff1d6997f8ba9fbd25211d19c4}{matches\_won}};}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00037}00037     this-\/>matches\_lost += \mbox{\hyperlink{class_player_a46ab532aa6ce561762738bac190efa4c}{matches\_lost}};}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00039}00039     this-\/>sets\_won += \mbox{\hyperlink{class_player_a4a51f0af5e3f896ce8ee238c6085ac70}{sets\_won}};}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00040}00040     this-\/>sets\_lost += \mbox{\hyperlink{class_player_a904c73bbbbe8be6ca9022eb316619c78}{sets\_lost}};}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00041}00041     this-\/>games\_won += \mbox{\hyperlink{class_player_a17f0f9497a689695d342acb4928a654d}{games\_won}};}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00042}00042     this-\/>games\_lost += \mbox{\hyperlink{class_player_ad015df8ddda23ab315a4d3bc3b576e1f}{games\_lost}}; }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00043}00043 \}}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00045}\mbox{\hyperlink{class_player_afca8141f38b60b526fd2f874523a2726}{00045}} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_player_afca8141f38b60b526fd2f874523a2726}{Player::get\_name}}() \{}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00046}00046     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_player_acf0355128a99ee20ad9931b760fb2de1}{name}};}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00047}00047 \}}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00049}\mbox{\hyperlink{class_player_ab035509e1a035f702694c50f60e06b8c}{00049}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_ab035509e1a035f702694c50f60e06b8c}{Player::print}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00050}00050     cout << \mbox{\hyperlink{class_player_acf0355128a99ee20ad9931b760fb2de1}{name}};}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00051}00051     cout << \textcolor{stringliteral}{"{} Rk:"{}} << \mbox{\hyperlink{class_player_ac793ef1d1e7c66b3b4a81a8b4ed005a5}{ranking}};}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00052}00052     cout << \textcolor{stringliteral}{"{} Ps:"{}} << \mbox{\hyperlink{class_player_adf0398ea8c1f29175204508ab642b64e}{points}};}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00053}00053     cout << \textcolor{stringliteral}{"{} Ts:"{}} << \mbox{\hyperlink{class_player_ad613e8a3ba83abfefac0b4a37ce57741}{tournaments\_played}};}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00054}00054     cout << \textcolor{stringliteral}{"{} WM:"{}} << \mbox{\hyperlink{class_player_a4d13b6ff1d6997f8ba9fbd25211d19c4}{matches\_won}} << \textcolor{stringliteral}{"{} LM:"{}} << \mbox{\hyperlink{class_player_a46ab532aa6ce561762738bac190efa4c}{matches\_lost}};}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00055}00055     cout << \textcolor{stringliteral}{"{} WS:"{}} << \mbox{\hyperlink{class_player_a4a51f0af5e3f896ce8ee238c6085ac70}{sets\_won}} << \textcolor{stringliteral}{"{} LS:"{}} << \mbox{\hyperlink{class_player_a904c73bbbbe8be6ca9022eb316619c78}{sets\_lost}};}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00056}00056     cout << \textcolor{stringliteral}{"{} WG:"{}} << \mbox{\hyperlink{class_player_a17f0f9497a689695d342acb4928a654d}{games\_won}} << \textcolor{stringliteral}{"{} LG:"{}} << \mbox{\hyperlink{class_player_ad015df8ddda23ab315a4d3bc3b576e1f}{games\_lost}} << endl;}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00057}00057 \}}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00059}\mbox{\hyperlink{class_player_a64108cc326b51b8dc47a1e0418aa65f8}{00059}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_a64108cc326b51b8dc47a1e0418aa65f8}{Player::decrease\_pos}}() \{}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00060}00060     -\/-\/\mbox{\hyperlink{class_player_ac793ef1d1e7c66b3b4a81a8b4ed005a5}{ranking}};}
+\DoxyCodeLine{\Hypertarget{player_8cc_source_l00061}00061 \}}
+
+\end{DoxyCode}

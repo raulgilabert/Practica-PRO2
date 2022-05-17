@@ -15,6 +15,18 @@
 
 using namespace std;
 
+struct element {
+    int player;
+    string points;
+    int left;
+    int right;
+};
+
+struct last_played {
+    string player;
+    int points;
+};
+
 /** @class Tournament
  * @brief Represents a tournament. */
 class Tournament {
@@ -23,7 +35,14 @@ private:
     int num_registered;
     vector<map<string, Player>::iterator> players;
     int category;
-    BinTree<int> matches;
+    vector<int> height;
+    vector<last_played> last_tournament;
+
+    BinTree<element> matches;
+
+    //BinTree<int> matches;
+
+    //BinTree<string> results;
 
     /** @brief Return the result of the tournament
      * \pre true
@@ -31,8 +50,10 @@ private:
      * players */
     BinTree<string> result_tournament();
 
+    int get_winner(int a, int b, const string& matches, int height, int& num);
+
 public:
-    Tournament(string id, int category);
+    Tournament(const string& id, int category);
 
     Tournament();
 
@@ -55,7 +76,7 @@ public:
      * \pre 0 < nodes <= 2^(k-1), 8 <= n <= 2^(k-1), 0 < pos <= 2^(k-1)
      * \post returned the binary tree of matches
      */
-    BinTree<int> inscriptions_t(int nodes, int n, int pos);
+    BinTree<element> inscriptions_t(int nodes, int n, int pos);
 
     /** @brief Call to generate the matches tree with the players data
      * \pre 8 <= n <= 2^(k-1)
@@ -63,6 +84,14 @@ public:
      */
     void inscriptions(int n);
 
+    
+    void get_results(BinTree<element>& results);
+    
+    void get_results_i();
+
+
+    int calc_winners(BinTree<element>& a, int height, int& pos);
+    int calc_winners_i();
 
     /** @brief En the tournament
      * \pre Players is a set of players
@@ -79,6 +108,21 @@ public:
      * \pre true
      * \post print in the standard channel id and category from the implicit paramenter */ 
     void print(const Set_categories& cat) const;
-};
 
+    void print_tree(const BinTree<element>& a);
+
+    void print_tree_i();
+
+    vector<int> get_heights();
+
+    vector<last_played> last_tournament_played();
+
+    void set_last();
+
+    void clear();
+
+    void delete_player(const string& id);
+
+    void print_players();
+};
 #endif
