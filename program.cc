@@ -165,32 +165,34 @@ int main() {
             cout << ' ' << t << endl;
 
             if (tournaments.tournament_exists(t)) {
-                int n;
-                cin >> n;
+                if (tournaments_playing.find(t) == tournaments_playing.end()) {
+                    int n;
+                    cin >> n;
 
-                map<string, Tournament>::iterator tournament = 
-                    tournaments.get_tournament(t);
+                    map<string, Tournament>::iterator tournament =
+                        tournaments.get_tournament(t);
 
-                vector<last_played> points_to_delete =
-                    tournament->second.last_tournament_played();
+                    tournament->second.clear();
 
-                tournament->second.clear();
+                    for (int i = 0; i < n; ++i) {
+                        int position_in_ranking;
+                        cin >> position_in_ranking;
 
-                for (int i = 0; i < n; ++i) {
-                    int position_in_ranking;
-                    cin >> position_in_ranking;
+                        tournament->second.add_player(
+                                players.get_iterator(position_in_ranking
+                                - 1));
+                    }
 
-                    tournament->second.add_player(
-                            players.get_iterator(position_in_ranking
-                            - 1));
+                    tournament->second.inscriptions(n);
+
+                    tournaments_playing[t] = tournament;
                 }
-
-                tournament->second.inscriptions(n);
-
-                tournaments_playing[t] = tournament;
+                else {
+                    cout << "error: el torneo ya se esta jugando" << endl;
+                }
             }
             else {
-                //cout << "error: el torneo no existe" << endl;
+                cout << "error: el torneo no existe" << endl;
             }
         }
         else if (command == "finalizar_torneo" or command == "ft") {
@@ -242,13 +244,14 @@ int main() {
 
                         if (points != 0) {
                             ++counter;
-                            cout << counter << '.' << points_to_add[i].player
+                            cout << i + 1 << '.' << points_to_add[i].player
                             <<  ' ' << points << endl;
                         }
                     }
                 }
                 players.recalculate_ranking();
             }
+            tournaments_playing.erase(t);
         }
         else if (command == "listar_ranking" or command == "lr") {
             cout << endl;
