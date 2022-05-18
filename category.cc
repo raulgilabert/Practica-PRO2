@@ -1,3 +1,7 @@
+/** @file category.cc
+ * @brief Código de la clase Category
+ */
+
 #include "category.hh"
 #include <algorithm>
 
@@ -5,7 +9,6 @@ using namespace std;
 
 Category::Category(string id) {
     this->id = id;
-    // vector<string> tournaments(0);
 }
 
 Category::Category() {}

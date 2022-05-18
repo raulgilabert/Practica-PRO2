@@ -1,5 +1,5 @@
 /** @file category.hh
- * @brief Specification of the class Category.
+ * @brief Especificación de la clase Category.
  */
 
 #ifndef CATEGORY
@@ -13,14 +13,12 @@
 using namespace std;
 
 /** @class Category
- * @brief Represents a category */
+ * @brief Representa una categoría */
 class Category {
 private:
-    vector<int> points_per_level; // points won on the category based in
-    // the position of result
-    string id; // name of the category
-    vector<string> tournaments; // vector of the tournaments in the
-    // category
+    vector<int> points_per_level; //!< Puntos que se ganan en la categoría en base al nivel en el que se queda en el árbol de resultados
+    string id; //!< Nombre de la categoría
+    vector<string> tournaments; //!< Vector de los nombres de los torneos que pertenecen a la categoría
 
 public:
     Category(string id);
@@ -29,24 +27,25 @@ public:
 
     ~Category();
 
-    /** @brief Set the points per level of the category
-     * \pre Levels >= 1, levels integers in the standard channel
-     * \post Added the inputted elements to the implicit parameter */
+    /** @brief Asigna los puntos por nivel
+     * \pre levels >= 1, levels enteros por el canal estándar
+     * \post Añade los elementos recibidos por el canal estándar al vector de
+     * puntos por nivel del parámetro implícito */
     void set_points_per_level(int levels);
 
-    /** @brief Return the name of the category
-     * \pre true
-     * \post Return the id from the implicit parameter */
+    /** @brief Devuelve el nombre de la categoría
+     * \pre cierto
+     * \post Devuelve id del parámetro implícito */
     string get_name() const;
 
-    /** @brief Return the name of the category
-     * \pre true
-     * \post Return the id from the implicit parameter */
+    /** @brief Devuelve el nombre de la categoría
+     * \pre cierto
+     * \post Devuelve id del parámetro implícito */
     string get_name();
 
-    /** @brief Return the points per level
-     * \pre true
-     * \post Return the points_per_level vector from the implicit parameter */
+    /** @brief Devuelve los puntos por nivel
+     * \pre cierto
+     * \post Devuelve el vector points_per_level del parámetro implícito */
     vector<int> get_points_per_level();
 };
 

@@ -1,5 +1,5 @@
 /** @file player.hh
- * @brief Specification of the class Player.
+ * @brief Especificación de la clase Player.
  */
 
 #ifndef PLAYER
@@ -13,23 +13,23 @@
 using namespace std;
 
 /** @class Player
- * @brief Represents a player
+ * @brief Representa un jugador
  */
 class Player {
 private:
-    string name;
+    string name; //!< Nombre del jugador
 
-    int tournaments_played;
-    int matches_won;
-    int matches_lost;
-    int sets_won;
-    int sets_lost;
-    int games_won;
-    int games_lost;
+    int tournaments_played; //!< Torneos jugados
+    int matches_won; //!< Partidos ganados
+    int matches_lost; //!< Partidos perdidos
+    int sets_won; //!< Sets ganados
+    int sets_lost; //!< Sets perdidos
+    int games_won; //!< Juegos ganados
+    int games_lost; //!< Juegos perdidos
 
-    int ranking;
+    int ranking; //!< Posición del ránking
     
-    int points;
+    int points; //!< Puntos del jugador
 
 public:
     Player(const string& id, int pos);
@@ -38,48 +38,60 @@ public:
 
     ~Player();
 
-   /** @brief Return the position in ranking of the player
-     * \pre true
-     * \post Return position in ranking from the implicit parameter */
+   /** @brief Devuelve la posición en el ránking del jugador
+     * \pre cierto
+     * \post Devuelve raking del parámetro implícito */
     int get_position();
 
-    /** @brief Return the points of the player
-     * \pre true
-     * \post Return points from the implicit parameter */
+    /** @brief Devuelve los puntos del jugador
+     * \pre cierto
+     * \post Devuelve points del parámetro implícito */
     int get_points();
 
 
-    /** @brief update the tournaments, sets and games data
-     * \pre matches_won >= 0, matches_lost >= 0, sets_won >= 0, sets_lost >= 0,
+    /** @brief Actualiza los datos de partidos, sets y juegos
+     * \pre won es un booleano, sets_won >= 0, sets_lost >= 0,
      * games_won >= 0, games_lost >= 0
-     * \post The data in the implicit parameter is updated */
+     * \post Los datos del parámetro implícito son actualizados */
     void update_data(bool won, int sets_won,
 	    int sets_lost, int games_won, int games_lost);
 
     void increase_tournament(); 
 
-    /** @brief Decrease the ranking position by one
-     * \pre true
-     * \post position in the implicit parameter decreased by one */
+    /** @brief Decrementa la posición del ránking por uno
+     * \pre cierto
+     * \post Decrementado por uno position del parámetro implícito */
     void decrease_pos();
 
-    /** @brief return player's name
-     * \pre true
-     * \post return player's name from the implicit parameter */
-    string get_name();
-    
+    /** @brief Modifica los puntos del jugador
+     * \pre quantity es un entero
+     * \post points del parámetro implícito es modificado en quantity */
     void modify_points(int quantity);
 
-    /** @brief Print the name, the position and the tournaments, sets and games
-     * data
-     * \pre true
-     * \post Prints in the standard channel the name, the position in the
-     * ranking, the points and all the data about tournaments, sets and
-     * games */
+    /** @brief Asigna la posición del ránking al jugador
+     * \pre 0 < pos
+     * \post ranking del parámetro implícito pasa a ser pos */
+    void set_position(int pos);
+
+    /** @brief Devuelve el nombre del jugador
+     * \pre cierto
+     * \post Devuelve name del parámetro implícito */
+    string get_name();
+
+    /** @brief Devuelve el ratio de juegos ganados respecto a los juegos
+     * perdidos
+     * \pre cierto
+     * \post 0 si tournaments_played == 0, games_won/games_lost*100 en caso
+     * contrario */
+    double ratio_games();
+
+    /** @brief Imprime el nombre, la posición, los puntos y los datos de
+     * torneos, partidos, sets y juegos
+     * \pre cierto
+     * \post Escribe en el canal estándar el nombre, la posición y los datos
+     * de torneos, partidos, sets y juegos del parámetro implícito */
     void print() const;
 
-    void set_position(int pos);
 };
-
 
 #endif

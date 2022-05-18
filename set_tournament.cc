@@ -1,7 +1,10 @@
+/** @file set_tournament.cc
+ * @brief Código de la clase Set_tournament
+ */
+
 #include "set_tournament.hh"
 #include "tournament.hh"
 
-#include <iostream>
 
 Set_tournament::Set_tournament() {
     num = 0;
@@ -38,12 +41,13 @@ void Set_tournament::read() {
     int n;
     cin >> n;
 
+    // Crea los torneos y los añade
     for (int i = 0; i < n; ++i) {
-	string name;
-	int cat;
-	cin >> name >> cat;
+        string name;
+        int cat;
+        cin >> name >> cat;
 
-	add_tournament(name, cat);
+        add_tournament(name, cat);
     }
 }
 

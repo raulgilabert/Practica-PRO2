@@ -1,7 +1,9 @@
+/** @file set_categories.cc
+ * @brief Código de la clase Set_categories
+ */
+
 #include "set_categories.hh"
 #include "category.hh"
-
-#include <iostream>
 
 Set_categories::Set_categories() {
     num = levels = 0;
@@ -28,6 +30,7 @@ void Set_categories::read() {
 
     levels = k;
 
+    // Crea las categorías con el nombre y las añade al conjunto
     for (int i = 0; i < c; ++i) {
         string name;
         cin >> name;
@@ -35,8 +38,9 @@ void Set_categories::read() {
         add_category(cat);
     }
 
+    // Añade los puntos por nivel a cada categoría
     for (int i = 0; i < c; ++i) {
-	categories[i].set_points_per_level(k);
+	    categories[i].set_points_per_level(k);
     }
 }
 

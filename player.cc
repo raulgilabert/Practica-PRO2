@@ -1,6 +1,8 @@
-#include "player.hh"
+/** @file player.cc
+ * @brief Código de la clase Player
+ */
 
-#include <iostream>
+#include "player.hh"
 
 Player::Player(const string& id, int pos) {
     name = id;
@@ -24,22 +26,12 @@ int Player::get_position() {
     return ranking;
 }
 
-// Se puede hacer más eficiente recalculando los puntos eliminando únicamente
-// al acabar un torneo los puntos que están guardados en el vector del total y
-// sumando la nueva puntuación del torneo
-
-
 void Player::update_data(bool won, int sets_won,
-	int sets_lost, int games_won, int games_lost) {
-/*    this->tournaments_played += 1;
-
-    this->matches_won += matches_won;
-    this->matches_lost += matches_lost;
-*/
+        int sets_lost, int games_won, int games_lost) {
     if (won)
-	++this->matches_won;
+        ++this->matches_won;
     else
-	++this->matches_lost;
+        ++this->matches_lost;
 
     this->sets_won += sets_won;
     this->sets_lost += sets_lost;
@@ -75,4 +67,11 @@ void Player::set_position(int pos) {
 
 void Player::increase_tournament() {
     ++this->tournaments_played;
+}
+
+double Player::ratio_games() {
+    if (tournaments_played == 0)
+        return 0;
+
+    return (double(games_won)/(games_won + games_lost))*100;
 }

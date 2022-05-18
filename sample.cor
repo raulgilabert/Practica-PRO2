@@ -5,35 +5,93 @@ Masters_1000 1000 600 360 180 90 45 25 10
 ATP_500 500 300 180 90 45 20 0 0
 ATP_250 250 150 90 45 20 0 0 0
 #iniciar_torneo Barcelona
-(((1.Tsitsipas (8.Cilic 9.Monfils)) ((4.Schwartzman 13.Dimitrov) (5.Bautista 12.Ramos))) ((2.Nadal (7.Alcaraz 10.Khachanov)) ((3.Berrettini 14.Delbonis) (6.Carreno 11.Garin))))
-#nuevo_jugador Duckworth
+(((1.Sabalenka (7.Fernandez 9.Kudermetova)) ((3.Kontaveit 13.Anisimova) (5.Pavlyuchenkova 11.Cirstea))) ((2.Sakkari (8.Zidansek 10.Samsonova)) ((4.Bencic 14.Kalinina) (6.Azarenka 12.Giorgi))))
+#nuevo_jugador Parrizas
 51
-#nj Bublik
+#nj Kvitova
 error: ya existe un jugador con ese nombre
-#consultar_jugador Nadal
-Nadal Rk:5 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-#cj Popyrin
+#consultar_jugador Sakkari
+Sakkari Rk:5 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
+#cj Siniakova
 error: el jugador no existe
-#bj Paire
-50
 #it Cincinnati
-(((((1.Djokovic 32.Thiem) (16.Isner 17.Evans)) ((8.Hurkacz 25.Korda) (9.Norrie 24.Fognini))) (((4.Rublev 29.Lajovic) (13.Basilashvili 20.De-Minaur)) ((5.Ruud 28.Ivashka) (12.Opelka 21.Tiafoe)))) ((((2.Medvedev 31.Goffin) (15.Karatsev 18.Federer)) ((7.Sinner 26.Nishikori) (10.Shapovalov 23.Fucsovics))) (((3.Zverev 30.Brooksby) (14.Sonego 19.Bublik)) ((6.Auger-Aliassime 27.Krajinovic) (11.Fritz 22.Harris)))))
-#nj Popyrin
-51
+(((((1.Swiatek 31.Rogers) (15.Keys 17.Mertens)) ((7.Jabeur 25.Zhang) (9.Ostapenko 23.Osaka))) (((3.Krejcikova 29.Paolini) (13.Kerber 19.Kvitova)) ((5.Collins 27.Putintseva) (11.Gauff 21.Cornet)))) ((((2.Badosa 32.Martincova) (16.Kasatkina 18.Svitolina)) ((8.Raducanu 26.Riske) (10.Pegula 24.Tomljanovic))) (((4.Pliskova 30.Sorribes) (14.Halep 20.Vondrousova)) ((6.Muguruza 28.Alexandrova) (12.Rybakina 22.Teichmann)))))
+#finalizar_torneo Barcelona
+(1.Sabalenka vs 4.Bencic 7-6,3-6,6-4(1.Sabalenka vs 5.Pavlyuchenkova 6-2,6-4(1.Sabalenka vs 9.Kudermetova 6-4,6-4(7.Fernandez vs 9.Kudermetova 6-4,4-6,4-6))(3.Kontaveit vs 5.Pavlyuchenkova 1-6,6-2,3-6(3.Kontaveit vs 13.Anisimova 6-1,6-3)(5.Pavlyuchenkova vs 11.Cirstea 7-5,7-6)))(8.Zidansek vs 4.Bencic 7-6,4-6,6-7(2.Sakkari vs 8.Zidansek 5-7,5-7(8.Zidansek vs 10.Samsonova 6-3,6-7,7-5))(4.Bencic vs 6.Azarenka 5-7,6-3,6-0(4.Bencic vs 14.Kalinina 6-4,7-6)(6.Azarenka vs 12.Giorgi 1-0))))
+#cj Sakkari
+Sakkari Rk:5 Ps:90 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:10 LG:14
+#ft Cincinnati
+(1.Swiatek vs 2.Badosa 4-6,6-3,4-6(1.Swiatek vs 3.Krejcikova 6-3,7-6(1.Swiatek vs 9.Ostapenko 6-2,6-4(1.Swiatek vs 17.Mertens 6-3,6-1(1.Swiatek vs 31.Rogers 6-0,6-1)(15.Keys vs 17.Mertens 5-7,3-6))(7.Jabeur vs 9.Ostapenko 6-3,6-7,6-7(7.Jabeur vs 25.Zhang 6-4,6-4)(9.Ostapenko vs 23.Osaka 6-7,6-2,6-2)))(3.Krejcikova vs 27.Putintseva 3-6,6-4,7-5(3.Krejcikova vs 19.Kvitova 7-5,7-5(3.Krejcikova vs 29.Paolini 6-1,6-2)(13.Kerber vs 19.Kvitova 5-7,3-6))(27.Putintseva vs 21.Cornet 7-5,3-6,6-3(5.Collins vs 27.Putintseva 4-6,5-7)(11.Gauff vs 21.Cornet 5-7,3-6))))(2.Badosa vs 4.Pliskova 7-6,7-6(2.Badosa vs 24.Tomljanovic 6-3,3-6,6-3(2.Badosa vs 18.Svitolina 1-0(2.Badosa vs 32.Martincova 6-2,6-4)(16.Kasatkina vs 18.Svitolina 0-1))(8.Raducanu vs 24.Tomljanovic 6-7,6-4,5-7(8.Raducanu vs 26.Riske 6-1,6-1)(10.Pegula vs 24.Tomljanovic 5-7,3-6)))(4.Pliskova vs 28.Alexandrova 5-7,6-3,6-0(4.Pliskova vs 20.Vondrousova 6-4,7-6(4.Pliskova vs 30.Sorribes 6-0,6-1)(14.Halep vs 20.Vondrousova 6-4,5-7,3-6))(28.Alexandrova vs 12.Rybakina 6-3,6-4(6.Muguruza vs 28.Alexandrova 0-1)(12.Rybakina vs 22.Teichmann 6-4,6-1)))))
+#puntos_torneo Barcelona
+1.Sabalenka 500
+2.Sakkari 90
+3.Kontaveit 90
+4.Bencic 300
+5.Pavlyuchenkova 180
+6.Azarenka 90
+7.Fernandez 45
+8.Zidansek 180
+9.Kudermetova 90
+10.Samsonova 45
+11.Cirstea 45
+12.Giorgi 45
+13.Anisimova 45
+14.Kalinina 45
+#pt Cincinnati
+1.Swiatek 600
+2.Badosa 1000
+3.Krejcikova 360
+4.Pliskova 360
+5.Collins 45
+6.Muguruza 45
+7.Jabeur 90
+8.Raducanu 90
+9.Ostapenko 180
+10.Pegula 45
+11.Gauff 45
+12.Rybakina 90
+13.Kerber 45
+14.Halep 45
+15.Keys 45
+16.Kasatkina 45
+17.Mertens 90
+18.Svitolina 90
+19.Kvitova 90
+20.Vondrousova 90
+21.Cornet 90
+22.Teichmann 45
+23.Osaka 45
+24.Tomljanovic 180
+25.Zhang 45
+26.Riske 45
+27.Putintseva 180
+28.Alexandrova 180
+29.Paolini 45
+30.Sorribes 45
+31.Rogers 45
+32.Martincova 45
+#mejor_jugador_games
+Swiatek 64.2857
+#cj Swiatek
+Swiatek Rk:2 Ps:600 Ts:1 WM:4 LM:1 WS:9 LS:2 WG:63 LG:35
+#nj Siniakova
+52
 #nuevo_torneo Casablanca 5
 error: la categoria no existe
 #nt Casablanca 4
 6
 #nt Estoril 4
 error: ya existe un torneo con ese nombre
-#baja_jugador Duckworth
-50
-#bj Bonzi
+#baja_jugador Sasnovich
+51
+#bj Galfi
 error: el jugador no existe
 #baja_torneo Kiev
 error: el torneo no existe
 #bt Estoril
 5
+#puntos_torneo Estoril
+error: el torneo no existe
 #listar_torneos
 5
 Barcelona ATP_500
@@ -42,105 +100,771 @@ Cincinnati Masters_1000
 Indian_Wells Masters_1000
 Wimbledon Grand_Slam
 #listar_ranking
-1 Djokovic 0
-2 Medvedev 0
-3 Zverev 0
-4 Tsitsipas 0
-5 Nadal 0
-6 Berrettini 0
-7 Rublev 0
-8 Ruud 0
-9 Auger-Aliassime 0
-10 Sinner 0
-11 Hurkacz 0
-12 Norrie 0
-13 Schwartzman 0
-14 Shapovalov 0
-15 Bautista 0
-16 Fritz 0
-17 Carreno 0
-18 Opelka 0
-19 Basilashvili 0
-20 Alcaraz 0
-21 Sonego 0
-22 Karatsev 0
-23 Isner 0
-24 Cilic 0
-25 Monfils 0
-26 Khachanov 0
-27 Garin 0
-28 Evans 0
-29 Federer 0
-30 Bublik 0
-31 Ramos 0
-32 De-Minaur 0
-33 Dimitrov 0
-34 Tiafoe 0
-35 Harris 0
-36 Fucsovics 0
-37 Delbonis 0
-38 Fognini 0
-39 Paul 0
-40 Korda 0
-41 Humbert 0
-42 Nishikori 0
-43 Davidovich 0
-44 Krajinovic 0
-45 Ivashka 0
-46 Lajovic 0
-47 Brooksby 0
-48 Goffin 0
-49 Thiem 0
-50 Popyrin 0
+1 Badosa 1000
+2 Swiatek 600
+3 Sabalenka 500
+4 Krejcikova 360
+5 Pliskova 360
+6 Bencic 300
+7 Pavlyuchenkova 180
+8 Zidansek 180
+9 Ostapenko 180
+10 Tomljanovic 180
+11 Putintseva 180
+12 Alexandrova 180
+13 Sakkari 90
+14 Kontaveit 90
+15 Azarenka 90
+16 Kudermetova 90
+17 Jabeur 90
+18 Raducanu 90
+19 Rybakina 90
+20 Mertens 90
+21 Svitolina 90
+22 Kvitova 90
+23 Vondrousova 90
+24 Cornet 90
+25 Fernandez 45
+26 Samsonova 45
+27 Cirstea 45
+28 Giorgi 45
+29 Anisimova 45
+30 Kalinina 45
+31 Collins 45
+32 Muguruza 45
+33 Pegula 45
+34 Gauff 45
+35 Kerber 45
+36 Halep 45
+37 Keys 45
+38 Kasatkina 45
+39 Teichmann 45
+40 Osaka 45
+41 Zhang 45
+42 Riske 45
+43 Paolini 45
+44 Sorribes 45
+45 Rogers 45
+46 Martincova 45
+47 Golubic 0
+48 Tauson 0
+49 Stephens 0
+50 Parrizas 0
+51 Siniakova 0
 #listar_jugadores
-50
-Alcaraz Rk:20 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Auger-Aliassime Rk:9 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Basilashvili Rk:19 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Bautista Rk:15 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Berrettini Rk:6 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Brooksby Rk:47 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Bublik Rk:30 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Carreno Rk:17 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Cilic Rk:24 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Davidovich Rk:43 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-De-Minaur Rk:32 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Delbonis Rk:37 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Dimitrov Rk:33 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Djokovic Rk:1 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Evans Rk:28 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Federer Rk:29 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Fognini Rk:38 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Fritz Rk:16 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Fucsovics Rk:36 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Garin Rk:27 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Goffin Rk:48 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Harris Rk:35 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Humbert Rk:41 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Hurkacz Rk:11 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Isner Rk:23 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Ivashka Rk:45 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Karatsev Rk:22 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Khachanov Rk:26 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Korda Rk:40 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Krajinovic Rk:44 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Lajovic Rk:46 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Medvedev Rk:2 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Monfils Rk:25 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Nadal Rk:5 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Nishikori Rk:42 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Norrie Rk:12 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Opelka Rk:18 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Paul Rk:39 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Popyrin Rk:50 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Ramos Rk:31 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Rublev Rk:7 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Ruud Rk:8 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Schwartzman Rk:13 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Shapovalov Rk:14 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Sinner Rk:10 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Sonego Rk:21 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Thiem Rk:49 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Tiafoe Rk:34 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Tsitsipas Rk:4 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
-Zverev Rk:3 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
+51
+Alexandrova Rk:12 Ps:180 Ts:1 WM:2 LM:1 WS:3 LS:2 WG:22 LG:24
+Anisimova Rk:29 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:4 LG:12
+Azarenka Rk:15 Ps:90 Ts:1 WM:1 LM:1 WS:1 LS:2 WG:10 LG:17
+Badosa Rk:1 Ps:1000 Ts:1 WM:5 LM:0 WS:8 LS:2 WG:56 LG:44
+Bencic Rk:6 Ps:300 Ts:1 WM:3 LM:1 WS:7 LS:4 WG:65 LG:53
+Cirstea Rk:27 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:11 LG:14
+Collins Rk:31 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:9 LG:13
+Cornet Rk:24 Ps:90 Ts:1 WM:1 LM:1 WS:3 LS:2 WG:27 LG:24
+Fernandez Rk:25 Ps:45 Ts:1 WM:0 LM:1 WS:1 LS:2 WG:14 LG:16
+Gauff Rk:34 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:8 LG:13
+Giorgi Rk:28 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Golubic Rk:47 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
+Halep Rk:36 Ps:45 Ts:1 WM:0 LM:1 WS:1 LS:2 WG:14 LG:17
+Jabeur Rk:17 Ps:90 Ts:1 WM:1 LM:1 WS:3 LS:2 WG:30 LG:25
+Kalinina Rk:30 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:10 LG:13
+Kasatkina Rk:38 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Kerber Rk:35 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:8 LG:13
+Keys Rk:37 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:8 LG:13
+Kontaveit Rk:14 Ps:90 Ts:1 WM:1 LM:1 WS:3 LS:2 WG:22 LG:18
+Krejcikova Rk:4 Ps:360 Ts:1 WM:3 LM:1 WS:6 LS:3 WG:51 LG:41
+Kudermetova Rk:16 Ps:90 Ts:1 WM:1 LM:1 WS:2 LS:3 WG:24 LG:26
+Kvitova Rk:22 Ps:90 Ts:1 WM:1 LM:1 WS:2 LS:2 WG:23 LG:22
+Martincova Rk:46 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:6 LG:12
+Mertens Rk:20 Ps:90 Ts:1 WM:1 LM:1 WS:2 LS:2 WG:17 LG:20
+Muguruza Rk:32 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Osaka Rk:40 Ps:45 Ts:1 WM:0 LM:1 WS:1 LS:2 WG:11 LG:18
+Ostapenko Rk:9 Ps:180 Ts:1 WM:2 LM:1 WS:4 LS:4 WG:41 LG:41
+Paolini Rk:43 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:3 LG:12
+Parrizas Rk:50 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
+Pavlyuchenkova Rk:7 Ps:180 Ts:1 WM:2 LM:1 WS:4 LS:3 WG:34 LG:33
+Pegula Rk:33 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:8 LG:13
+Pliskova Rk:5 Ps:360 Ts:1 WM:3 LM:1 WS:6 LS:3 WG:54 LG:35
+Putintseva Rk:11 Ps:180 Ts:1 WM:2 LM:1 WS:5 LS:3 WG:44 LG:39
+Raducanu Rk:18 Ps:90 Ts:1 WM:1 LM:1 WS:3 LS:2 WG:29 LG:20
+Riske Rk:42 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:2 LG:12
+Rogers Rk:45 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:1 LG:12
+Rybakina Rk:19 Ps:90 Ts:1 WM:1 LM:1 WS:2 LS:2 WG:19 LG:17
+Sabalenka Rk:3 Ps:500 Ts:1 WM:3 LM:0 WS:6 LS:1 WG:40 LG:30
+Sakkari Rk:13 Ps:90 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:10 LG:14
+Samsonova Rk:26 Ps:45 Ts:1 WM:0 LM:1 WS:1 LS:2 WG:15 LG:19
+Siniakova Rk:51 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
+Sorribes Rk:44 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:1 LG:12
+Stephens Rk:49 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
+Svitolina Rk:21 Ps:90 Ts:1 WM:1 LM:1 WS:0 LS:0 WG:0 LG:0
+Swiatek Rk:2 Ps:600 Ts:1 WM:4 LM:1 WS:9 LS:2 WG:63 LG:35
+Tauson Rk:48 Ps:0 Ts:0 WM:0 LM:0 WS:0 LS:0 WG:0 LG:0
+Teichmann Rk:39 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:5 LG:12
+Tomljanovic Rk:10 Ps:180 Ts:1 WM:2 LM:1 WS:5 LS:3 WG:43 LG:40
+Vondrousova Rk:23 Ps:90 Ts:1 WM:1 LM:1 WS:2 LS:3 WG:27 LG:27
+Zhang Rk:41 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:8 LG:12
+Zidansek Rk:8 Ps:180 Ts:1 WM:2 LM:1 WS:5 LS:3 WG:50 LG:44
+#nuevo_jugador Osorio
+52
+#nj Brengle
+53
+#nj Kanepi
+54
+#nj Linette
+55
+#nj Ruse
+56
+#nj Martic
+57
+#nj Van_Uytvanck
+58
+#nj Kostyuk
+59
+#nj Sherif
+60
+#nj Begu
+61
+#nj Li_Ann
+62
+#nj Petkovic
+63
+#nj Haddad_Maia
+64
+#nj Konjuh
+65
+#nj Muchova
+66
+#nj Bondar
+67
+#nj Cristian
+68
+#nj Zanevska
+69
+#nj Garcia
+70
+#iniciar_torneo Casablanca
+(((1.Azarenka (7.Tauson 9.Kanepi)) ((3.Kalinina 13.Bondar) (5.Rogers 11.Martic))) ((2.Giorgi (8.Stephens 10.Linette)) (4.Osaka (6.Martincova 12.Begu))))
+#it Indian_Wells
+((((1.Badosa (15.Kudermetova 17.Raducanu)) ((7.Pavlyuchenkova 25.Halep) (9.Ostapenko 23.Pegula))) ((3.Sabalenka (13.Sakkari 19.Kvitova)) ((5.Pliskova 27.Van_Uytvanck) (11.Putintseva 21.Anisimova)))) (((2.Swiatek (16.Jabeur 18.Rybakina)) ((8.Zidansek 26.Riske) (10.Tomljanovic 24.Gauff))) ((4.Krejcikova (14.Kontaveit 20.Fernandez)) ((6.Bencic 28.Sherif) (12.Alexandrova 22.Collins)))))
+#finalizar_torneo Casablanca
+(1.Azarenka vs 2.Giorgi 6-3,7-6(1.Azarenka vs 13.Bondar 4-6,6-3,6-2(1.Azarenka vs 7.Tauson 6-1,6-4(7.Tauson vs 9.Kanepi 6-4,4-6,6-4))(13.Bondar vs 11.Martic 6-1,5-7,6-3(3.Kalinina vs 13.Bondar 4-6,4-6)(5.Rogers vs 11.Martic 7-5,6-7,0-6)))(2.Giorgi vs 4.Osaka 6-3,6-2(2.Giorgi vs 10.Linette 7-5,5-7,7-6(8.Stephens vs 10.Linette 6-3,4-6,4-6))(4.Osaka vs 12.Begu 6-1,6-1(6.Martincova vs 12.Begu 4-6,3-6))))
+#ft Indian_Wells
+(13.Sakkari vs 2.Swiatek 3-6,6-4,7-6(1.Badosa vs 13.Sakkari 7-5,3-6,3-6(1.Badosa vs 25.Halep 6-4,6-4(1.Badosa vs 15.Kudermetova 6-1,6-0(15.Kudermetova vs 17.Raducanu 5-7,6-4,6-1))(25.Halep vs 23.Pegula 6-3,6-3(7.Pavlyuchenkova vs 25.Halep 1-6,6-4,2-6)(9.Ostapenko vs 23.Pegula 6-7,4-6)))(13.Sakkari vs 27.Van_Uytvanck 6-2,6-3(3.Sabalenka vs 13.Sakkari 3-6,6-2,5-7(13.Sakkari vs 19.Kvitova 6-1,6-1))(27.Van_Uytvanck vs 11.Putintseva 7-5,6-3(5.Pliskova vs 27.Van_Uytvanck 4-6,6-7)(11.Putintseva vs 21.Anisimova 1-0))))(2.Swiatek vs 4.Krejcikova 6-2,7-5(2.Swiatek vs 8.Zidansek 6-3,6-3(2.Swiatek vs 16.Jabeur 6-4,6-1(16.Jabeur vs 18.Rybakina 6-3,4-6,6-4))(8.Zidansek vs 24.Gauff 7-6,7-6(8.Zidansek vs 26.Riske 6-0,6-2)(10.Tomljanovic vs 24.Gauff 3-6,2-6)))(4.Krejcikova vs 22.Collins 4-6,7-5,6-3(4.Krejcikova vs 14.Kontaveit 6-4,6-4(14.Kontaveit vs 20.Fernandez 6-2,7-6))(6.Bencic vs 22.Collins 0-1(6.Bencic vs 28.Sherif 6-1,6-4)(12.Alexandrova vs 22.Collins 5-7,3-6)))))
+#puntos_torneo Casablanca
+1.Azarenka 250
+2.Giorgi 150
+3.Kalinina 20
+4.Osaka 90
+5.Rogers 20
+6.Martincova 20
+7.Tauson 45
+8.Stephens 20
+9.Kanepi 20
+10.Linette 45
+11.Martic 45
+12.Begu 45
+13.Bondar 90
+#pt Indian_Wells
+1.Badosa 360
+2.Swiatek 600
+3.Sabalenka 90
+4.Krejcikova 360
+5.Pliskova 45
+6.Bencic 90
+7.Pavlyuchenkova 45
+8.Zidansek 180
+9.Ostapenko 45
+10.Tomljanovic 45
+11.Putintseva 90
+12.Alexandrova 45
+13.Sakkari 1000
+14.Kontaveit 90
+15.Kudermetova 90
+16.Jabeur 90
+17.Raducanu 45
+18.Rybakina 45
+19.Kvitova 45
+20.Fernandez 45
+21.Anisimova 45
+22.Collins 180
+23.Pegula 90
+24.Gauff 90
+25.Halep 180
+26.Riske 45
+27.Van_Uytvanck 180
+28.Sherif 45
+#mjg
+Swiatek 62.7027
+#lr
+1 Badosa 1360
+2 Swiatek 1200
+3 Sakkari 1090
+4 Krejcikova 720
+5 Sabalenka 590
+6 Pliskova 405
+7 Bencic 390
+8 Zidansek 360
+9 Azarenka 340
+10 Putintseva 270
+11 Pavlyuchenkova 225
+12 Ostapenko 225
+13 Tomljanovic 225
+14 Alexandrova 225
+15 Collins 225
+16 Halep 225
+17 Giorgi 195
+18 Kontaveit 180
+19 Kudermetova 180
+20 Jabeur 180
+21 Van_Uytvanck 180
+22 Osaka 135
+23 Raducanu 135
+24 Rybakina 135
+25 Kvitova 135
+26 Pegula 135
+27 Gauff 135
+28 Mertens 90
+29 Svitolina 90
+30 Vondrousova 90
+31 Cornet 90
+32 Bondar 90
+33 Fernandez 90
+34 Anisimova 90
+35 Riske 90
+36 Kalinina 65
+37 Rogers 65
+38 Martincova 65
+39 Samsonova 45
+40 Cirstea 45
+41 Muguruza 45
+42 Kerber 45
+43 Keys 45
+44 Kasatkina 45
+45 Teichmann 45
+46 Zhang 45
+47 Paolini 45
+48 Sorribes 45
+49 Tauson 45
+50 Linette 45
+51 Martic 45
+52 Begu 45
+53 Sherif 45
+54 Stephens 20
+55 Kanepi 20
+56 Golubic 0
+57 Parrizas 0
+58 Siniakova 0
+59 Osorio 0
+60 Brengle 0
+61 Ruse 0
+62 Kostyuk 0
+63 Li_Ann 0
+64 Petkovic 0
+65 Haddad_Maia 0
+66 Konjuh 0
+67 Muchova 0
+68 Cristian 0
+69 Zanevska 0
+70 Garcia 0
+#baja_jugador Bondar
+69
+#pt Wimbledon
+error: torneo no disputado
+#it Wimbledon
+((((((1.Badosa (63.Cristian 65.Garcia)) (31.Fernandez 33.Riske)) ((15.Collins 49.Stephens) (17.Giorgi 47.Begu))) (((7.Bencic 57.Kostyuk) (25.Kvitova 39.Keys)) ((9.Azarenka 55.Brengle) (23.Raducanu 41.Teichmann)))) ((((3.Sakkari 61.Konjuh) (29.Svitolina 35.Rogers)) ((13.Tomljanovic 51.Golubic) (19.Kudermetova 45.Linette))) (((5.Sabalenka 59.Petkovic) (27.Gauff 37.Muguruza)) ((11.Pavlyuchenkova 53.Siniakova) (21.Van_Uytvanck 43.Paolini))))) (((((2.Swiatek 64.Zanevska) (32.Anisimova 34.Kalinina)) ((16.Halep 50.Kanepi) (18.Kontaveit 48.Sherif))) (((8.Zidansek 58.Li_Ann) (26.Pegula 40.Kasatkina)) ((10.Putintseva 56.Ruse) (24.Rybakina 42.Zhang)))) ((((4.Krejcikova 62.Muchova) (30.Vondrousova 36.Samsonova)) ((14.Alexandrova 52.Parrizas) (20.Jabeur 46.Martic))) (((6.Pliskova 60.Haddad_Maia) (28.Mertens 38.Kerber)) ((12.Ostapenko 54.Osorio) (22.Osaka 44.Sorribes))))))
+#ft Wimbledon
+(1.Badosa vs 2.Swiatek 4-6,6-3,4-6(1.Badosa vs 3.Sakkari 6-3,7-6(1.Badosa vs 9.Azarenka 6-2,6-4(1.Badosa vs 47.Begu 6-3,6-1(1.Badosa vs 33.Riske 6-0,6-1(1.Badosa vs 65.Garcia 6-4,6-2(63.Cristian vs 65.Garcia 3-6,4-6))(31.Fernandez vs 33.Riske 0-1))(15.Collins vs 47.Begu 5-7,3-6(15.Collins vs 49.Stephens 1-0)(17.Giorgi vs 47.Begu 0-1)))(7.Bencic vs 9.Azarenka 6-3,6-7,6-7(7.Bencic vs 39.Keys 6-4,6-4(7.Bencic vs 57.Kostyuk 1-0)(25.Kvitova vs 39.Keys 0-1))(9.Azarenka vs 41.Teichmann 6-7,6-2,6-2(9.Azarenka vs 55.Brengle 1-0)(23.Raducanu vs 41.Teichmann 0-1))))(3.Sakkari vs 37.Muguruza 3-6,6-4,7-5(3.Sakkari vs 45.Linette 7-5,7-5(3.Sakkari vs 35.Rogers 6-1,6-2(3.Sakkari vs 61.Konjuh 1-0)(29.Svitolina vs 35.Rogers 0-1))(13.Tomljanovic vs 45.Linette 5-7,3-6(13.Tomljanovic vs 51.Golubic 1-0)(19.Kudermetova vs 45.Linette 0-1)))(37.Muguruza vs 43.Paolini 7-5,3-6,6-3(5.Sabalenka vs 37.Muguruza 4-6,5-7(5.Sabalenka vs 59.Petkovic 1-0)(27.Gauff vs 37.Muguruza 0-1))(11.Pavlyuchenkova vs 43.Paolini 5-7,3-6(11.Pavlyuchenkova vs 53.Siniakova 1-0)(21.Van_Uytvanck vs 43.Paolini 0-1)))))(2.Swiatek vs 4.Krejcikova 7-6,7-6(2.Swiatek vs 42.Zhang 6-3,3-6,6-3(2.Swiatek vs 48.Sherif 1-0(2.Swiatek vs 34.Kalinina 6-2,6-4(2.Swiatek vs 64.Zanevska 1-0)(32.Anisimova vs 34.Kalinina 0-1))(16.Halep vs 48.Sherif 0-1(16.Halep vs 50.Kanepi 1-0)(18.Kontaveit vs 48.Sherif 0-1)))(8.Zidansek vs 42.Zhang 6-7,6-4,5-7(8.Zidansek vs 40.Kasatkina 6-1,6-1(8.Zidansek vs 58.Li_Ann 1-0)(26.Pegula vs 40.Kasatkina 0-1))(10.Putintseva vs 42.Zhang 5-7,3-6(10.Putintseva vs 56.Ruse 1-0)(24.Rybakina vs 42.Zhang 0-1))))(4.Krejcikova vs 38.Kerber 5-7,6-3,6-0(4.Krejcikova vs 46.Martic 6-4,7-6(4.Krejcikova vs 36.Samsonova 6-0,6-1(4.Krejcikova vs 62.Muchova 1-0)(30.Vondrousova vs 36.Samsonova 0-1))(14.Alexandrova vs 46.Martic 6-4,5-7,3-6(14.Alexandrova vs 52.Parrizas 1-0)(20.Jabeur vs 46.Martic 0-1)))(38.Kerber vs 12.Ostapenko 6-3,6-4(6.Pliskova vs 38.Kerber 0-1(6.Pliskova vs 60.Haddad_Maia 1-0)(28.Mertens vs 38.Kerber 0-1))(12.Ostapenko vs 44.Sorribes 6-4,6-1(12.Ostapenko vs 54.Osorio 1-0)(22.Osaka vs 44.Sorribes 0-1))))))
+#puntos_torneo Wimbledon
+1.Badosa 1200
+2.Swiatek 2000
+3.Sakkari 720
+4.Krejcikova 720
+5.Sabalenka 90
+6.Pliskova 90
+7.Bencic 180
+8.Zidansek 180
+9.Azarenka 360
+10.Putintseva 90
+11.Pavlyuchenkova 90
+12.Ostapenko 180
+13.Tomljanovic 90
+14.Alexandrova 90
+15.Collins 90
+16.Halep 90
+17.Giorgi 45
+18.Kontaveit 45
+19.Kudermetova 45
+20.Jabeur 45
+21.Van_Uytvanck 45
+22.Osaka 45
+23.Raducanu 45
+24.Rybakina 45
+25.Kvitova 45
+26.Pegula 45
+27.Gauff 45
+28.Mertens 45
+29.Svitolina 45
+30.Vondrousova 45
+31.Fernandez 45
+32.Anisimova 45
+33.Riske 90
+34.Kalinina 90
+35.Rogers 90
+36.Samsonova 90
+37.Muguruza 360
+38.Kerber 360
+39.Keys 90
+40.Kasatkina 90
+41.Teichmann 90
+42.Zhang 360
+43.Paolini 180
+44.Sorribes 90
+45.Linette 180
+46.Martic 180
+47.Begu 180
+48.Sherif 180
+49.Stephens 45
+50.Kanepi 45
+51.Golubic 45
+52.Parrizas 45
+53.Siniakova 45
+54.Osorio 45
+55.Brengle 45
+56.Ruse 45
+57.Kostyuk 45
+58.Li_Ann 45
+59.Petkovic 45
+60.Haddad_Maia 45
+61.Konjuh 45
+62.Muchova 45
+63.Cristian 10
+64.Zanevska 45
+65.Garcia 45
+#mjg
+Swiatek 60.3509
+#listar_ranking
+1 Swiatek 3200
+2 Badosa 2560
+3 Sakkari 1810
+4 Krejcikova 1440
+5 Azarenka 700
+6 Sabalenka 680
+7 Bencic 570
+8 Zidansek 540
+9 Pliskova 495
+10 Ostapenko 405
+11 Muguruza 405
+12 Kerber 405
+13 Zhang 405
+14 Putintseva 360
+15 Pavlyuchenkova 315
+16 Tomljanovic 315
+17 Alexandrova 315
+18 Collins 315
+19 Halep 315
+20 Giorgi 240
+21 Kontaveit 225
+22 Kudermetova 225
+23 Jabeur 225
+24 Van_Uytvanck 225
+25 Paolini 225
+26 Linette 225
+27 Martic 225
+28 Begu 225
+29 Sherif 225
+30 Osaka 180
+31 Raducanu 180
+32 Rybakina 180
+33 Kvitova 180
+34 Pegula 180
+35 Gauff 180
+36 Riske 180
+37 Kalinina 155
+38 Rogers 155
+39 Mertens 135
+40 Svitolina 135
+41 Vondrousova 135
+42 Fernandez 135
+43 Anisimova 135
+44 Samsonova 135
+45 Keys 135
+46 Kasatkina 135
+47 Teichmann 135
+48 Sorribes 135
+49 Cornet 90
+50 Martincova 65
+51 Stephens 65
+52 Kanepi 65
+53 Cirstea 45
+54 Tauson 45
+55 Golubic 45
+56 Parrizas 45
+57 Siniakova 45
+58 Osorio 45
+59 Brengle 45
+60 Ruse 45
+61 Kostyuk 45
+62 Li_Ann 45
+63 Petkovic 45
+64 Haddad_Maia 45
+65 Konjuh 45
+66 Muchova 45
+67 Zanevska 45
+68 Garcia 45
+69 Cristian 10
+#listar_jugadores
+69
+Alexandrova Rk:17 Ps:315 Ts:3 WM:3 LM:3 WS:4 LS:6 WG:44 LG:54
+Anisimova Rk:43 Ps:135 Ts:3 WM:0 LM:3 WS:0 LS:2 WG:4 LG:12
+Azarenka Rk:5 Ps:700 Ts:3 WM:7 LM:2 WS:11 LS:7 WG:92 LG:83
+Badosa Rk:2 Ps:2560 Ts:3 WM:12 LM:2 WS:24 LS:6 WG:168 LG:111
+Begu Rk:28 Ps:225 Ts:2 WM:3 LM:2 WS:4 LS:4 WG:31 LG:39
+Bencic Rk:7 Ps:570 Ts:3 WM:6 LM:3 WS:12 LS:6 WG:107 LG:83
+Brengle Rk:59 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Cirstea Rk:53 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:11 LG:14
+Collins Rk:18 Ps:315 Ts:3 WM:3 LM:3 WS:3 LS:6 WG:44 LG:51
+Cornet Rk:49 Ps:90 Ts:1 WM:1 LM:1 WS:3 LS:2 WG:27 LG:24
+Cristian Rk:69 Ps:10 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:7 LG:12
+Fernandez Rk:42 Ps:135 Ts:3 WM:0 LM:3 WS:1 LS:4 WG:22 LG:29
+Garcia Rk:68 Ps:45 Ts:1 WM:1 LM:1 WS:2 LS:2 WG:18 LG:19
+Gauff Rk:35 Ps:180 Ts:3 WM:1 LM:3 WS:2 LS:4 WG:32 LG:32
+Giorgi Rk:20 Ps:240 Ts:3 WM:2 LM:3 WS:4 LS:3 WG:40 LG:36
+Golubic Rk:55 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Haddad_Maia Rk:64 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Halep Rk:19 Ps:315 Ts:3 WM:3 LM:3 WS:5 LS:5 WG:50 LG:44
+Jabeur Rk:23 Ps:225 Ts:3 WM:2 LM:3 WS:5 LS:5 WG:51 LG:50
+Kalinina Rk:37 Ps:155 Ts:3 WM:1 LM:3 WS:0 LS:6 WG:24 LG:37
+Kanepi Rk:52 Ps:65 Ts:2 WM:0 LM:2 WS:1 LS:2 WG:14 LG:16
+Kasatkina Rk:46 Ps:135 Ts:2 WM:1 LM:2 WS:0 LS:2 WG:2 LG:12
+Kerber Rk:12 Ps:405 Ts:2 WM:3 LM:2 WS:3 LS:4 WG:30 LG:37
+Keys Rk:45 Ps:135 Ts:2 WM:1 LM:2 WS:0 LS:4 WG:16 LG:25
+Konjuh Rk:65 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Kontaveit Rk:21 Ps:225 Ts:3 WM:2 LM:3 WS:5 LS:4 WG:43 LG:38
+Kostyuk Rk:61 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Krejcikova Rk:4 Ps:1440 Ts:3 WM:9 LM:3 WS:16 LS:9 WG:141 LG:111
+Kudermetova Rk:22 Ps:225 Ts:3 WM:2 LM:3 WS:4 LS:6 WG:42 LG:50
+Kvitova Rk:33 Ps:180 Ts:3 WM:1 LM:3 WS:2 LS:4 WG:25 LG:34
+Li_Ann Rk:62 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Linette Rk:26 Ps:225 Ts:2 WM:3 LM:2 WS:5 LS:5 WG:56 LG:55
+Martic Rk:27 Ps:225 Ts:2 WM:3 LM:2 WS:5 LS:6 WG:56 LG:57
+Martincova Rk:50 Ps:65 Ts:2 WM:0 LM:2 WS:0 LS:4 WG:13 LG:24
+Mertens Rk:39 Ps:135 Ts:2 WM:1 LM:2 WS:2 LS:2 WG:17 LG:20
+Muchova Rk:66 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Muguruza Rk:11 Ps:405 Ts:2 WM:3 LM:2 WS:5 LS:3 WG:44 LG:39
+Osaka Rk:30 Ps:180 Ts:3 WM:1 LM:3 WS:3 LS:4 WG:28 LG:32
+Osorio Rk:58 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Ostapenko Rk:10 Ps:405 Ts:3 WM:4 LM:3 WS:6 LS:8 WG:70 LG:71
+Paolini Rk:25 Ps:225 Ts:2 WM:2 LM:2 WS:3 LS:4 WG:30 LG:36
+Parrizas Rk:56 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Pavlyuchenkova Rk:15 Ps:315 Ts:3 WM:3 LM:3 WS:5 LS:7 WG:51 LG:62
+Pegula Rk:34 Ps:180 Ts:3 WM:1 LM:3 WS:2 LS:4 WG:27 LG:35
+Petkovic Rk:63 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Pliskova Rk:9 Ps:495 Ts:3 WM:4 LM:3 WS:6 LS:5 WG:64 LG:48
+Putintseva Rk:14 Ps:360 Ts:3 WM:4 LM:3 WS:5 LS:7 WG:60 LG:65
+Raducanu Rk:31 Ps:180 Ts:3 WM:1 LM:3 WS:4 LS:4 WG:41 LG:37
+Riske Rk:36 Ps:180 Ts:3 WM:1 LM:3 WS:0 LS:6 WG:5 LG:36
+Rogers Rk:38 Ps:155 Ts:3 WM:1 LM:3 WS:1 LS:6 WG:17 LG:42
+Ruse Rk:60 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Rybakina Rk:32 Ps:180 Ts:3 WM:1 LM:3 WS:3 LS:4 WG:32 LG:33
+Sabalenka Rk:6 Ps:680 Ts:3 WM:4 LM:2 WS:7 LS:5 WG:63 LG:58
+Sakkari Rk:3 Ps:1810 Ts:3 WM:9 LM:2 WS:16 LS:8 WG:133 LG:105
+Samsonova Rk:44 Ps:135 Ts:2 WM:1 LM:2 WS:1 LS:4 WG:16 LG:31
+Sherif Rk:29 Ps:225 Ts:2 WM:2 LM:2 WS:0 LS:2 WG:5 LG:12
+Siniakova Rk:57 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Sorribes Rk:48 Ps:135 Ts:2 WM:1 LM:2 WS:0 LS:4 WG:6 LG:24
+Stephens Rk:51 Ps:65 Ts:2 WM:0 LM:2 WS:1 LS:2 WG:14 LG:15
+Svitolina Rk:40 Ps:135 Ts:2 WM:1 LM:2 WS:0 LS:0 WG:0 LG:0
+Swiatek Rk:1 Ps:3200 Ts:3 WM:13 LM:2 WS:24 LS:6 WG:172 LG:113
+Tauson Rk:54 Ps:45 Ts:1 WM:1 LM:1 WS:2 LS:3 WG:21 LG:26
+Teichmann Rk:47 Ps:135 Ts:2 WM:1 LM:2 WS:1 LS:4 WG:16 LG:30
+Tomljanovic Rk:16 Ps:315 Ts:3 WM:3 LM:3 WS:5 LS:7 WG:56 LG:65
+Van_Uytvanck Rk:24 Ps:225 Ts:2 WM:2 LM:2 WS:4 LS:2 WG:31 LG:30
+Vondrousova Rk:41 Ps:135 Ts:2 WM:1 LM:2 WS:2 LS:3 WG:27 LG:27
+Zanevska Rk:67 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Zhang Rk:13 Ps:405 Ts:2 WM:3 LM:2 WS:5 LS:5 WG:51 LG:52
+Zidansek Rk:8 Ps:540 Ts:3 WM:6 LM:3 WS:12 LS:7 WG:111 LG:90
+#baja_jugador Gauff
+68
+#bj Samsonova
+67
+#it Barcelona
+((((1.Krejcikova (15.Begu 17.Riske)) (7.Zhang 9.Halep)) ((3.Sabalenka (13.Linette 19.Fernandez)) (5.Zidansek (11.Kontaveit 21.Haddad_Maia)))) (((2.Azarenka (16.Sherif 18.Kalinina)) (8.Tomljanovic 10.Giorgi)) ((4.Bencic (14.Martic 20.Tauson)) (6.Ostapenko 12.Kudermetova))))
+#bt Cincinnati
+4
+#ft Barcelona
+(3.Sabalenka vs 6.Ostapenko 7-5,6-7,7-6(15.Begu vs 3.Sabalenka 2-6,3-6(15.Begu vs 7.Zhang 7-6,3-6,6-4(1.Krejcikova vs 15.Begu 6-7,6-2,6-7(15.Begu vs 17.Riske 7-5,6-4))(7.Zhang vs 9.Halep 6-3,6-0))(3.Sabalenka vs 21.Haddad_Maia 6-1,6-4(3.Sabalenka vs 13.Linette 6-1,6-1(13.Linette vs 19.Fernandez 1-0))(5.Zidansek vs 21.Haddad_Maia 4-6,6-3,6-7(11.Kontaveit vs 21.Haddad_Maia 6-7,3-6))))(18.Kalinina vs 6.Ostapenko 6-4,1-6,2-6(18.Kalinina vs 8.Tomljanovic 1-0(2.Azarenka vs 18.Kalinina 6-7,6-4,3-6(16.Sherif vs 18.Kalinina 4-6,6-7))(8.Tomljanovic vs 10.Giorgi 6-3,6-3))(14.Martic vs 6.Ostapenko 0-6,2-6(4.Bencic vs 14.Martic 0-1(14.Martic vs 20.Tauson 7-5,7-5))(6.Ostapenko vs 12.Kudermetova 6-4,7-5))))
+#nuevo_jugador Gauff
+68
+#lr
+1 Swiatek 2600
+2 Sakkari 1720
+3 Badosa 1560
+4 Krejcikova 1125
+5 Sabalenka 680
+6 Azarenka 655
+7 Ostapenko 525
+8 Zhang 450
+9 Zidansek 405
+10 Begu 405
+11 Muguruza 360
+12 Kerber 360
+13 Bencic 315
+14 Halep 315
+15 Martic 315
+16 Kalinina 290
+17 Collins 270
+18 Linette 270
+19 Sherif 245
+20 Giorgi 240
+21 Van_Uytvanck 225
+22 Tomljanovic 225
+23 Kudermetova 180
+24 Putintseva 180
+25 Paolini 180
+26 Kontaveit 155
+27 Riske 155
+28 Pavlyuchenkova 135
+29 Pliskova 135
+30 Alexandrova 135
+31 Jabeur 135
+32 Osaka 135
+33 Pegula 135
+34 Haddad_Maia 135
+35 Fernandez 110
+36 Rogers 110
+37 Anisimova 90
+38 Raducanu 90
+39 Rybakina 90
+40 Kvitova 90
+41 Keys 90
+42 Kasatkina 90
+43 Teichmann 90
+44 Sorribes 90
+45 Stephens 65
+46 Kanepi 65
+47 Tauson 65
+48 Mertens 45
+49 Svitolina 45
+50 Vondrousova 45
+51 Golubic 45
+52 Parrizas 45
+53 Siniakova 45
+54 Osorio 45
+55 Brengle 45
+56 Ruse 45
+57 Kostyuk 45
+58 Li_Ann 45
+59 Petkovic 45
+60 Konjuh 45
+61 Muchova 45
+62 Zanevska 45
+63 Garcia 45
+64 Martincova 20
+65 Cristian 10
+66 Cirstea 0
+67 Cornet 0
+68 Gauff 0
+#it Indian_Wells
+((((1.Swiatek (15.Haddad_Maia 17.Raducanu)) ((7.Van_Uytvanck 25.Konjuh) (9.Paolini 23.Vondrousova))) ((3.Badosa (13.Osaka 19.Kvitova)) ((5.Kerber 27.Cirstea) (11.Alexandrova 21.Kasatkina)))) (((2.Sakkari (16.Anisimova 18.Rybakina)) ((8.Putintseva 26.Zanevska) (10.Pliskova 24.Siniakova))) ((4.Muguruza (14.Pegula 20.Keys)) ((6.Collins 28.Gauff) (12.Jabeur 22.Svitolina)))))
+#pt Indian_Wells
+error: torneo en juego
+#ft Indian_Wells
+(1.Swiatek vs 4.Muguruza 7-6,3-6,6-4(1.Swiatek vs 5.Kerber 6-2,6-4(1.Swiatek vs 9.Paolini 6-4,6-4(1.Swiatek vs 15.Haddad_Maia 6-3,6-0(15.Haddad_Maia vs 17.Raducanu 6-4,4-6,7-6))(7.Van_Uytvanck vs 9.Paolini 6-4,4-6,4-6(7.Van_Uytvanck vs 25.Konjuh 6-2,6-3)(9.Paolini vs 23.Vondrousova 1-0)))(3.Badosa vs 5.Kerber 1-6,6-2,3-6(3.Badosa vs 13.Osaka 6-1,6-3(13.Osaka vs 19.Kvitova 7-5,6-0))(5.Kerber vs 11.Alexandrova 7-5,7-6(5.Kerber vs 27.Cirstea 6-1,6-1)(11.Alexandrova vs 21.Kasatkina 6-3,6-3))))(2.Sakkari vs 4.Muguruza 7-6,4-6,6-7(2.Sakkari vs 8.Putintseva 7-5,7-5(2.Sakkari vs 18.Rybakina 6-1,6-2(16.Anisimova vs 18.Rybakina 6-2,5-7,4-6))(8.Putintseva vs 10.Pliskova 6-3,6-7,7-5(8.Putintseva vs 26.Zanevska 6-1,6-4)(10.Pliskova vs 24.Siniakova 7-6,6-3)))(4.Muguruza vs 6.Collins 5-7,6-3,6-0(4.Muguruza vs 20.Keys 6-4,7-6(14.Pegula vs 20.Keys 3-6,7-5,5-7))(6.Collins vs 22.Svitolina 1-0(6.Collins vs 28.Gauff 7-6,6-4)(12.Jabeur vs 22.Svitolina 0-1)))))
+#puntos_torneo Indian_Wells
+1.Swiatek 1000
+2.Sakkari 360
+3.Badosa 180
+4.Muguruza 600
+5.Kerber 360
+6.Collins 180
+7.Van_Uytvanck 90
+8.Putintseva 180
+9.Paolini 180
+10.Pliskova 90
+11.Alexandrova 90
+12.Jabeur 45
+13.Osaka 90
+14.Pegula 45
+15.Haddad_Maia 90
+16.Anisimova 45
+17.Raducanu 45
+18.Rybakina 90
+19.Kvitova 45
+20.Keys 90
+21.Kasatkina 45
+22.Svitolina 90
+23.Vondrousova 45
+24.Siniakova 45
+25.Konjuh 45
+26.Zanevska 45
+27.Cirstea 45
+28.Gauff 45
+#pt Barcelona
+1.Krejcikova 45
+2.Azarenka 45
+3.Sabalenka 500
+4.Bencic 45
+5.Zidansek 45
+6.Ostapenko 300
+7.Zhang 90
+8.Tomljanovic 90
+9.Halep 45
+10.Giorgi 45
+11.Kontaveit 20
+12.Kudermetova 45
+13.Linette 45
+14.Martic 90
+15.Begu 180
+16.Sherif 20
+17.Riske 20
+18.Kalinina 180
+19.Fernandez 20
+20.Tauson 20
+21.Haddad_Maia 90
+#mejor_jugador_games
+Swiatek 60.5405
+#lt
+4
+Barcelona ATP_500
+Casablanca ATP_250
+Indian_Wells Masters_1000
+Wimbledon Grand_Slam
+#lr
+1 Swiatek 3000
+2 Badosa 1380
+3 Sakkari 1080
+4 Muguruza 960
+5 Krejcikova 765
+6 Kerber 720
+7 Azarenka 655
+8 Sabalenka 590
+9 Ostapenko 480
+10 Zhang 450
+11 Begu 405
+12 Paolini 360
+13 Martic 315
+14 Kalinina 290
+15 Collins 270
+16 Linette 270
+17 Putintseva 270
+18 Giorgi 240
+19 Zidansek 225
+20 Bencic 225
+21 Osaka 225
+22 Haddad_Maia 225
+23 Sherif 200
+24 Tomljanovic 180
+25 Pliskova 180
+26 Alexandrova 180
+27 Keys 180
+28 Halep 135
+29 Van_Uytvanck 135
+30 Rybakina 135
+31 Kasatkina 135
+32 Svitolina 135
+33 Riske 110
+34 Rogers 110
+35 Kudermetova 90
+36 Pavlyuchenkova 90
+37 Jabeur 90
+38 Pegula 90
+39 Anisimova 90
+40 Raducanu 90
+41 Kvitova 90
+42 Teichmann 90
+43 Sorribes 90
+44 Vondrousova 90
+45 Siniakova 90
+46 Konjuh 90
+47 Zanevska 90
+48 Kontaveit 65
+49 Fernandez 65
+50 Stephens 65
+51 Kanepi 65
+52 Tauson 65
+53 Mertens 45
+54 Golubic 45
+55 Parrizas 45
+56 Osorio 45
+57 Brengle 45
+58 Ruse 45
+59 Kostyuk 45
+60 Li_Ann 45
+61 Petkovic 45
+62 Muchova 45
+63 Garcia 45
+64 Cirstea 45
+65 Gauff 45
+66 Martincova 20
+67 Cristian 10
+68 Cornet 0
+#lj
+68
+Alexandrova Rk:26 Ps:180 Ts:4 WM:4 LM:4 WS:6 LS:8 WG:67 LG:74
+Anisimova Rk:39 Ps:90 Ts:4 WM:0 LM:4 WS:1 LS:4 WG:19 LG:27
+Azarenka Rk:7 Ps:655 Ts:4 WM:7 LM:3 WS:12 LS:9 WG:107 LG:100
+Badosa Rk:2 Ps:1380 Ts:4 WM:13 LM:3 WS:27 LS:8 WG:190 LG:129
+Begu Rk:11 Ps:405 Ts:3 WM:6 LM:3 WS:10 LS:8 WG:81 LG:94
+Bencic Rk:20 Ps:225 Ts:4 WM:6 LM:4 WS:12 LS:6 WG:107 LG:83
+Brengle Rk:57 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Cirstea Rk:64 Ps:45 Ts:2 WM:0 LM:2 WS:0 LS:4 WG:13 LG:26
+Collins Rk:15 Ps:270 Ts:4 WM:5 LM:4 WS:6 LS:8 WG:67 LG:78
+Cornet Rk:68 Ps:0 Ts:1 WM:1 LM:1 WS:3 LS:2 WG:27 LG:24
+Cristian Rk:67 Ps:10 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:7 LG:12
+Fernandez Rk:49 Ps:65 Ts:4 WM:0 LM:4 WS:1 LS:4 WG:22 LG:29
+Garcia Rk:63 Ps:45 Ts:1 WM:1 LM:1 WS:2 LS:2 WG:18 LG:19
+Gauff Rk:65 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:10 LG:13
+Giorgi Rk:18 Ps:240 Ts:4 WM:2 LM:4 WS:4 LS:5 WG:46 LG:48
+Golubic Rk:54 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Haddad_Maia Rk:22 Ps:225 Ts:3 WM:3 LM:3 WS:6 LS:6 WG:54 LG:65
+Halep Rk:28 Ps:135 Ts:4 WM:3 LM:4 WS:5 LS:7 WG:53 LG:56
+Jabeur Rk:37 Ps:90 Ts:4 WM:2 LM:4 WS:5 LS:5 WG:51 LG:50
+Kalinina Rk:14 Ps:290 Ts:4 WM:4 LM:4 WS:5 LS:9 WG:63 LG:78
+Kanepi Rk:51 Ps:65 Ts:2 WM:0 LM:2 WS:1 LS:2 WG:14 LG:16
+Kasatkina Rk:31 Ps:135 Ts:3 WM:1 LM:3 WS:0 LS:4 WG:8 LG:24
+Kerber Rk:6 Ps:720 Ts:3 WM:6 LM:3 WS:9 LS:7 WG:76 LG:72
+Keys Rk:27 Ps:180 Ts:3 WM:2 LM:3 WS:2 LS:7 WG:44 LG:53
+Konjuh Rk:46 Ps:90 Ts:2 WM:0 LM:2 WS:0 LS:2 WG:5 LG:12
+Kontaveit Rk:48 Ps:65 Ts:4 WM:2 LM:4 WS:5 LS:6 WG:52 LG:51
+Kostyuk Rk:59 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Krejcikova Rk:5 Ps:765 Ts:4 WM:9 LM:4 WS:17 LS:11 WG:159 LG:127
+Kudermetova Rk:35 Ps:90 Ts:4 WM:2 LM:4 WS:4 LS:8 WG:51 LG:63
+Kvitova Rk:41 Ps:90 Ts:4 WM:1 LM:4 WS:2 LS:6 WG:30 LG:47
+Li_Ann Rk:60 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Linette Rk:16 Ps:270 Ts:3 WM:4 LM:3 WS:5 LS:7 WG:58 LG:67
+Martic Rk:13 Ps:315 Ts:3 WM:5 LM:3 WS:7 LS:8 WG:72 LG:79
+Martincova Rk:66 Ps:20 Ts:2 WM:0 LM:2 WS:0 LS:4 WG:13 LG:24
+Mertens Rk:53 Ps:45 Ts:2 WM:1 LM:2 WS:2 LS:2 WG:17 LG:20
+Muchova Rk:62 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Muguruza Rk:4 Ps:960 Ts:3 WM:6 LM:3 WS:12 LS:7 WG:109 LG:92
+Osaka Rk:21 Ps:225 Ts:4 WM:2 LM:4 WS:5 LS:6 WG:45 LG:49
+Osorio Rk:56 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Ostapenko Rk:9 Ps:480 Ts:4 WM:7 LM:4 WS:13 LS:11 WG:129 LG:111
+Paolini Rk:12 Ps:360 Ts:3 WM:4 LM:3 WS:5 LS:7 WG:54 LG:62
+Parrizas Rk:55 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Pavlyuchenkova Rk:36 Ps:90 Ts:3 WM:3 LM:3 WS:5 LS:7 WG:51 LG:62
+Pegula Rk:38 Ps:90 Ts:4 WM:1 LM:4 WS:3 LS:6 WG:42 LG:53
+Petkovic Rk:61 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Pliskova Rk:25 Ps:180 Ts:4 WM:5 LM:4 WS:9 LS:7 WG:92 LG:76
+Putintseva Rk:17 Ps:270 Ts:4 WM:6 LM:4 WS:9 LS:10 WG:101 LG:99
+Raducanu Rk:40 Ps:90 Ts:4 WM:1 LM:4 WS:5 LS:6 WG:57 LG:54
+Riske Rk:33 Ps:110 Ts:4 WM:1 LM:4 WS:0 LS:8 WG:14 LG:49
+Rogers Rk:34 Ps:110 Ts:3 WM:1 LM:3 WS:1 LS:6 WG:17 LG:42
+Ruse Rk:58 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
+Rybakina Rk:30 Ps:135 Ts:4 WM:2 LM:4 WS:5 LS:7 WG:50 LG:60
+Sabalenka Rk:8 Ps:590 Ts:4 WM:8 LM:2 WS:15 LS:6 WG:119 LG:88
+Sakkari Rk:3 Ps:1080 Ts:4 WM:11 LM:3 WS:21 LS:10 WG:176 LG:137
+Sherif Rk:23 Ps:200 Ts:3 WM:2 LM:3 WS:0 LS:4 WG:15 LG:25
+Siniakova Rk:45 Ps:90 Ts:2 WM:0 LM:2 WS:0 LS:2 WG:9 LG:13
+Sorribes Rk:43 Ps:90 Ts:2 WM:1 LM:2 WS:0 LS:4 WG:6 LG:24
+Stephens Rk:50 Ps:65 Ts:2 WM:0 LM:2 WS:1 LS:2 WG:14 LG:15
+Svitolina Rk:32 Ps:135 Ts:3 WM:2 LM:3 WS:0 LS:0 WG:0 LG:0
+Swiatek Rk:1 Ps:3000 Ts:4 WM:17 LM:2 WS:32 LS:7 WG:224 LG:146
+Tauson Rk:52 Ps:65 Ts:2 WM:1 LM:2 WS:2 LS:5 WG:31 LG:40
+Teichmann Rk:42 Ps:90 Ts:2 WM:1 LM:2 WS:1 LS:4 WG:16 LG:30
+Tomljanovic Rk:24 Ps:180 Ts:4 WM:4 LM:4 WS:7 LS:7 WG:68 LG:71
+Van_Uytvanck Rk:29 Ps:135 Ts:3 WM:3 LM:3 WS:7 LS:4 WG:57 LG:51
+Vondrousova Rk:44 Ps:90 Ts:3 WM:1 LM:3 WS:2 LS:3 WG:27 LG:27
+Zanevska Rk:47 Ps:90 Ts:2 WM:0 LM:2 WS:0 LS:2 WG:5 LG:12
+Zhang Rk:10 Ps:450 Ts:3 WM:4 LM:3 WS:8 LS:7 WG:79 LG:71
+Zidansek Rk:19 Ps:225 Ts:4 WM:6 LM:4 WS:13 LS:9 WG:127 LG:106

@@ -1,69 +1,67 @@
 /** @file set_tournament.hh
- * @brief Specification of the class Set_tournament.
+ * @brief Especificación de la clase Set_tournament.
  */
 
 #ifndef SET_TOURNAMENT
 #define SET_TOURNAMENT
 
 #include "tournament.hh"
-#include "set_categories.hh"
 
 using namespace std;
 
 /** @class Set_tournament
- * @brief Represents a set of tournaments
+ * @brief Representa un conjunto de torneos
  */
 class Set_tournament {
 private:
-    int num;
-    map<string, Tournament> tournaments;
+    int num; //!< Número de torneos
+    map<string, Tournament> tournaments; //!< Torneos identificados por el nombre
 
 public:
     Set_tournament();
 
     ~Set_tournament();
 
-    /** @brief Add a tournament
-     * \pre id a tournament identifier, 0 <= category <= C
-     * \post Tournament added to the implicit parameter */
+    /** @brief Añade un torneo
+     * \pre id es un identificador de torneo, 0 <= category <= C
+     * \post Torneo añadido al parámetro implícito */
     void add_tournament(const string& id, int category);
 
-    /** @brief Delete a tournament
-     * \pre id a tournament identifier
-     * \post Tournament deleted from the implicit parameter */
+    /** @brief Elimina un torneo
+     * \pre id es un identificador de torneo
+     * \post Torneo eliminado del parámetro implícito */
     void delete_tournament(const string& id);
 
-    /** @brief Check if the tournament exists
-     * \pre id is a tournament identifier
-     * \post True if id in the implicit parameter, false if not */
+    /** @brief Elimina un jugador de todos los torneos
+     * \pre id es un identificador de jugador válido
+     * \post El jugador es eliminado de todos los torneos */
+    void delete_player(const string& id);
+
+    /** @brief Comprueba si el torneo existe
+     * \pre id es un identificador de torneo
+     * \post Cierto si id se encuentra en el map del parámetro implícito,
+     * falso si no */
     bool tournament_exists(const string& id);
 
-    /** @brief Return the number of tournaments
-     * \pre true
-     * \post Return number */
+    /** @brief Devuelve el número de torneos
+     * \pre Cierto
+     * \post Devuelve num del parámetro implícito */
     int num_tournaments();
 
-    /** @brief Return the tournament requested
-     * \pre id is a tournament identifier
-     * \post Return the tournament requested */
+    /** @brief Devuelve un iterador que apunta al torneo pedido
+     * \pre id es un identificador de torneo
+     * \post Devuelve el iterador requerido */
     map<string, Tournament>::iterator get_tournament(const string& id);
 
-    /** @brief Return all the tournaments identifiers
-     * \pre true
-     * \post Return the tournaments vector in the implicit parameter */
-    vector<string> get_tournaments();
-
-    /** @brief Read the tournaments
-     * \pre An integer n and n pairs of string and integer
-     * \post Added the data to the implicit parameter */
+    /** @brief Lee los torneo
+     * \pre Un entero n y n strings y enteros por el canal estándar
+     * \post Datos añadidos al parámetro implícito */
     void read();
 
-    /** @brief Print the data of all the tournaments
-     * \pre true
-     * \post printed the data of the tournaments on the standard channel */
+    /** @brief Imprime los datos de todos los torneos
+     * \pre cierto
+     * \post Datos de los torneos escritos en el canal estándar */
     void print(const Set_categories& cat);
-
-    void delete_player(const string& id);
 };
 
 #endif
